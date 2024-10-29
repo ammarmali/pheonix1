@@ -1,0 +1,187 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #280B3B;
+}
+
+/* Base Header and Navbar Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #401B51;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 60px;
+  transition: all 0.3s ease;
+}
+
+/* Logo Styling */
+.logo-text {
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+.logo-text img {
+  width: 150px; /* Adjust as necessary for logo size */
+  height: auto;
+  max-height: 60px; /* Ensures it fits well in the navbar */
+}
+
+/* Navbar Links */
+.navbar {
+  display: flex;
+}
+
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  margin: 10px 30px 1px 1px;
+  padding: 0;
+  gap: 30px;
+  background-color: #280B3B;
+  background-size: 20px;
+}
+
+.navbar li {
+  margin: 0 0.5rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #FFD700;
+}
+
+/* Right Section for Authentication Buttons */
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
+.auth-button {
+  padding: 0.6rem 1.3rem;
+  font-size: 0.9rem;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(90deg, #5A0078, #EFAD70);
+}
+
+.auth-button:hover {
+  opacity: 0.9;
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+.hamburger.open .bar {
+  background-color: #FFD700;
+}
+
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive Styles for Different Screen Sizes */
+@media (max-width: 768px) {
+  .navbar {
+    display: none; /* Hide the navbar by default on mobile */
+  }
+  
+  .navbar.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    background-color: #401B51;
+    padding: 1rem;
+    width: 100%;
+    text-align: right;
+  }
+  
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .navbar li {
+    margin: 1rem 0;
+  }
+  
+  .right-section {
+    display: none;
+  }
+  
+  .hamburger {
+    display: flex; /* Show hamburger icon on mobile */
+  }
+  
+  .logo-text img {
+    width: 120px; /* Resize logo for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .logo-text img {
+    width: 100px; /* Smaller logo size for mobile */
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar.open {
+    padding: 0.8rem;
+    top: 80px;
+  }
+  
+  .auth-button {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .auth-button {
+    padding: 0.2rem 0.7rem;
+    font-size: 0.55rem;
+  }
+}

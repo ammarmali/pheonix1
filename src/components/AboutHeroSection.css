@@ -1,0 +1,29 @@
+.hero {
+  text-align: center;
+  background-color: #401B51;
+  color: #fff;
+  padding: 3rem 1rem;
+  margin: 100px 100px 1px 1px;
+}
+
+.hero h1 {
+  font-size: 34px;
+  margin-bottom: 0.5rem;
+}
+
+.hero h2 span {
+  background: linear-gradient(180deg, rgba(254,204,82,1) 18%, rgba(255,255,255,1) 75%);;
+  -webkit-background-clip: text;
+  background-clip: text ;
+  color:  transparent;
+  font-size: 120px;
+}
+
+.hero-btn {
+  background-color: #f4b400;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

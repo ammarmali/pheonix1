@@ -1,0 +1,495 @@
+body {
+  margin: 0;
+  background-color: #341443;
+  color: white;
+}
+
+.contact-us-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 20px;
+  margin: 100px 1px 100px 1px;
+}
+
+.contact-us-content {
+  background-color: #2b0232;
+  border: 2px solid #ffd700;
+  border-radius: 10px;
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  color: white;
+}
+
+.contact-us-left {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+.contact-us-list {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 20px; /* Move the entire list to the right */
+}
+
+.contact-us-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-us-list li svg {
+  margin-right: 10px;
+  color: #ffd700;
+}
+
+/* Add padding to each list item */
+.contact-us-list li {
+  padding-left: 50px; /* Adjust as needed */
+}
+
+.website {
+  margin-top: auto;
+  font-weight: bold;
+}
+
+.contact-us-right {
+  flex: 2;
+  padding: 40px;
+  
+
+}
+
+h2 {
+  background: linear-gradient(180deg, rgba(254,204,82,1) 18%, rgba(255,255,255,1) 75%);;
+  -webkit-background-clip: text;
+  background-clip: text ;
+  color:  transparent;
+  font-size: 40px;
+  margin-bottom: 30px;
+  margin-left: 60px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  background-color: transparent;
+  border: 2px solid white; /* Make border wider */
+  border-radius: 5px;
+  color: white;
+  padding: 12px; /* Increase padding */
+  width: 100%;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #ffd700;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 221, 0, 0.5); /* Add shadow on focus */
+}
+
+textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background: linear-gradient(90deg, #ffd700, #ffed4a);
+  border: none;
+  border-radius: 5px;
+  color: #401B51;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 10px 20px;
+  align-self: flex-end;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background: linear-gradient(90deg, #ffed4a, #ffd700);
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
+}
+
+button:active {
+  transform: translateY(0); /* Return to original position on click */
+  box-shadow: 0 4px 6px rgba(152, 145, 145, 0); /* Reset shadow */
+}
+
+/* Success message styling */
+.success-message {
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+/* General styling for all devices remains as is */
+
+/* Ultra-wide 4K screens (2560px and above) */
+@media (min-width: 2560px) {
+  .contact-us-content {
+    max-width: 1400px;
+    padding: 80px;
+  }
+
+  h2 {
+    font-size: 64px;
+    margin-left: 100px;
+  }
+
+  input, textarea {
+    padding: 16px;
+    font-size: 20px;
+  }
+
+  button {
+    padding: 14px 28px;
+    font-size: 20px;
+  }
+}
+
+/* 4K Large Desktop (2400px - 2559px) */
+@media (min-width: 2400px) and (max-width: 2559px) {
+  .contact-us-content {
+    max-width: 1300px;
+    padding: 75px;
+  }
+
+  h2 {
+    font-size: 60px;
+    margin-left: 90px;
+  }
+
+  input, textarea {
+    padding: 16px;
+  }
+
+  button {
+    padding: 14px 26px;
+    font-size: 19px;
+  }
+}
+
+/* Large desktops (2000px - 2399px) */
+@media (min-width: 2000px) and (max-width: 2399px) {
+  .contact-us-content {
+    max-width: 1200px;
+    padding: 70px;
+  }
+
+  h2 {
+    font-size: 56px;
+    margin-left: 80px;
+  }
+
+  input, textarea {
+    padding: 16px;
+  }
+
+  button {
+    padding: 14px 24px;
+    font-size: 18px;
+  }
+}
+
+/* Extra-large desktops (1800px - 1999px) */
+@media (min-width: 1800px) and (max-width: 1999px) {
+  .contact-us-content {
+    max-width: 1100px;
+    padding: 65px;
+  }
+
+  h2 {
+    font-size: 52px;
+    margin-left: 70px;
+  }
+
+  input, textarea {
+    padding: 14px;
+  }
+
+  button {
+    padding: 12px 22px;
+    font-size: 17px;
+  }
+}
+
+/* Desktops (1600px - 1799px) */
+@media (min-width: 1600px) and (max-width: 1799px) {
+  .contact-us-content {
+    max-width: 1000px;
+    padding: 60px;
+  }
+
+  h2 {
+    font-size: 48px;
+    margin-left: 60px;
+  }
+
+  input, textarea {
+    padding: 14px;
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}
+
+/* Smaller Desktops (1400px - 1599px) */
+@media (min-width: 1400px) and (max-width: 1599px) {
+  .contact-us-content {
+    max-width: 950px;
+    padding: 50px;
+  }
+
+  h2 {
+    font-size: 44px;
+    margin-left: 50px;
+  }
+
+  input, textarea {
+    padding: 12px;
+  }
+
+  button {
+    padding: 10px 18px;
+    font-size: 15px;
+  }
+}
+
+/* Laptops (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .contact-us-content {
+    max-width: 850px;
+    padding: 45px;
+  }
+
+  h2 {
+    font-size: 40px;
+    margin-left: 40px;
+  }
+
+  input, textarea {
+    padding: 10px;
+  }
+
+  button {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Large Tablets (1024px - 1199px) */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .contact-us-content {
+    max-width: 800px;
+    padding: 40px;
+  }
+
+  h2 {
+    font-size: 36px;
+    margin-left: 30px;
+  }
+
+  input, textarea {
+    padding: 10px;
+  }
+
+  button {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Medium Tablets (900px - 1023px) */
+@media (min-width: 900px) and (max-width: 1023px) {
+  .contact-us-content {
+    max-width: 700px;
+    padding: 35px;
+  }
+
+  h2 {
+    font-size: 32px;
+    margin-left: 20px;
+  }
+
+  input, textarea {
+    padding: 10px;
+  }
+
+  button {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
+
+/* Small Tablets (768px - 899px) */
+@media (min-width: 768px) and (max-width: 899px) {
+  .contact-us-content {
+    max-width: 90%;
+    padding: 30px;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 28px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  input, textarea {
+    padding: 8px;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
+
+/* Large Phones (600px - 767px) */
+@media (min-width: 600px) and (max-width: 767px) {
+  .contact-us-content {
+    width: 90%;
+    padding: 25px;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  input, textarea {
+    padding: 8px;
+  }
+
+  button {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}
+
+/* Medium Phones (500px - 599px) */
+@media (min-width: 500px) and (max-width: 599px) {
+  .contact-us-content {
+    width: 90%;
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  input, textarea {
+    padding: 8px;
+  }
+
+  button {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}
+
+/* Small Phones (400px - 499px) */
+@media (min-width: 400px) and (max-width: 499px) {
+  .contact-us-container {
+    width: 500px;
+    margin: 1px 1px 1px 25px;
+
+  }
+  .contact-us-content {
+    width: 90%;
+    padding: 15px;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 40px;
+    text-align: center;
+    margin: 0px 1px 40px 17px;
+  }
+
+  input, textarea {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}
+
+/* Extra Small Phones (320px - 399px) */
+@media (min-width: 320px) and (max-width: 399px) {
+  .contact-us-content {
+    width: 100%;
+    padding: 12px;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  input, textarea {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  button {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+}
+
+/* Smallest Devices (below 319px) */
+@media (max-width: 319px) {
+  .contact-us-content {
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  input, textarea {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  button {
+    padding: 6px 8px;
+    font-size: 10px;
+  }
+}
+

@@ -1,0 +1,490 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .title1 {
+    background: linear-gradient(180deg, rgba(254,204,82,1) 18%, rgba(255,255,255,1) 75%);;
+    -webkit-background-clip: text;
+    background-clip: text ;
+    color:  transparent;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+  }
+  
+  .percentage-indicator {
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    letter-spacing: -1.44px;
+    width: 80px;
+    font: 600 25px Poppins, sans-serif;
+    border: 1px solid #FECC52;
+  }
+  
+  .preference-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Ensure vertical layout */
+    align-items: center; /* Center children */
+    padding: 20px 0; /* Add padding for aesthetics */
+    background-color: #401B51;
+  }
+  
+  .preference-container {
+    gap: 20px;
+    display: flex;
+  }
+  
+  .preference-card {
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.27);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Roboto, sans-serif;
+    height: 300px;
+    width: 260px;
+    padding: 40px;
+  }
+  
+  .preference-title {
+    background: linear-gradient(180deg, rgba(254,204,82,1) 18%, rgba(255,255,255,1) 75%);;
+    -webkit-background-clip: text;
+    background-clip: text ;
+    color:  transparent;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -1.28px;
+    text-align: center;
+    margin: 20px 0px 40px 0px;
+  }
+  
+  .preference-description {
+    color: #fff;
+    text-shadow: #000;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+
+  }
+  
+  /* Diverse Team Section Styles */
+  .diverse-team-section {
+    border-radius: 23px;
+    background-color: rgba(0, 0, 0, 0.27);
+    margin: 100px 0px 0px 100px;
+    max-width: 1000px;
+    width: 100%;
+    padding: 38px 35px;
+    border: 1px solid rgba(255, 255, 255, 0.01);
+  }
+  
+  .diverse-team-content {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .image-column {
+    width: 50%;
+  }
+  
+  .team-image {
+    aspect-ratio: 1.45; /* Maintain aspect ratio */
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    border-radius: 20px;
+  }
+  
+  .text-column {
+    width: 50%;
+    font-family: Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -1.12px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .section-description {
+    color: #fff;
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: -0.84px;
+    margin-top: 24px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+
+/* General styles for all devices remain as is */
+
+/* Ultra-wide 4K screens (2560px and above) */
+@media (min-width: 2560px) {
+  .preference-card {
+    width: 400px;
+    height: 450px;
+  }
+
+  h1 {
+    font-size: 80px;
+  }
+
+  .section-title {
+    font-size: 48px;
+  }
+
+  .section-description {
+    font-size: 32px;
+  }
+}
+
+/* Ultra-wide (2000px - 2559px) */
+@media (min-width: 2000px) and (max-width: 2559px) {
+  .preference-card {
+    width: 370px;
+    height: 420px;
+  }
+
+  h1 {
+    font-size: 70px;
+  }
+
+  .section-title {
+    font-size: 44px;
+  }
+
+  .section-description {
+    font-size: 30px;
+  }
+}
+
+/* Large desktops (1600px - 1999px) */
+@media (min-width: 1600px) and (max-width: 1999px) {
+  .preference-card {
+    width: 350px;
+    height: 400px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  .section-title {
+    font-size: 40px;
+  }
+
+  .section-description {
+    font-size: 26px;
+  }
+}
+
+/* Extra-large desktops (1400px - 1599px) */
+@media (min-width: 1400px) and (max-width: 1599px) {
+  .preference-card {
+    width: 325px;
+    height: 375px;
+  }
+
+  h1 {
+    font-size: 55px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .section-description {
+    font-size: 24px;
+  }
+}
+
+/* Large desktops (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .preference-card {
+    width: 300px;
+    height: 350px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  .section-title {
+    font-size: 34px;
+  }
+
+  .section-description {
+    font-size: 22px;
+  }
+}
+
+/* Small desktops (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .preference-card {
+    width: 225px;
+    height: 320px;
+  }
+  .preference-section{
+    margin: 1px 1px 55px 1px;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .section-description {
+    font-size: 20px;
+  }
+}
+
+/* Large tablets (900px - 991px) */
+@media (min-width: 900px) and (max-width: 991px) {
+  .preference-card {
+    width: 250px;
+    height: 300px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .section-description {
+    font-size: 18px;
+  }
+}
+
+/* Medium tablets (768px - 899px) */
+@media (min-width: 768px) and (max-width: 899px) {
+  .preference-card {
+    width: 220px;
+    height: 270px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .section-description {
+    font-size: 16px;
+  }
+}
+
+/* Landscape tablets (600px - 767px) */
+@media (min-width: 600px) and (max-width: 767px) {
+  .preference-card {
+    width: 200px;
+    height: 250px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .section-description {
+    font-size: 15px;
+  }
+}
+
+/* Large portrait phones (500px - 599px) */
+@media (min-width: 500px) and (max-width: 599px) {
+  .preference-card {
+    width: 180px;
+    height: 230px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .section-description {
+    font-size: 14px;
+  }
+}
+
+/* Small portrait phones (400px - 499px) */
+@media (min-width: 400px) and (max-width: 499px) {
+  .preference-card {
+    width: 60px;
+    height: 267px;
+
+  }
+
+  .preference-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin: 7px 0px 50px 163px;
+}
+}
+
+  h1 {
+    font-size: 28px;
+    margin: 50px 1px 30px 120px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .section-description {
+    font-size: 13px;
+  }
+
+
+/* Very small phones (375px - 399px) */
+@media (min-width: 375px) and (max-width: 399px) {
+  .preference-card {
+    width: 1px;
+    height: 373px;
+}
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .section-description {
+    font-size: 12px;
+  }
+}
+
+/* Extra small phones (320px - 374px) */
+@media (min-width: 320px) and (max-width: 374px) {
+  .preference-card {
+    width: 140px;
+    height: 180px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .section-description {
+    font-size: 11px;
+  }
+}
+
+/* Ultra-small phones (below 319px) */
+@media (max-width: 319px) {
+  .preference-card {
+    width: 130px;
+    height: 160px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .section-title {
+    font-size: 16px;
+  }
+
+  .section-description {
+    font-size: 10px;
+  }
+}
+
+/* Smaller screens, add horizontal scroll effect for preference cards */
+@media (max-width: 599px) {
+  .preference-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 10px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .preference-card {
+    scroll-snap-align: start;
+    flex: 0 0 80%;
+  }
+
+  /* Hide scrollbar on mobile */
+  .preference-container::-webkit-scrollbar {
+    display: none;
+  }
+  .preference-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Finer adjustments between larger sizes */
+
+/* Desktops (1440px - 1600px) */
+@media (min-width: 1440px) and (max-width: 1600px) {
+  .preference-card {
+    width: 320px;
+    height: 380px;
+  }
+
+  h1 {
+    font-size: 56px;
+  }
+
+  .section-title {
+    font-size: 38px;
+  }
+
+  .section-description {
+    font-size: 25px;
+  }
+}
+
+/* Laptops (1280px - 1439px) */
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .preference-card {
+    width: 290px;
+    height: 350px;
+  }
+
+  h1 {
+    font-size: 52px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .section-description {
+    font-size: 23px;
+  }
+}

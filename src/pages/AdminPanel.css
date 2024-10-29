@@ -1,0 +1,67 @@
+.service-card {
+  
+  border-radius: 10px;
+  background-color: #401b51;
+  display: flex;
+  width: 100%;
+
+  align-items: center;
+  font-family: Oswald, sans-serif;
+  font-weight: 400;
+  padding: 1px 1px 1px 1px;
+  border: 1px solid #c3ffcd;
+  margin : 1px 100px 1px 1px ;
+}
+
+.service-image {
+  aspect-ratio: 1.94;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.service-title {
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 7px;
+}
+
+.service-description {
+  color: #fff;
+  margin-top: 13px;
+  font: 10px Roboto, sans-serif;
+}
+
+.purchase-container {
+  display: flex;
+  margin-top: 8px;
+  width: 205px;
+  max-width: 100%;
+  align-items: center;
+  gap: 12px;
+  text-transform: uppercase;
+}
+
+.purchase-button {
+  border-radius: 4px;
+  background-color: #000;
+  font-size: 11px;
+  padding: 10px 21px;
+  border: 1px solid #fff;
+}
+
+.price {
+  color: #fff;
+  align-self: stretch;
+  margin: auto 0;
+  font: 15px Bebas Kai, sans-serif;
+}
+
+.duration {
+  color: #fff;
+  font-size: 14px;
+  align-self: stretch;
+  margin: auto 0;
+}

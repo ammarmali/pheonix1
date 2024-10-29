@@ -1,0 +1,134 @@
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100vh; /* Ensure body covers the full viewport height */
+    background-color: #401B51; /* Set the background color for the entire page */
+}
+
+.services-page {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Stack items vertically */
+    height: 100%; /* Full height of the viewport */
+    color: rgb(0, 0, 0); /* Text color for contrast */
+    text-align: center;
+    margin: 90px 1px 1px 70px;
+    width: 170vh;
+}
+
+.main-content {
+    max-width: 800px; /* Keep the content centered and limited in width */
+    width: 100%; /* Full width for smaller screens */
+    margin: 0 auto; /* Center the main content */
+    margin-bottom: 20px;
+}
+
+.services-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px; 
+    font-size: 3rem;
+    margin-left: 35px; /* Negative margin to bring it closer to the second heading */
+}
+
+.customized-solutions {
+    position: relative;
+    margin-bottom: 0px; /* Space below this section */
+
+}
+
+.solutions-heading {
+    background: linear-gradient(81deg, rgba(245,178,65,1) 18%, rgba(255,255,255,1) 53%, rgba(245,178,65,1) 86%);
+    -webkit-background-clip: text;
+    background-clip: text ;
+    color:  transparent;
+  font-weight: 1000;
+    font-size: 4rem;
+    margin-bottom: 10px; 
+    position: relative; 
+    white-space: nowrap; 
+    overflow: visible;
+
+}
+
+.transformation-tag {
+    display: block; /* Make it a block element */
+    font-size: 1rem;
+    position: absolute; /* Position it absolutely */
+    right: -130px; /* Move it slightly to the left */
+    bottom: -10px; /* Increase the gap below the heading */
+    color: rgb(255, 255, 255); /* Optional: style as needed */
+}
+
+.services-description {
+    color: white;
+    font-size: 1.2rem;
+    margin: 15px 0; /* Space above and below the description */
+}
+
+.btn {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    border-color: white;
+    padding: 12px 32px;
+    margin: 1rem;
+    cursor: pointer;
+    border-radius: 10px; /* Rounded button */
+    transition: all 0.3s ease;
+}
+
+.btn-gradient {
+    background-image: linear-gradient(90deg, rgb(86, 36, 146), rgb(234, 184, 68));
+    border: 0;
+    color: rgba(256, 256, 256); /* Text color */
+}
+
+.btn-glow:hover {
+    box-shadow: rgba(217, 179, 55, 0.5) 0px 0px 20px 0px; /* Glow effect */
+}
+
+.btn i {
+    margin-left: 8px; /* Add some space between the icon and the text */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .services-title {
+        font-size: 2.5rem; /* Smaller title for tablets and smaller screens */
+    }
+
+    .solutions-heading {
+        font-size: 3rem; /* Smaller heading for tablets and smaller screens */
+        left: 0; /* Reset left position for smaller screens */
+    }
+
+    .services-description {
+        font-size: 1rem; /* Smaller font size for description */
+    }
+
+    .btn {
+        font-size: 16px; /* Slightly smaller button text */
+        padding: 10px 24px; /* Adjust button padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .services-title {
+        font-size: 2rem; /* Further reduced title size for mobile */
+    }
+
+    .solutions-heading {
+        font-size: 2.5rem; /* Further reduced heading size for mobile */
+    }
+
+    .services-description {
+        font-size: 0.9rem; /* Smaller font size for mobile */
+    }
+
+    .btn {
+        font-size: 14px; /* Smaller button text for mobile */
+        padding: 8px 20px; /* Further adjust button padding */
+    }
+}

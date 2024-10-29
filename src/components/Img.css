@@ -1,0 +1,286 @@
+.image-gallery {
+    background-color: #fff;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 70px 64px;
+    margin-top: 55px;
+  }
+
+  .gallery-container {
+    opacity: 0;
+    transform: translateY(50px); /* Start slightly down */
+    transition: opacity 1s ease-in, transform 1s ease-in;
+  }
+  
+  .gallery-container.visible {
+    opacity: 1;
+    transform: translateY(0); /* Move to the original position */
+  }
+  
+  .gallery-container {
+    width: 1040px;
+    max-width: 100%;
+  }
+  
+  .image-row {
+    display: flex;
+    gap: 1px;
+    margin: 1px 150px 1px 1px;
+  }
+  
+  .image-column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  
+  .gallery-image {
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    border-radius: 24px;
+  }
+  
+  .image-1 {
+    aspect-ratio: 1.54;
+    margin: 1px 1px 1px 90px;
+  }
+  
+  .image-2 {
+    aspect-ratio: 1.39;
+    flex-grow: 1;
+    margin: 1px 1px 1px 90px;
+  }
+  
+  .image-gallery {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 70px 64px;
+    margin-top: 55px;
+    color: black;
+}
+
+.gallery-container {
+    opacity: 0;
+    transform: translateY(50px); /* Start slightly down */
+    transition: opacity 1s ease-in, transform 1s ease-in;
+}
+
+.gallery-container.visible {
+    opacity: 1;
+    transform: translateY(0); /* Move to the original position */
+}
+
+.gallery-container {
+    width: 1040px;
+    max-width: 100%;
+}
+
+.image-row {
+    display: flex;
+    gap: 5px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.image-column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 5px;
+}
+
+.gallery-image {
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    border-radius: 24px;
+}
+
+.image-1 {
+    aspect-ratio: 1.54;
+    margin: 1px 1px 1px 1px;
+}
+
+.image-2 {
+    aspect-ratio: 1.39;
+    flex-grow: 1;
+    margin:1px 1px 1px 1px ;
+}
+
+/* Ultra-wide 4K screens (2560px and above) */
+@media (min-width: 2560px) {
+    .gallery-container {
+        width: 1400px;
+        padding: 80px 100px;
+    }
+    .image-gallery {
+        margin-top: 80px;
+        padding: 40px 80px;
+    }
+}
+
+/* 4K Large Desktop (2400px - 2559px) */
+@media (min-width: 2400px) and (max-width: 2559px) {
+    .gallery-container {
+        width: 1300px;
+        padding: 75px 90px;
+    }
+}
+
+/* Large desktops (2000px - 2399px) */
+@media (min-width: 2000px) and (max-width: 2399px) {
+    .gallery-container {
+        width: 1200px;
+        padding: 70px 80px;
+    }
+}
+
+/* Extra-large desktops (1800px - 1999px) */
+@media (min-width: 1800px) and (max-width: 1999px) {
+    .gallery-container {
+        width: 1150px;
+        padding: 60px 70px;
+    }
+}
+
+/* Desktops (1600px - 1799px) */
+@media (min-width: 1600px) and (max-width: 1799px) {
+    .gallery-container {
+        width: 1050px;
+        padding: 55px 60px;
+    }
+}
+
+/* Large Desktops (1400px - 1599px) */
+@media (min-width: 1400px) and (max-width: 1599px) {
+    .gallery-container {
+        width: 1000px;
+        padding: 50px 50px;
+    }
+}
+
+/* Standard Desktops (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .gallery-container {
+        width: 90%;
+        padding: 45px 40px;
+    }
+    .image-gallery {
+        margin-top: 60px;
+    }
+}
+
+/* Laptops (1024px - 1199px) */
+@media (min-width: 1024px) and (max-width: 1199px) {
+    .gallery-container {
+        width: 80%;
+        padding: 40px 30px;
+    }
+}
+
+/* Tablets (900px - 1023px) */
+@media (min-width: 900px) and (max-width: 1023px) {
+    .image-gallery {
+        padding: 30px 20px;
+        margin-top: 40px;
+        width: 68vh;
+    }
+    .gallery-container {
+        width: 700px;
+        padding: 35px 25px;
+        margin: 1px 140px 1px 1px;
+    }
+}
+
+/* Landscape Tablets (768px - 899px) */
+@media (min-width: 768px) and (max-width: 899px) {
+    .image-gallery {
+        padding: 25px 15px;
+    }
+    .gallery-container {
+        width: 90%;
+    }
+    .image-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Large Phones (600px - 767px) */
+@media (min-width: 600px) and (max-width: 767px) {
+    .image-gallery {
+        padding: 20px 10px;
+        margin-top: 30px;
+    }
+    .gallery-container {
+        width: 90%;
+    }
+    .image-row {
+        flex-direction: column;
+    }
+    .image-column {
+        width: 100%;
+    }
+}
+
+/* Medium Phones (500px - 599px) */
+@media (min-width: 500px) and (max-width: 599px) {
+    .image-gallery {
+        padding: 15px 10px;
+        margin-top: 25px;
+    }
+    .gallery-container {
+        width: 85%;
+    }
+    .image-row {
+        flex-direction: column;
+    }
+}
+
+/* Small Phones (400px - 499px) */
+@media (min-width: 400px) and (max-width: 499px) {
+    .image-gallery {
+        padding: 15px;
+        margin-top: 20px;
+        width: 55vh;
+    }
+    .gallery-container {
+        width: 100%;
+    }
+    .image-row {
+        flex-direction: column;
+    }
+}
+
+/* Extra Small Phones (300px - 399px) */
+@media (min-width: 300px) and (max-width: 399px) {
+    .image-gallery {
+        padding: 10px;
+        margin-top: 15px;
+    }
+    .gallery-container {
+        width: 100%;
+    }
+    .image-row {
+        flex-direction: column;
+    }
+}
+
+/* Very Small Phones (below 299px) */
+@media (max-width: 299px) {
+    .image-gallery {
+        padding: 8px;
+        margin-top: 10px;
+    }
+    .gallery-container {
+        width: 100%;
+    }
+    .image-row {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,161 @@
+/* src/components/ShopHero.css */
+  
+  .shop-hero-wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    background: linear-gradient(135deg, #461955 0%, #461955 100%);
+  }
+  
+  .shop-hero12 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-content {
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    animation: slideIn 1s ease forwards; /* Updated slide-in animation */
+  }
+  
+  .primary-heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #FFD700, #f6e482, #FFD700);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+  }
+  
+  .secondary-heading {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(45deg, #FFD700, #fef6c3, #FFD700);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+  }
+  
+  .hero-paragraph {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #fdfdfd;
+    max-width: 800px;
+    margin: 0 auto;
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+  }
+  
+  /* New Entrance Animation */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-50px); /* Start from the left */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .primary-heading.animate,
+  .secondary-heading.animate,
+  .hero-paragraph.animate {
+    animation: slideIn 0.8s ease forwards; /* Apply slide-in animation */
+  }
+  
+  .primary-heading.animate {
+    animation-delay: 0.5s; /* Delay for primary heading */
+  }
+  
+  .secondary-heading.animate {
+    animation-delay: 0.7s; /* Delay for secondary heading */
+  }
+  
+  .hero-paragraph.animate {
+    animation-delay: 0.9s; /* Delay for paragraph */
+  }
+  
+  /* Updated Hover Effects */
+  .primary-heading:hover,
+  .secondary-heading:hover,
+  .hero-paragraph:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+    transition: transform 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 1024px) {
+    .primary-heading {
+      font-size: 2.5rem;
+    }
+    .secondary-heading {
+      font-size: 3.5rem;
+    }
+    .hero-paragraph {
+      font-size: 1.1rem;
+      padding: 0 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .shop-hero {
+      padding: 2rem;
+    }
+    .primary-heading {
+      font-size: 2rem;
+    }
+    .secondary-heading {
+      font-size: 2.8rem;
+    }
+    .hero-paragraph {
+      font-size: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .shop-hero {
+      padding: 1.5rem;
+    }
+    .primary-heading {
+      font-size: 1.8rem;
+    }
+    .secondary-heading {
+      font-size: 2.2rem;
+    }
+    .hero-paragraph {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Enhanced visual effects */
+  .primary-heading,
+  .secondary-heading {
+    filter: drop-shadow(0 2px 4px rgba(219, 202, 23, 0.1));
+    transition: filter 0.3s ease;
+  }
+  
+  .primary-heading:hover,
+  .secondary-heading:hover {
+    filter: drop-shadow(0 4px 8px rgba(249, 237, 145, 0.2));
+  }
+  
+  /* Additional animation for smooth content appearance */
+  .hero-content {
+    transform: perspective(1000px);
+    transform-style: preserve-3d;
+  }
+  
+  .animated-element {
+    backface-visibility: hidden;
+  }
+  

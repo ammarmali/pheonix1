@@ -1,0 +1,135 @@
+.section-container {
+  margin: 93px 0px 50px 1px;
+  width: 50vh;
+}
+
+.title-con{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 43px 1px 37px 345px;
+    width: 100vh;
+    font-size: 50px;
+    background: linear-gradient(103deg, rgba(253,191,103,1) 51%, rgba(255,247,237,1) 86%);
+    -webkit-background-clip: text;
+    background-clip: text ;
+    color:  transparent;
+
+}
+
+.title h1 {
+  display: flex;
+  position: fixed;
+  margin: 1px 1px 100px 500px;
+}
+
+.column-layout {
+  display: flex;
+  margin: 1px 1px 1px 1px;
+  gap: 20px;
+}
+
+.service-card2 {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  text-align: center;
+  background-color: #2d1339;
+  border-radius: 20px;
+  width: 500px;
+}
+
+.service-icon {
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  border-radius: 9px;
+}
+
+.service-title {
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  align-self: center;
+  margin: 22px 1px 1px 1px;
+}
+
+.service-description {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 40px 110px;
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: -0.64px;
+  flex-wrap: wrap;
+}
+
+.description-item {
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  align-self: stretch;
+  width: 350px;
+  margin: 10px 20px 1px 20px;
+  font-size: 16px;
+}
+
+.service-list {
+  display: flex;
+  margin-top: 23px;
+  align-items: center;
+  gap: 40px 111px;
+  font-size: 15px;
+  color: #fff;
+  line-height: 15px;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.list-item {
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  align-self: stretch;
+  width: 335px;
+  margin: auto 0;
+}
+
+/* Responsive styles for various screen sizes */
+@media (max-width: 1200px) { .section-container { margin-top: 80px; }}
+@media (max-width: 1150px) { .section-container { margin-top: 70px; }}
+@media (max-width: 1100px) { .section-container { margin-top: 60px; }}
+@media (max-width: 1050px) { .column-layout { gap: 15px; }}
+@media (max-width: 1000px) { .service-card { padding: 10px 15px; }}
+@media (max-width: 950px) { .service-description { flex-direction: column; }}
+@media (max-width: 900px) { .service-list { gap: 30px; }}
+@media (max-width: 850px) { .service-card { width: 90px; }}
+@media (max-width: 800px) { .section-container { margin-top: 50px; }}
+@media (max-width: 750px) { .title h1 { margin: 0; font-size: 24px; }}
+@media (max-width: 700px) { .service-description { font-size: 18px; }}
+@media (max-width: 650px) { .service-list { flex-direction: column; }}
+@media (max-width: 600px) { .service-card { padding: 5px; }}
+@media (max-width: 550px) { .description-item { width: 250px; }}
+@media (max-width: 500px) { .service-title { font-size: 16px; }}
+@media (max-width: 450px) { .service-list { gap: 20px; }}
+@media (max-width: 400px) { .column-layout { flex-direction: column; }}
+@media (max-width: 350px) { .service-card { padding: 2px; }}
+@media (max-width: 300px) { .service-title { font-size: 14px; }}
+@media (max-width: 250px) { .service-description { font-size: 16px; }}
+@media (max-width: 200px) { .service-card { padding: 1px; }}
+
+@media (max-width: 180px) { .service-card { width: 50px; }}
+@media (max-width: 150px) { .service-title { font-size: 12px; }}
+@media (max-width: 100px) { .service-description { font-size: 12px; }}
+
+/* Slide-in effect for small screens */
+@media (max-width: 600px) {
+  .service-card {
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideIn 0.5s forwards;
+  }
+
+  @keyframes slideIn {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

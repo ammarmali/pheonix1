@@ -1,0 +1,213 @@
+.phoenixrize-section {
+  background-color: #401B51;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.heading-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.main-heading {
+  font-size: 2em;
+  margin: 0;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #F7B546, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;}
+ 
+
+.main-heading span {
+  font-style: italic;
+  font-size: 2em;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.product-card {
+  width: 276px;
+  height: 294px;
+  background: linear-gradient(135deg, #4B1E54, #4B1E54);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  top: -5px; /* Move the entire card content upward */
+  margin-bottom: 20px;
+}
+
+.product-card img,
+.image-placeholder {
+  width: 100%;
+  height: 140px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+}
+
+.image-placeholder {
+  background-color: #666;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-name {
+  color: white;
+  margin: 5px 0;
+  font-size: 0.9em;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.product-description {
+  margin: 3px 0; /* Reduced margin to move upward */
+  color: white;
+  font-size: 0.8em;
+  padding: 0 10px;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 6px; /* Reduced padding to move upward */
+}
+
+.buy-button {
+  background: linear-gradient(90deg, #E5A945, #4B1E54);
+  color: white;
+  border: solid 1px white;
+  width: 100px;
+  height: 32px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.85em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+.buy-button:hover {
+  background: linear-gradient(135deg, #f3d5a2, #4B1E54);
+}
+
+.purchase-guide {
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+              url('src/components/caucasian-adult-paying-with-credit-card-indoors-generated-by-ai 1.png');
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 50px;
+}
+
+.purchase-guide .overlay-container {
+  background-color: linear-gradient(180deg, rgba(116, 33, 157, 0.929), rgba(255, 187, 40, 0.966)0.75);
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1000;
+}
+
+.purchase-guide h2 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, #F7B546, #e8e4e3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+ 
+  margin-left: -30px; ;
+}
+
+/* Ensure higher specificity */
+.purchase-guide .guide-step {
+  margin-bottom: 20px;
+  text-align: left;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2em; /* Increased font size for better visibility */
+}
+
+.purchase-guide .guide-step .step-title {
+  font-size: 20px; /* Increased title font size */
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.purchase-guide .guide-step .step-description {
+  font-size: 18px; /* Increased description font size */
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Spacing between guide steps */
+.purchase-guide .guide-step:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .purchase-guide {
+    padding: 30px 20px;
+  }
+
+  .purchase-guide h2 {
+    font-size: 2.5em;
+  }
+
+  .purchase-guide .guide-step .step-title {
+    font-size: 18px; /* Adjusted for smaller screens */
+  }
+
+  .purchase-guide .guide-step .step-description {
+    font-size: 16px; /* Adjusted for smaller screens */
+  }
+
+  .purchase-guide .overlay-container {
+    width: 95%;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,114 @@
+.mission-vision-container {
+  background-color: #fff;
+  align-self: stretch;
+  display: flex;
+  margin-top: 176px;
+width: 195vh;
+  flex-direction: column;
+  padding: 39px 50px 112px;
+}
+
+.section-title {
+
+  text-transform: uppercase;
+  align-self: center;
+  font: 700 81px Roboto, sans-serif;
+  background: linear-gradient(262deg, rgba(70,25,85,1) 2%, rgba(245,178,65,1) 67%);
+  -webkit-background-clip: text;
+  background-clip: text ;
+  color:  transparent;
+}
+
+.cards-container {
+  margin: 78px 0 -22px;
+}
+
+.cards-wrapper {
+  gap: 20px;
+  display: flex;
+}
+
+.card {
+  border-radius: 14px;
+  background-color: #401b51;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  font-family: Roboto, sans-serif;
+  width: 91vh;
+  height: 60vh;
+  padding: 52px 0px;
+}
+
+.card-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 100px;
+}
+
+.card-title {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 19px;
+}
+
+.card-description {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 300;
+  align-self: stretch;
+  margin: 42px 50px 1px 78px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 50%;
+}
+
+.column-right {
+  margin-left: 20px;
+}
+
+@media (max-width: 991px) {
+  .mission-vision-container {
+    max-width: 100%;
+    margin-top: 40px;
+    padding: 0 20px 100px;
+  }
+
+  .section-title {
+    max-width: 100%;
+    font-size: 40px;
+  }
+
+  .cards-container {
+    max-width: 100%;
+    margin: 40px 0 10px;
+  }
+
+  .cards-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .column {
+    width: 100%;
+  }
+
+  .card {
+    max-width: 100%;
+    margin-top: 39px;
+    padding: 0 20px;
+  }
+
+  .card-description {
+    max-width: 100%;
+  }
+}

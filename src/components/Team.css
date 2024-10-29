@@ -1,0 +1,6 @@
+.img-folder img{
+  display: flex;
+  align-items: center;
+margin: 90px 1px 1px 210px ;
+width: 140vh;
+}

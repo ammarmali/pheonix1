@@ -1,0 +1,109 @@
+.services-container {
+  background-color: #fff;
+  display: flex;
+  margin-top: 76px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 116px 1px;
+}
+.custom-heading {
+  font-size: 50px;
+  background: linear-gradient(0deg, rgba(70,25,85,1) 2%, rgba(245,178,65,1) 67%);
+ -webkit-background-clip: text;
+  background-clip: text ;
+  color:  transparent;
+  margin: 120px 30px 1px 1px;
+  font-weight: 900;
+}
+
+
+.services-grid {
+  align-self: stretch;
+  display: flex;
+ 
+}
+
+.service-card1{
+  border-radius: 13px;
+  background-color: #461955;
+  display: flex;
+  border: 2px solid rgb(165, 113, 9);
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  padding: 3px 5px 1px;
+  margin:10px 40px 1px 50px ;}
+
+
+.service-title {
+  font: 800 30px/76px Poppins, sans-serif;
+  text-transform: uppercase;
+}
+
+.service-description {
+  font: 400 14px/22px Poppins, sans-serif;
+  letter-spacing: -0.98px;
+}
+
+.learn-more-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  font: 600 14px/76px Poppins, sans-serif;
+  text-decoration: none;
+}
+
+.arrow-icon {
+  aspect-ratio: 1;
+  width: 15px;
+}
+
+.custom-solutions {
+  color: black
+  ;
+  margin-top: 1px;
+  font: 500 32px/146px Poppins, sans-serif;
+}
+
+.contact-button {
+
+
+}
+
+.contact-text {
+  align-self: start;
+  z-index: 10;
+  margin: 1px 1px 1px 600px;
+}
+
+.contact-icon {
+  aspect-ratio: 1;
+  width: 24px;
+  align-self: end;color: white;
+  margin-top: 10px;
+}
+
+@media (max-width: 991px) {
+  .services-container {
+    max-width: 100%;
+    margin-top: 40px;
+    padding: 100px 20px;
+  }
+  .services-grid {
+    flex-direction: column;
+  }
+  .service-card {
+    max-width: 100%;
+    margin-top: 27px;
+    padding: 0 20px;
+  }
+  .custom-solutions {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+  .contact-button {
+    margin-bottom: 10px;
+  }
+}
