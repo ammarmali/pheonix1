@@ -1,6 +1,7 @@
 .section-container {
   margin: 93px 0px 50px 1px;
-  width: 50vh;
+  width: auto;
+  
 }
 
 .title-con{
@@ -8,8 +9,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 43px 1px 37px 345px;
-    width: 100vh;
+  
+    width: auto;
     font-size: 50px;
     background: linear-gradient(103deg, rgba(253,191,103,1) 51%, rgba(255,247,237,1) 86%);
     -webkit-background-clip: text;
@@ -37,20 +38,22 @@
   text-align: center;
   background-color: #2d1339;
   border-radius: 20px;
-  width: 500px;
+  width: 1px;
+  height: 425px;
 }
 
 .service-icon {
   object-fit: contain;
   object-position: center;
-  width: 100%;
+  width: auto;
   border-radius: 9px;
 }
 
-.service-title {
+.service-title1 {
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   align-self: center;
   margin: 22px 1px 1px 1px;
+  font-size: 20px;
 }
 
 .service-description {
@@ -64,13 +67,14 @@
   flex-wrap: wrap;
 }
 
-.description-item {
+.description-item1 {
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  align-self: stretch;
-  width: 350px;
+  width: auto;
   margin: 10px 20px 1px 20px;
-  font-size: 16px;
+  font-size: 12px;
 }
+
+
 
 .service-list {
   display: flex;
@@ -87,12 +91,15 @@
 .list-item {
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   align-self: stretch;
-  width: 335px;
+  width: auto;
   margin: auto 0;
 }
 
 /* Responsive styles for various screen sizes */
-@media (max-width: 1200px) { .section-container { margin-top: 80px; }}
+@media (max-width: 1400px) { .section-container { margin: 90px; 
+}}
+@media (max-width: 1200px) { .section-container { margin: 80px; 
+}}
 @media (max-width: 1150px) { .section-container { margin-top: 70px; }}
 @media (max-width: 1100px) { .section-container { margin-top: 60px; }}
 @media (max-width: 1050px) { .column-layout { gap: 15px; }}

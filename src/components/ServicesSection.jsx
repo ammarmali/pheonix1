@@ -20,8 +20,8 @@ const ServicesSection = () => {
             className="service-icon"
             alt="Consulting service icon"
           />
-          <h2 className="service-title">Consulting</h2>
-          <p className="description-item">
+          <h2 className="service-title1">Consulting</h2>
+          <p className="description-item1">
           <br /> 
             We are strategy consultants taking a data-driven approach to
             developing your diversity and inclusion strategy. <br /> <br />
@@ -44,8 +44,8 @@ const ServicesSection = () => {
             className="service-icon"
             alt="Training service icon"
           />
-          <h2 className="service-title">Training</h2>
-          <p className="description-item">
+          <h2 className="service-title1">Training</h2>
+          <p className="description-item1">
             Through our network of trusted trainers and coaches, we deliver the
             right training for you to upskill your team. <br /> <br />
             1.Coach inclusive leaders <br /> <br />
@@ -63,8 +63,8 @@ const ServicesSection = () => {
             className="service-icon"
             alt="Technology service icon"
           />
-          <h2 className="service-title">Technology</h2>
-          <p className="description-item">
+          <h2 className="service-title1">Technology</h2>
+          <p className="description-item1">
             Change needs to be sustainable. We implement tech solutions that
             embed more inclusive practices.
             <br />

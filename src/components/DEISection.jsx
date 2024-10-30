@@ -6,7 +6,7 @@ const DEISection = () => {
   return (
     <section className="dei-journey-container">
       <div className="content-wrapper">
-        <h1 className="main-title">3 steps of an organisations DEI journey</h1>
+        <h1 className="main-title1">3 steps of an organisations DEI journey</h1>
 
         <div className="step-container">
           <article className="step-content">

@@ -41,11 +41,14 @@ const Navbar = () => {
               >
                 Log Out
               </button>
+
             </>
           ) : (
-            <button className="auth-button" onClick={() => loginWithRedirect()}>
-              Log In
-            </button>
+            <><button className="auth-button" onClick={() => loginWithRedirect()}>
+                  Log In
+                </button>
+               <button className="contact-button">contact us</button>
+                  </>
           )}
         </div>
       </div>
