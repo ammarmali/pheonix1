@@ -1,14 +1,4 @@
 /* Default styling */
-.img22 {
-    margin: 1px 1px 1px 1px;
-    height: 100vh;
-    background-color: #ffffff;
-}
-
-.img22 img {
-    height: 95vh;
-    margin: 40px 1px 1px 190px;
-}
 
 /* Media queries for different screen sizes, adjusting margin */
 @media (max-width: 2560px) { /* 30-inch screen */

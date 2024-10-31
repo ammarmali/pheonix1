@@ -2,6 +2,7 @@
 body {
   margin: 0;
   font-family: sans-serif;
+  
   background-color: #280B3B;
 }
 
@@ -155,8 +156,8 @@ body {
     gap: 45px;
   }
   .header {
-  height: 70px;
-  width: 195vh;
+    height: 70px;
+    width: 113vh;
 }
 }
 
@@ -206,6 +207,10 @@ body {
   .logo-text img {
     width: 140px;
   }
+  .header {
+    height: 70px;
+    width: 205vh;
+}
 }
 
 @media (max-width: 1200px) {

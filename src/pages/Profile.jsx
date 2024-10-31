@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import "./Profile.css"; // Include custom CSS for enhanced styling
+ // Include custom CSS for enhanced styling
 
 // Mock subscription data for demo purposes (in real case, fetch this from a server)
 const subscriptionData = {

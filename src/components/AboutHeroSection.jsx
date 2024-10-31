@@ -1,15 +1,32 @@
 /* eslint-disable no-unused-vars */
-// Hero.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import './AboutHeroSection.css';
 
-const AboutHeroSection = () => (
-  <section className="hero">
-    <h1>Empowering Inclusive Excellence</h1>
-    <h2>Meet </h2>
-    <h3>PhoenixRize</h3>
-    <button className="hero-btn1">Free Self-Assessment</button>
-  </section>
-);
+const ShopHero = () => {
+  useEffect(() => {
+    const elements = document.querySelectorAll('.animated-element');
+    elements.forEach((element) => {
+      element.classList.add('animate');
+    });
+  }, []);
 
-export default AboutHeroSection;
+  return (
+    <div className="shop-hero-wrapper">
+      <section className="shop-hero">
+        <div className="hero-content">
+          <h2 className="primary-heading1 animated-element">
+          Empowering Inclusive Excellence 
+          </h2>
+          <h1 className="secondary-heading1 animated-element">
+          <span>MEET</span> PhoenixRize
+          </h1>
+
+          <button className="buy-button1">Free Self Analysis</button>
+          
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default ShopHero;
