@@ -3,13 +3,13 @@
   align-self: stretch;
   display: flex;
   margin-top: 176px;
-width: 195vh;
+width: auto;
   flex-direction: column;
-  padding: 39px 50px 112px;
+  padding: 39px 2px 112px 250px;
 }
 
 .section-title {
-
+margin:  1px 200px 1px 1px;
   text-transform: uppercase;
   align-self: center;
   font: 700 81px Roboto, sans-serif;
@@ -36,8 +36,8 @@ width: 195vh;
   flex-direction: column;
   align-items: center;
   font-family: Roboto, sans-serif;
-  width: 91vh;
-  height: 60vh;
+  width: 70vh;
+  height: 48vh;
   padding: 52px 0px;
 }
 
@@ -68,47 +68,126 @@ width: 195vh;
   display: flex;
   flex-direction: column;
   line-height: normal;
-  width: 50%;
+  width: 40%;
 }
 
 .column-right {
   margin-left: 20px;
 }
 
-@media (max-width: 991px) {
-  .mission-vision-container {
-    max-width: 100%;
-    margin-top: 40px;
-    padding: 0 20px 100px;
-  }
-
-  .section-title {
-    max-width: 100%;
-    font-size: 40px;
-  }
-
-  .cards-container {
-    max-width: 100%;
-    margin: 40px 0 10px;
-  }
-
-  .cards-wrapper {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-  }
-
-  .column {
-    width: 100%;
-  }
-
+/* Desktop 30 inches and above (2560px) */
+/* Desktop 30 inches and above (2560px) */
+@media (max-width: 2560px) {
   .card {
-    max-width: 100%;
-    margin-top: 39px;
-    padding: 0 20px;
-  }
-
-  .card-description {
-    max-width: 100%;
-  }
+    width: 40vh;
+    height: 30vh;
+    margin: 1px 4px 1px -55px;}
+  
 }
+
+/* Desktop 27 inches (2048px) */
+@media (max-width: 2048px) {
+  .card {
+    margin: 1px 1px 1px 10px;
+    width: 39vh;
+    height: 21vh;
+    gap: 11px}
+  
+}
+
+/* Desktop 24 inches (1920px) */
+@media (max-width: 1920px) {
+  .card {
+    width: 60vh;
+    height: 20vh;
+  margin: 1px 4px 1px 5px;}
+}
+.mission-vision-container {
+width: 169vh;}
+
+/* Desktop 22 inches (1680px) */
+@media (max-width: 1680px) {
+  .card {
+    margin: 1px 1px 1px 1px;
+  width: 70vh;
+  height: 40vh;}
+}
+.card-description {
+  font-size: 20px;
+}
+
+/* Desktop 20 inches (1600px) */
+@media (max-width: 1600px) {
+  .card {
+   margin: 1px 1px 1px 1px;
+    width: 41vh;
+    height: 30vh;}
+.card-icon {
+    width: 100px;
+    height: 80px;}
+}
+
+/* Desktop 19 inches (1440px) */
+@media (max-width: 1440px) {
+  .card {
+    width: 40vh;
+    height: 30vh;
+    margin: 1px 4px 1px -55px;}
+  
+}
+
+/* Standard Laptop (1366px) */
+@media (max-width: 1366px) {
+  /* Add custom styles here */
+}
+
+/* Small Laptop (1280px) */
+@media (max-width: 1280px) {
+  /* Add custom styles here */
+}
+
+/* Large Tablet (1024px) */
+@media (max-width: 1024px) {
+  /* Add custom styles here */
+}
+
+/* Small Tablet (991px) */
+@media (max-width: 991px) {
+  /* Add custom styles here */
+}
+
+/* Extra Large Mobile (900px) */
+@media (max-width: 900px) {
+  /* Add custom styles here */
+}
+
+/* Large Mobile (768px) */
+@media (max-width: 768px) {
+  /* Add custom styles here */
+}
+
+/* Medium Mobile (640px) */
+@media (max-width: 640px) {
+  /* Add custom styles here */
+}
+
+/* Small Mobile (576px) */
+@media (max-width: 576px) {
+  /* Add custom styles here */
+}
+
+/* Extra Small Mobile (480px) */
+@media (max-width: 480px) {
+  /* Add custom styles here */
+}
+
+/* iPhone SE (375px) */
+@media (max-width: 375px) {
+  /* Add custom styles here */
+}
+
+/* Mini Mobile (320px) */
+@media (max-width: 320px) {
+  /* Add custom styles here */
+}
+

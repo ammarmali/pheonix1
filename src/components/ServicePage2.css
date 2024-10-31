@@ -2,7 +2,7 @@
   background-color: #fff;
   display: flex;
   margin-top: 76px;
-  width: 100%;
+  width: auto;
   flex-direction: column;
   align-items: center;
   padding: 116px 1px;
@@ -31,29 +31,59 @@
   border: 2px solid rgb(165, 113, 9);
   flex-direction: column;
   align-items: center;
+  height: 350px;
+  width: 400px;
   color: #fff;
   padding: 3px 5px 1px;
-  margin:10px 40px 1px 50px ;}
+  margin:10px 0px 1px 100px ;}
 
 
 .service-title {
   font: 800 30px/76px Poppins, sans-serif;
   text-transform: uppercase;
+  margin: 1px 1px 1px 1px;
 }
 
 .service-description {
-  font: 400 14px/22px Poppins, sans-serif;
-  letter-spacing: -0.98px;
-}
-
-.learn-more-link {
   display: flex;
   align-items: center;
-  gap: 5px;
-  color: #fff;
-  font: 600 14px/76px Poppins, sans-serif;
-  text-decoration: none;
+  font: 300 15px / 22px Poppins, sans-serif;
+  letter-spacing: 1px;
+  margin: 1px 55px 0px 45px;
 }
+
+.button-style {
+  display: flex;
+position: absolute;
+margin: 280px 1px 1px 1px ;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(67deg, rgba(212,137,53,1) 0%, rgba(255,212,87,1) 24%, rgba(255,212,87,1) 45%, rgba(236,178,72,1) 59%, rgba(255,212,87,1) 100%);;
+  -webkit-background-clip: text;
+  background-clip: text ;
+  color:  transparent;
+  border-radius: 8px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.button-style:hover {
+  background-color: #5a2a74; /* Darker shade for hover effect */
+}
+
+.arrow-icon {
+  margin-left: 8px;
+  width: 20px;
+}
+
+.contact-text {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
 
 .arrow-icon {
   aspect-ratio: 1;
@@ -67,10 +97,7 @@
   font: 500 32px/146px Poppins, sans-serif;
 }
 
-.contact-button {
 
-
-}
 
 .contact-text {
   align-self: start;

@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRightToBracket, faPhone } from '@fortawesome/free-solid-svg-icons';
 import "./Navbar.css";
 import img23 from '../assets/color_4_logo2.png';
 
@@ -41,14 +43,16 @@ const Navbar = () => {
               >
                 Log Out
               </button>
-
             </>
           ) : (
-            <><button className="auth-button" onClick={() => loginWithRedirect()}>
-                  Log In
-                </button>
-               <button className="contact-button">contact us</button>
-                  </>
+            <>
+              <button className="auth-button" onClick={() => loginWithRedirect()}>
+                Log In <FontAwesomeIcon icon={faArrowRightToBracket} />
+              </button>
+              <button className="contact-button">
+                <FontAwesomeIcon icon={faPhone} /> Contact Us
+              </button>
+            </>
           )}
         </div>
       </div>

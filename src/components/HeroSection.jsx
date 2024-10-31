@@ -1,16 +1,19 @@
 /* eslint-disable no-unused-vars */
 // HeroSection.js
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import "./HeroSection.css"; // Import the CSS file
 
 const HeroSection = () => {
   return (
-     
     <section className="consultant-section">
       <div className="consultant-content">
         <div className="text-column">
           <div className="text-wrapper">
-            <h1 className="consultant-title">Your <span>Professional DEI</span>  Consultant</h1>
+            <h1 className="consultant-title">
+              Your <span>Professional DEI</span> Consultant
+            </h1>
             <p className="consultant-description">
               Our commitment to DEI ensures that every individual has the opportunity to thrive and succeed.
             </p>
@@ -26,8 +29,9 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="button-column">
-        <a href="#contact" className="consultant-button">
-          Free Self Analysis
+        <a href="#contact" className="consultant-button1">
+          Free Self Analysis 
+          <FontAwesomeIcon icon={faUpRightFromSquare} />
         </a>
       </div>
     </section>

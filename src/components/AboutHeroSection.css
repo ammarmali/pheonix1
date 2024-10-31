@@ -6,24 +6,35 @@
   margin: 100px 100px 1px 1px;
 }
 
-.hero h1 {
+.hero h2 {
+  color: white;
+  ;
+  display: flex;
+  position: absolute;
   font-size: 34px;
-  margin-bottom: 0.5rem;
+  margin: 50px 1px 1px 345px;
 }
 
-.hero h2 span {
+.hero h3 {
+  display: flex;
+  position: absolute;
   background: linear-gradient(180deg, rgba(254,204,82,1) 18%, rgba(255,255,255,1) 75%);;
   -webkit-background-clip: text;
   background-clip: text ;
   color:  transparent;
   font-size: 120px;
+  margin: 1px 1px 1px 420px;
 }
 
-.hero-btn {
-  background-color: #f4b400;
-  padding: 0.75rem 1.5rem;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
+.hero-btn1 {
+  display: flex;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(254,204,82,1) 18%, rgba(255,255,255,1) 75%);;
+  -webkit-background-clip: text;
+  background-clip: text ;
+  color:  transparent;
+  border: white;
+  border-radius: 2px solid white;
   cursor: pointer;
+  margin: 120px 1px 1px 670px;
 }

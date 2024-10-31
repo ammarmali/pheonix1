@@ -1,6 +1,136 @@
-.img-folder img{
+/* Default */
+.img-folder img {
   display: flex;
   align-items: center;
-margin: 90px 1px 1px 210px ;
-width: 140vh;
+  margin: 90px 1px 1px 210px;
+  width: 130vh;
+}
+
+/* Media queries for different screen sizes, adjusting margin */
+@media (max-width: 2560px) { /* 30-inch screen */
+  .img-folder img {
+    margin: 80px 1px 1px 190px;
+  }
+}
+
+@media (max-width: 2520px) {
+  .img-folder img {
+    margin: 70px 1px 1px 180px;
+  }
+}
+
+@media (max-width: 2480px) {
+  .img-folder img {
+    margin: 60px 1px 1px 170px;
+  }
+}
+
+@media (max-width: 2440px) {
+  .img-folder img {
+    margin: 55px 1px 1px 160px;
+  }
+}
+
+@media (max-width: 2400px) {
+  .img-folder img {
+    margin: 50px 1px 1px 150px;
+  }
+}
+
+@media (max-width: 2360px) {
+  .img-folder img {
+    margin: 45px 1px 1px 140px;
+  }
+}
+
+@media (max-width: 2320px) {
+  .img-folder img {
+    margin: 40px 1px 1px 130px;
+  }
+}
+
+@media (max-width: 2280px) {
+  .img-folder img {
+    margin: 35px 1px 1px 120px;
+  }
+}
+
+@media (max-width: 2240px) {
+  .img-folder img {
+    margin: 30px 1px 1px 110px;
+  }
+}
+
+@media (max-width: 2200px) {
+  .img-folder img {
+    margin: 25px 1px 1px 100px;
+  }
+}
+
+@media (max-width: 2160px) {
+  .img-folder img {
+    margin: 20px 1px 1px 90px;
+  }
+}
+
+@media (max-width: 2120px) {
+  .img-folder img {
+    margin: 15px 1px 1px 80px;
+  }
+}
+
+@media (max-width: 2080px) {
+  .img-folder img {
+    margin: 10px 1px 1px 70px;
+  }
+}
+
+@media (max-width: 2040px) {
+  .img-folder img {
+    width: 105vh;
+   
+}
+  .img-folder  {
+    display: flex;
+    align-items: center;
+    height: 180vh;
+    margin: 70px 1px 1px 70px;
+}
+}
+
+@media (max-width: 2000px) {
+  .img-folder img {
+    margin: 0 1px 1px 50px;
+  }
+
+}
+
+@media (max-width: 1920px) { /* Full HD */
+  .img-folder img {
+    margin: 100px 1px 1px 350px;
+  }
+}
+
+@media (max-width: 1600px) { /* 2K */
+  .img-folder img {
+    margin: 0 1px 1px 30px;
+  }
+}
+
+@media (max-width: 1366px) { /* Standard Laptop */
+  .img-folder img {
+    margin: 0 1px 1px 20px;
+  }
+}
+
+@media (max-width: 1024px) { /* Tablet */
+  .img-folder img {
+    margin: 0 1px 1px 10px;
+  }
+}
+
+@media (max-width: 768px) { /* Smaller Tablet */
+  .img-folder img {
+    margin: 0 1px 1px 0;
+  }
 }

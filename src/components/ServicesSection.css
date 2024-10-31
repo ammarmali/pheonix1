@@ -1,22 +1,26 @@
 .section-container {
   margin: 93px 0px 50px 1px;
   width: auto;
-  
+  height: 80vh;
+
 }
 
-.title-con{
+.title-con {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
-    width: auto;
-    font-size: 50px;
-    background: linear-gradient(103deg, rgba(253,191,103,1) 51%, rgba(255,247,237,1) 86%);
-    -webkit-background-clip: text;
-    background-clip: text ;
-    color:  transparent;
-
+margin: 1px 1px 100px 1px;
+  width: auto;
+  font-size: 50px;
+  background: linear-gradient(
+    103deg,
+    rgba(253, 191, 103, 1) 51%,
+    rgba(255, 247, 237, 1) 86%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .title h1 {
@@ -39,12 +43,13 @@
   background-color: #2d1339;
   border-radius: 20px;
   width: 1px;
-  height: 425px;
+  height: auto;
 }
 
 .service-icon {
   object-fit: contain;
   object-position: center;
+  padding: 10px 13px;
   width: auto;
   border-radius: 9px;
 }
@@ -74,8 +79,6 @@
   font-size: 12px;
 }
 
-
-
 .service-list {
   display: flex;
   margin-top: 23px;
@@ -96,34 +99,160 @@
 }
 
 /* Responsive styles for various screen sizes */
-@media (max-width: 1400px) { .section-container { margin: 90px; 
-}}
-@media (max-width: 1200px) { .section-container { margin: 80px; 
-}}
-@media (max-width: 1150px) { .section-container { margin-top: 70px; }}
-@media (max-width: 1100px) { .section-container { margin-top: 60px; }}
-@media (max-width: 1050px) { .column-layout { gap: 15px; }}
-@media (max-width: 1000px) { .service-card { padding: 10px 15px; }}
-@media (max-width: 950px) { .service-description { flex-direction: column; }}
-@media (max-width: 900px) { .service-list { gap: 30px; }}
-@media (max-width: 850px) { .service-card { width: 90px; }}
-@media (max-width: 800px) { .section-container { margin-top: 50px; }}
-@media (max-width: 750px) { .title h1 { margin: 0; font-size: 24px; }}
-@media (max-width: 700px) { .service-description { font-size: 18px; }}
-@media (max-width: 650px) { .service-list { flex-direction: column; }}
-@media (max-width: 600px) { .service-card { padding: 5px; }}
-@media (max-width: 550px) { .description-item { width: 250px; }}
-@media (max-width: 500px) { .service-title { font-size: 16px; }}
-@media (max-width: 450px) { .service-list { gap: 20px; }}
-@media (max-width: 400px) { .column-layout { flex-direction: column; }}
-@media (max-width: 350px) { .service-card { padding: 2px; }}
-@media (max-width: 300px) { .service-title { font-size: 14px; }}
-@media (max-width: 250px) { .service-description { font-size: 16px; }}
-@media (max-width: 200px) { .service-card { padding: 1px; }}
+/* General styles remain unchanged */
 
-@media (max-width: 180px) { .service-card { width: 50px; }}
-@media (max-width: 150px) { .service-title { font-size: 12px; }}
-@media (max-width: 100px) { .service-description { font-size: 12px; }}
+/* Responsive styles for various screen sizes */
+@media (min-width: 1920px) { /* 30 inches */
+  .section-container {
+    margin: 100px;
+  }
+}
+@media (max-width: 1600px) {
+  .section-container {
+    margin: 90px;;
+  }
+
+  .service-card2{
+    height: 520px;
+  }
+  .card-icon{
+    padding: 10px 13px;
+    height: 10px;
+
+  }
+}
+@media (max-width: 1400px) {
+  .service-card2{
+    height: 450px;
+  }
+  .section-container {
+    margin: 85px;
+  }
+  .card-icon{
+    padding: 10px 13px
+  }
+}
+@media (max-width: 1200px) {
+  .section-container {
+    margin: 80px;
+  }
+}
+@media (max-width: 1150px) {
+  .section-container {
+    margin-top: 70px;
+  }
+}
+@media (max-width: 1100px) {
+  .section-container {
+    margin-top: 60px;
+  }
+}
+@media (max-width: 1050px) {
+  .column-layout {
+    gap: 15px;
+  }
+}
+@media (max-width: 1000px) {
+  .service-card {
+    padding: 10px 15px;
+  }
+}
+@media (max-width: 950px) {
+  .service-description {
+    flex-direction: column;
+  }
+}
+@media (max-width: 900px) {
+  .service-list {
+    gap: 30px;
+  }
+}
+@media (max-width: 850px) {
+  .service-card {
+    width: 90px;
+  }
+}
+@media (max-width: 800px) {
+  .section-container {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 750px) {
+  .title h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+}
+@media (max-width: 700px) {
+  .service-description {
+    font-size: 18px;
+  }
+}
+@media (max-width: 650px) {
+  .service-list {
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  .service-card {
+    padding: 5px;
+  }
+}
+@media (max-width: 550px) {
+  .description-item {
+    width: 250px;
+  }
+}
+@media (max-width: 500px) {
+  .service-title {
+    font-size: 16px;
+  }
+}
+@media (max-width: 450px) {
+  .service-list {
+    gap: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .column-layout {
+    flex-direction: column;
+  }
+}
+@media (max-width: 350px) {
+  .service-card {
+    padding: 2px;
+  }
+}
+@media (max-width: 300px) {
+  .service-title {
+    font-size: 14px;
+  }
+}
+@media (max-width: 250px) {
+  .service-description {
+    font-size: 16px;
+  }
+}
+@media (max-width: 200px) {
+  .service-card {
+    padding: 1px;
+  }
+}
+@media (max-width: 180px) {
+  .service-card {
+    width: 50px;
+  }
+}
+@media (max-width: 150px) {
+  .service-title {
+    font-size: 12px;
+  }
+}
+@media (max-width: 100px) {
+  .service-description {
+    font-size: 12px;
+  }
+}
 
 /* Slide-in effect for small screens */
 @media (max-width: 600px) {
@@ -140,3 +269,4 @@
     }
   }
 }
+

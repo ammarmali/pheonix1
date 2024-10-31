@@ -29,9 +29,10 @@ body {
 }
 
 .logo-text img {
-  width: 150px; /* Adjust as necessary for logo size */
+  width: 220px; /* Adjust as necessary for logo size */
   height: auto;
-  max-height: 60px; /* Ensures it fits well in the navbar */
+  max-height: 60px; 
+  margin: 10px 1px 1px 1px;
 }
 
 /* Navbar Links */
@@ -69,7 +70,7 @@ body {
   height: 1px;
   bottom: -4px; /* Adjusts position slightly below the text */
   left: 0;
-  background-color: #D59748;
+  background-color: #f9a813;
   transition: width 0.3s ease;
 }
 
@@ -111,6 +112,8 @@ body {
 
 .auth-button:hover {
   opacity: 0.9;
+  color: white;
+  background-color: #ffffff;
 }
 
 /* Hamburger Menu for Mobile */
@@ -151,6 +154,10 @@ body {
   .navbar ul {
     gap: 45px;
   }
+  .header {
+  height: 70px;
+  width: 195vh;
+}
 }
 
 @media (max-width: 1800px) {

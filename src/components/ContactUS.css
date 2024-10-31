@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  background-color: #341443;
   color: white;
 }
 
@@ -15,7 +14,7 @@ body {
 }
 
 .contact-us-content {
-  background-color: #2b0232;
+  background-color: #2d1339;
   border: 2px solid #ffd700;
   border-radius: 10px;
   display: flex;
