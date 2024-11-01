@@ -1,5 +1,8 @@
 /* HeroSection.css */
 
+
+
+
 .image-gallery {
   background-color: #fff;
   color: white;
@@ -116,9 +119,10 @@
 
 
 .consultant-section {
-  margin: 150px 10px 0px 40px;
+  margin: 220px 10px 0px 40px;
   width: auto;
   height: auto;
+  background-color: #401B51;
  
 }
 
@@ -251,30 +255,49 @@ cursor: pointer;
 }
 
 @media (max-width: 2400px) {
+  .consultant-section {
+height: 40vh;
+  }
   .consultant-title {
     font-size: 100px;
   }
+
+
 }
 
-@media (max-width: 2200px) {
+@media (min-width: 2100px),(max-width: 2200px) {
   .consultant-description {
-    font-size: 22px;
+    font-size: 32px;
   }
 }
+.consultant-content {
+  display: flex;
+  gap: 20px;
+  height: 505px;}
 
-@media (max-width: 2048px) {
-  .consultant-title {
-    font-size: 104px;
-    line-height: 75px;
-  }
-}
+  .image-gallery {
+    height: 513px;}
 
-@media (max-width: 1920px) {
-  .consultant-content {
-    gap: 18px;
+    .image-row {
+      display: flex;
+      gap: 5px;
+      margin: 25px 9px 1px -143px;
+      width: 134%;}
+
+@media (min-width: 1800px), (max-width: 1920px) {
+  .consultant-section{
+    height: 40vh;}
+
+
+    .consultant-title {
+      font-size: 104px;
+      line-height: 75px;
+      margin: 100px 1px 1px 100px;
+
+    
   }
   .consultant-title {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 
@@ -284,7 +307,11 @@ cursor: pointer;
   }
 }
 
-@media (max-width: 1680px) {
+@media  (min-width: 1600px), (max-width: 1700px) {
+  .consultant-section{
+    height: 55vh;
+  }
+  
   .consultant-title {
     font-size: 100px;
     line-height: 80px;
