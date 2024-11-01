@@ -1,19 +1,19 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightToBracket, faPhone, faTimes } from '@fortawesome/free-solid-svg-icons';
+import useWindowSize from '../hooks/useWindowSize'; // Import the custom hook
 import "./Navbar.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const { width } = useWindowSize(); // Get the current window size
 
   useEffect(() => {
     const handleScroll = () => {
-      const offset = window.scrollY;
-      setScrolled(offset > 50);
+      setScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -21,25 +21,15 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    document.body.style.overflow = !isOpen ? 'hidden' : 'unset';
-  };
-
-  const loginWithRedirect = () => {
-    console.log("Login clicked");
-  };
-
-  const logout = () => {
-    console.log("Logout clicked");
+    document.body.style.overflow = isOpen ? 'unset' : 'hidden';
   };
 
   return (
     <header className={`header ${scrolled ? "scrolled" : ""}`}>
-      {/* Logo */}
       <div className="logo-text">
-        <img src="/path/to/logo.png" alt="Logo" className={`logo-image ${scrolled ? "scrolled" : ""}`} />
+        <img src="/path/to/logo.png" alt="Logo" className="logo-image" />
       </div>
 
-      {/* Navbar Links */}
       <nav className={`navbar ${isOpen ? "open" : ""}`}>
         <ul className="nav-links" onClick={() => setIsOpen(false)}>
           <li><Link to="/">Home</Link></li>
@@ -49,34 +39,15 @@ const Navbar = () => {
         </ul>
       </nav>
 
-      {/* Auth and Contact Buttons */}
       <div className="right-section">
-        <div className="auth-buttons">
-          {isLoading ? (
-            <div className="loading-spinner" />
-          ) : isAuthenticated ? (
-            <>
-              <button className="profile-button" onClick={logout}>
-                Profile
-              </button>
-              <button className="auth-button" onClick={logout}>
-                Log Out
-              </button>
-            </>
-          ) : (
-            <>
-              <button className="auth-button" onClick={loginWithRedirect}>
-                <FontAwesomeIcon icon={faArrowRightToBracket} /> Log In
-              </button>
-              <button className="contact-button">
-                <FontAwesomeIcon icon={faPhone} /> Contact Us
-              </button>
-            </>
-          )}
-        </div>
+        <button className="auth-button" onClick={() => console.log("Login")}>
+          <FontAwesomeIcon icon={faArrowRightToBracket} /> Log In
+        </button>
+        <button className="contact-button">
+          <FontAwesomeIcon icon={faPhone} /> Contact Us
+        </button>
       </div>
 
-      {/* Mobile Menu Button */}
       <button className="hamburger" onClick={toggleMenu}>
         {isOpen ? <FontAwesomeIcon icon={faTimes} /> : (
           <>

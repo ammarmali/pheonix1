@@ -1,12 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
- 
 /* eslint-disable react/prop-types */
- 
 /* eslint-disable no-unused-vars */
 
 import React, { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import useResponsive from '../hooks/useWindowSize'; // Import the custom hook
 import "./HeroSection.css"; // Import the CSS file
 
 // ImageColumn Component
@@ -71,13 +70,18 @@ const Img = () => {
 
 // HeroSection Component
 const HeroSection = () => {
+  const { screenSize } = useResponsive();
+
+  // Determine styles based on screen size
+  const consultantTitleStyle = screenSize > 1200 ? 'large-title' : 'small-title';
+  
   return (
     <>
       <section className="consultant-section">
         <div className="consultant-content">
           <div className="text-column">
             <div className="text-wrapper">
-              <h1 className="consultant-title">
+              <h1 className={`consultant-title ${consultantTitleStyle}`}>
                 Your <span>Professional DEI</span> Consultant
               </h1>
               <p className="consultant-description">
