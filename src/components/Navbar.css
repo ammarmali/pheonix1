@@ -5,7 +5,8 @@ body {
 }
 
 .header {
-  display: flex;
+  display:flex;
+  
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 2rem;
@@ -47,11 +48,11 @@ body {
 .nav-links {
   display: flex;
   border-radius: 10px;
-  border: 1px solid #ffdda1;
+  border: 1px solid #ffffff45;
   list-style: none;
-  background-color: #200e28;
+  background-color: #200e2875;
   gap: 1.5rem;
-  padding: 15px 35px 15px 35px;
+  padding: 18px 35px 18px 35px;
 }
 
 .nav-links li a {

@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import "./AboutHeroSection.css"
-const ShopHero = () => {
+const AboutHeroSection = () => {
   useEffect(() => {
     const elements = document.querySelectorAll('.animated-element');
     elements.forEach((element) => {
@@ -26,4 +26,4 @@ const ShopHero = () => {
   );
 };
 
-export default ShopHero;
+export default AboutHeroSection;

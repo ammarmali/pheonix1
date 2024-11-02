@@ -3,7 +3,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightToBracket, faPhone, faTimes } from '@fortawesome/free-solid-svg-icons';
-import useWindowSize from '../hooks/useWindowSize'; // Import the custom hook
+import useWindowSize from '../hooks/useWindowSize';
+import  logoimg1 from '../assets/color_4_logo2.png'
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -27,7 +28,7 @@ const Navbar = () => {
   return (
     <header className={`header ${scrolled ? "scrolled" : ""}`}>
       <div className="logo-text">
-        <img src="/path/to/logo.png" alt="Logo" className="logo-image" />
+        <img src={logoimg1} alt="Logo" className="logo-image" />
       </div>
 
       <nav className={`navbar ${isOpen ? "open" : ""}`}>

@@ -10,7 +10,7 @@ function ServicePage2() {
 
           <article className="service-card1">
             <h2 className="service-title">Training</h2>
-            <p className="service-description">
+            <p className="service-description1">
               Our training programs are customized to meet the unique needs of each client, guiding participants through a progressive learning journey that empowers them to apply DEIB principles in their daily practices and lead meaningful change.
             </p>
             <button className="learn-more-button button-style">
@@ -26,7 +26,7 @@ function ServicePage2() {
 
           <article className="service-card1">
             <h2 className="service-title">Consulting</h2>
-            <p className="service-description">
+            <p className="service-description1">
               Our consulting services assist organizations in identifying, evaluating, and addressing DEIB challenges through collaborative development of tailored strategies that embed inclusion at all levels.
             </p>
             <button className="learn-more-button button-style">
@@ -42,7 +42,7 @@ function ServicePage2() {
 
           <article className="service-card1">
             <h2 className="service-title">Keynote</h2>
-            <p className="service-description">
+            <p className="service-description1">
               PhoenixRize delivers inspiring keynotes focused on diversity and inclusion, offering engaging speeches tailored to meet the specific interests and needs of each client.
             </p>
             <button className="learn-more-button button-style">

@@ -3,10 +3,8 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  display: block;
-  text-align: center;
-  margin: 30px;
-  font-size: 40px;
+  margin: 50px 1px 40px 200px;
+  font-size: auto;
 }
 
 .percentage-indicator {
@@ -17,7 +15,6 @@
   letter-spacing: -1.44px;
   width: 80px;
   font: 600 25px Poppins, sans-serif;
-  border: 1px solid #FECC52;
 }
 
 .preference-section {
@@ -38,7 +35,6 @@
 .preference-card {
   border-radius: 25px;
   background-color: rgba(0, 0, 0, 0.27);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +48,6 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   font-size: 30px;
   font-weight: 700;
   letter-spacing: -1.28px;
@@ -66,137 +61,16 @@
   height: 70px;
   text-align: center;
   display: flex;
-  margin: 10px 10px 10px 10px;
-  
+  margin: 10px;
 }
 
-/* Diverse Team Section Styles */
-.diverse-team-section {
-  border-radius: 23px;
-  background-color: rgba(0, 0, 0, 0.27);
-  margin: 100px 0px 0px 100px;
-  max-width: 1000px;
-  width: 100%;
-  padding: 38px 35px;
-  border: 1px solid rgba(255, 255, 255, 0.01);
-}
 
-.diverse-team-content {
-  display: flex;
-  gap: 20px;
-}
-
-.image-column {
-  width: 50%;
-}
-
-.team-image {
-  aspect-ratio: 1.45; /* Maintain aspect ratio */
-  object-fit: contain;
-  object-position: center;
-  width: 100%;
-  border-radius: 20px;
-}
-
-.text-column {
-  width: 50%;
-  font-family: Roboto, sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.section-title {
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: -1.12px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.section-description {
-  color: #fff;
-  font-size: 21px;
-  font-weight: 400;
-  letter-spacing: -0.84px;
-  margin-top: 24px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.dei-journey-container {
+.dei-img1{
   background-color: #fff;
   display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  align-items: center;
   justify-content: center;
-  padding: 96px 80px;
+  align-items: center;
 }
-
-.content-wrapper {
-  display: flex;
-  width: 100%;
-  max-width: 1070px;
-  flex-direction: column;
-}
-
-.main-title1 {
-  letter-spacing: -2.4px;
-  font-size: 100px;
-  margin: 1px 1px 35px 1px;
-  text-align: center;
-  align-self: center;
-  width: auto;
-  font: 800 50px Roboto, sans-serif;
-  background: linear-gradient(81deg, rgba(245, 178, 65, 1) 2%, rgba(245, 178, 65, 1) 67%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.step-container {
-  display: flex;
-  gap: 20px;
-  margin-top: 47px;
-}
-
-.step-content {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-}
-
-.step-number {
-  font: 900 70px Roboto, sans-serif;
-  letter-spacing: -2.4px;
-  text-align: center;
-  background: linear-gradient(81deg, rgba(255, 255, 255, 1) 3%, rgba(245, 178, 65, 1) 36%, rgba(245, 178, 65, 1) 71%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.step-title {
-  color: #0c0000;
-  font: 600 39px Roboto, sans-serif;
-  letter-spacing: -1.56px;
-  text-transform: uppercase;
-  margin: 6px 0 12px;
-}
-
-.step-description {
-  color: #0c0000;
-  font: 400 18px Roboto, sans-serif;
-  letter-spacing: -0.72px;
-}
-
-.step-image {
-  aspect-ratio: 1.66;
-  object-fit: contain;
-  width: 100%;
-  border-radius: 13px;
-}
-
-/* General styles for all devices remain as is */
 
 /* Ultra-wide 4K screens (2560px and above) */
 @media (min-width: 2560px) {
@@ -216,115 +90,172 @@
   .section-description {
     font-size: 32px;
   }
+
+  /* Additional styles for .title1 and others can be added here if needed */
 }
 
 /* Ultra-wide (2000px - 2559px) */
-@media (min-width: 2000px) , (max-width: 2159px) {
-  
+@media (min-width: 2000px) and (max-width: 2159px) {
   .preference-section {
     padding-bottom: 100px;
     height: 40vh;
   }
+
   .preference-card {
-    
     width: 400px;
     height: 360px;
-}
-  
+  }
 }
 
 /* Large desktops (1600px - 1999px) */
-@media (min-width: 1600px) and (max-width: 1800px) {
+@media  (min-width: 1600px) and (max-width: 1800px) {
   .preference-section {
     padding-bottom: 100px;
     height: 45vh;
   }
+
   .preference-card {
     width: 350px;
     height: 60px;
   }
+
   .title1 {
     font-size: 50px;
-    margin: 30px 1px 40px 150px;
-  }
-
-  h1 {
-    font-size: 60px;
+    display: flex;
+    align-items: center;
+    text-align: center;
   }
 
   .section-title {
     font-size: 35px;
   }
 
-  .preference-description { 
+  .preference-description {
     font-size: 10px;
   }
 }
 
 /* Extra-large desktops (1400px - 1599px) */
-@media (min-width: 1400px) {
+@media (min-width: 1400px),(max-width: 1600px) {
   .preference-card {
-    width: 420px;
-    height: 360px;
+    width: 450px;
+    height: 460px;
   }
 
   h1 {
-    font-size: 550px;
-  }
-
-  .section-title {
-    font-size: 46px;
+    font-size: 40px;
   }
 
   .title1 {
+    font-size: 45px;
     margin: 20px 1px 30px 120px;
   }
 
   .section-description {
-    font-size: 34px;
-
+    font-size: 44px;
   }
-  
+
   .percentage-indicator {
+   
     margin: 40px 1px 1px 1px;
   }
 
   .preference-description {
-
-    font-size: 15px;
+    font-size: 16px;
+  
+        
   }
 
+  .preference-section {
+    height: auto;
+  }
+  .preference-title{
+    font-size: 35px;
+    margin: 20px 1px 30px 10px;
+  }
 }
 
 /* Large desktops (1200px - 1399px) */
 @media (min-width: 1200px) and (max-width: 1399px) {
   .preference-card {
-    width: 300px;
-    height: 270px;
+    width: 360px;
+    height: 380px;
+  }
+
+  .preference-section {
+    height: 50vh;
+  }
+
+  .percentage-indicator {
+    margin: 30px 1px 1px 1px;
   }
 
   h1 {
-    font-size: 500px;
+    font-size: 35px;
+    margin: 1px 1px 1px 10px;
   }
 
   .section-title {
     font-size: 34px;
+    margin: 67px 1px 30px 213px;;
   }
 
   .section-description {
+    font-size: 20px;
+    margin: 40px;
+  }
+
+  .title1 {
+    font-size: 38px;
+   
+  }
+}
+
+/* Medium desktops (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .preference-card {
+    width: 300px;
+    height: 300px;
+  }
+
+  h1 {
+    font-size: 30px;
+    margin: 1px 1px 10px 50px;
+  }
+
+  .title1 {
+    font-size: 38px;
+   
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .section-description {
+    font-size: 18px;
+  }
+
+  .percentage-indicator {
     font-size: 22px;
   }
 }
 
-/* Small desktops (992px - 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
+/* Tablets (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
   .preference-card {
-    width: 260px;
-    height: 240px;
+    width: 300px;
+    height: 250px;
   }
 
   h1 {
-    font-size: 460px;
+    font-size: 26px;
+    margin: 1px 1px 20px 30px;
+  }
+
+  .title1 {
+    font-size: 28px;
+    margin: 1px 1px 20px 30px;
   }
 
   .section-title {
@@ -332,39 +263,24 @@
   }
 
   .section-description {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
-/* Tablets (768px - 991px) */
-@media (min-width: 768px) and (max-width: 991px) {
-  .preference-card {
-    width: 220px;
-    height: 220px;
-  }
-
-  h1 {
-    font-size: 400px;
-  }
-
-  .section-title {
-    font-size: 28px;
-  }
-
-  .section-description {
-    font-size: 18px;
-  }
-}
-
-/* Mobile devices (320px - 767px) */
+/* Mobile (576px - 767px) */
 @media (max-width: 767px) {
   .preference-card {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: auto;
   }
 
-  h1 {
-    font-size: 300px;
+  .percentage-indicator {
+    font-size: 18px;
+  }
+
+  .title1 {
+    font-size: 24px;
+    margin: 10px;
   }
 
   .section-title {
@@ -372,6 +288,55 @@
   }
 
   .section-description {
+    font-size: 14px;
+  }
+
+  .step-container {
+    flex-direction: column;
+  }
+
+  .step-content {
+    width: 100%;
+  }
+
+  .step-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+/* Extra-small devices (up to 575px) */
+@media (max-width: 575px) {
+  .preference-section {
+    height: auto;
+    padding: 20px;
+  }
+
+  .step-number {
+    font-size: 50px;
+  }
+
+  .step-title {
+    font-size: 20px;
+  }
+
+  .step-description {
+    font-size: 12px;
+  }
+
+  .percentage-indicator {
     font-size: 16px;
+  }
+
+  .title1 {
+    font-size: 20px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .section-description {
+    font-size: 12px;
   }
 }

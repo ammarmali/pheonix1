@@ -1,16 +1,22 @@
 /* eslint-disable no-unused-vars */
-
 import React from 'react';
-import img1 from '../assets/Group 65.png';
-import img2 from '../assets/Group 67.png'
+import img1 from "../assets/Group 65.png";
+import img2 from "../assets/Group 67.png";
 import './Team.css';
+import useWindowSize from '../hooks/useWindowSize'; // Import the custom hook
 
 const Team = () => {
+  const { width } = useWindowSize();
+
+  // Apply conditional classes based on screen width
+  const isMobile = width < 768;
+  const isTablet = width >= 768 && width < 1024;
+
   return (
     <>
-<section className="mission-vision-container">
+      <section className="mission-vision-container">
         <h2 className="section-title">Our Mission & Vision</h2>
-        <div className="cards-container">
+        <div className={`cards-container ${isMobile ? 'mobile' : isTablet ? 'tablet' : 'desktop'}`}>
           <div className="cards-wrapper">
             <div className="column">
               <article className="card">
@@ -44,18 +50,16 @@ const Team = () => {
         </div>
       </section>
 
+      {/* Image Section */}
+      <section className="image-section">
+        <div className="img-folder">
+          <img src={img1} alt="Hero" />
+        </div>
 
-
-
-
-
-
-
-    <div className='img-folder'>
-      <img src={img1} alt="Hero" />
-      </div>
-
-      <div className='img22'><img src={img2} alt="" /></div>
+        <div className="img22">
+          <img src={img2} alt="Secondary" />
+        </div>
+      </section>
     </>
   );
 };

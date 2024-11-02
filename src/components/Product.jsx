@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import img32 from '../assets/Group 74 (1).png';
 import './Product.css';
 
 const products = [
@@ -14,7 +15,7 @@ const products = [
 
 const PhoenixRizeSection = () => {
   return (
-    <div className="phoenixrize-section">
+    <><div className="phoenixrize-section">
       <div className="container">
         <div className="heading-group">
           <h2 className="main-heading"><span>PHOENIXRIZE</span> DEI SHOP SERVICE</h2>
@@ -38,34 +39,11 @@ const PhoenixRizeSection = () => {
             </div>
           ))}
         </div>
+
       </div>
-
-      <div className="purchase-guide">
-        <h2>How To <span>Purchase:</span></h2>
-        <div className="guide-step">
-          <div className="step-title">Select Your Services</div>
-          <div className="step-description">
-            Browse through our offerings and add your selected services to the cart.
-          </div>
-        </div>
-
-        <div className="guide-step">
-          <div className="step-title">Checkout</div>
-          <div className="step-description">
-            Once you're ready, head to the checkout to complete your purchase. You'll
-            receive an email confirmation with the next steps.
-          </div>
-        </div>
-
-        <div className="guide-step">
-          <div className="step-title">Schedule</div>
-          <div className="step-description">
-            After purchase, a member of our team will reach out within 24 hours to
-            schedule your service.
-          </div>
-        </div>
-      </div>
-    </div>
+    </div><div className='img32'>
+        <img src={img32} alt="" />
+      </div></>
   );
 };
 
