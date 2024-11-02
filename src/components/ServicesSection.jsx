@@ -7,45 +7,47 @@ const ServicesSection = () => {
     {
       id: 1,
       name: "James L",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      text: "Perfect execution! Layout scales beautifully at every breakpoint....",
       imageUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/d70a4e9d393cc7235c0703e90e339a0a5e03ef3c9c1a492951cf789d5e759633",
       ratingUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/8d22406df3396a6d1d9cda1c3c42fa1ef94a8c469d52853d07833cb637aa0824"
     },
     {
       id: 2,
       name: "Emily R",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      text: "Outstanding! Responsive design is seamless across all devices.",
       imageUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/7b24119fe8aa3d697563b699d50935310eb316249fb9571a854885a8a23149c4",
       ratingUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/8d22406df3396a6d1d9cda1c3c42fa1ef94a8c469d52853d07833cb637aa0824"
     },
     {
       id: 3,
       name: "Sarah M",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      text: "Fantastic work! Smooth, clean, and highly responsive design...",
       imageUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/dd2379c55ccf124e698dcf40eaa47ad9ba9651adef2d23850a571230856f63a1",
       ratingUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/8d22406df3396a6d1d9cda1c3c42fa1ef94a8c469d52853d07833cb637aa0824"
     },
+    
     {
       id: 4,
       name: "Alex B",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      imageUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/sample-url-4",
-      ratingUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/sample-url-rating"
-    },
-    {
+      text: "Excellent! Looks amazing and works flawlessly on any screen size...",
+      imageUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/dd2379c55ccf124e698dcf40eaa47ad9ba9651adef2d23850a571230856f63a1",
+      ratingUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/8d22406df3396a6d1d9cda1c3c42fa1ef94a8c469d52853d07833cb637aa0824"
+   },
+   {
       id: 5,
       name: "Lara T",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      imageUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/sample-url-5",
-      ratingUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/sample-url-rating"
-    },
-    {
+      text: "Impressive! Every breakpoint is handled with precision...",
+      imageUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/7b24119fe8aa3d697563b699d50935310eb316249fb9571a854885a8a23149c4",
+      ratingUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/8d22406df3396a6d1d9cda1c3c42fa1ef94a8c469d52853d07833cb637aa0824"
+   },
+   {
       id: 6,
       name: "Chris P",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      imageUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/sample-url-6",
-      ratingUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/sample-url-rating"
-    }
+      text: "Brilliant! Responsive and visually appealing on all devices...",
+      imageUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/d70a4e9d393cc7235c0703e90e339a0a5e03ef3c9c1a492951cf789d5e759633",
+      ratingUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/8d22406df3396a6d1d9cda1c3c42fa1ef94a8c469d52853d07833cb637aa0824"
+   }
+   
   ];
 
   return (

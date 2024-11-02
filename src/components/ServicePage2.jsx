@@ -41,8 +41,8 @@ function ServicePage2() {
           </article>
 
           <article className="service-card1">
-            <h2 className="service-title">Keynote</h2>
-            <p className="service-description1">
+            <h2 className="service-title2">Keynote</h2>
+            <p className="service-description2">
               PhoenixRize delivers inspiring keynotes focused on diversity and inclusion, offering engaging speeches tailored to meet the specific interests and needs of each client.
             </p>
             <button className="learn-more-button button-style">
@@ -77,15 +77,7 @@ function ServicePage2() {
           </h2>
           <h1 className="heading-text2">DEIB strategy?</h1>
 
-          <a href="#contact" className="cta-button-wrapper" role="button" tabIndex="0">
-            <span className="button-text">Contact us today</span>
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/1aa9219ed93e4bbb94b8cc5656ecd1f2fb6f39c327c332bd584960ff8371d287?placeholderIfAbsent=true&apiKey=e59ec647e8834dcf973e15f6f0bdc424"
-              alt="Right arrow"
-              className="arrow-icon"
-            />
-          </a>
+      <div className='ctn-btn'> <button className='btn1'>GET STARTED</button></div>
         </div>
       </section>
     </>

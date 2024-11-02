@@ -135,6 +135,13 @@ margin: 1px 1px 100px 1px;
   height: auto;
 }
 
+.service-card2:hover {
+  transform: translateY(-10px); /* Lift effect */
+  background-color: #3a1b4e; /* Darken background on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+
 .service-icon {
   object-fit: contain;
   object-position: center;
@@ -198,16 +205,9 @@ margin: 1px 1px 100px 1px;
   }
 }
 
-@media (min-width: 1600px) ,(max-width: 1700px) { /* 30 inches */
-  .section-container {
-    margin: 100px;
-    height: 50vh;
-  }
-  .testimonials-container {
-height: 40vh;
-  }
-}
-@media (min-width: 1500px),(max-width: 1600px) {
+
+
+@media (min-width: 1400px),(max-width: 1600px) {
   .section-container {
     margin: 90px;;
     height: auto;
@@ -251,16 +251,8 @@ height: 40vh;
   }
 }
 
-@media (max-width: 1050px) {
-  .column-layout {
-    gap: 15px;
-  }
-}
-@media (max-width: 1000px) {
-  .service-card {
-    padding: 10px 15px;
-  }
-}
+
+
 @media (max-width: 950px) {
   .service-description {
     flex-direction: column;

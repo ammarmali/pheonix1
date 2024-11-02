@@ -1,10 +1,8 @@
 /* HeroSection.css */
 
-
- body {
+body {
   font-size: 14px; /* Default */
-
- }
+}
 
 .image-gallery {
   background-color: #fff;
@@ -48,15 +46,11 @@
 }
 
 .consultant-section {
-display: flex;
-align-items: center;
-justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 100px 100px;
-  width: auto;
-  height: auto;
   background-color: #401B51;
-  
-  
 }
 
 .consultant-content {
@@ -81,6 +75,7 @@ justify-content: center;
 
 .consultant-title {
   line-height: 88px;
+  font-size: auto;
   margin: 20px 60px 0px 50px;
   animation: fadeIn 2s ease-in forwards; /* 2-second fade-in animation */
   animation-delay: 1s;
@@ -93,7 +88,7 @@ justify-content: center;
   line-height: 30px;
   letter-spacing: -0.8px;
   margin: 20px 10px 0px 60px;
-  animation: fadeIn 1s ease-in forwards; /* 2-second fade-in animation */
+  animation: fadeIn 1s ease-in forwards; /* 1-second fade-in animation */
   animation-delay: 1s;
 }
 
@@ -112,12 +107,11 @@ justify-content: center;
   object-position: center;
   height: 300px;
   width: 100%;
-  margin: 10px 10px 1px 1px;
+  margin: 100px 10px 71px 15px;
   border-radius: 13px;
-  animation: fadeIn 1s ease-in forwards; /* 2-second fade-in animation */
+  animation: fadeIn 1s ease-in forwards; /* 1-second fade-in animation */
   animation-delay: 1s;
 }
-
 
 .button-column {
   display: flex;
@@ -127,20 +121,8 @@ justify-content: center;
   animation-delay: 2s;
 }
 
-.consultant-button1 {
- align-items: center;
- justify-content: center;
-  padding: 15px 10px;
-  height: 20px;
-  width: 100px;
-  font-size: 10px;
-  background: linear-gradient(270deg, rgba(53, 0, 88, 1) 0%, rgba(252, 176, 69, 1) 100%);
-  color: rgb(252, 252, 252);
-  border: 1px solid  #fefefd;
-  border-radius: 10px;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-
+.btn-home {
+  /* Button styles */
 }
 
 .consultant-title span {
@@ -156,6 +138,97 @@ justify-content: center;
   background-color: #fff; /* White background on hover */
   color: #000; /* Black text color on hover */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Responsive styles */
 @media (max-width: 2560px) {
@@ -177,13 +250,7 @@ justify-content: center;
   }
 }
 
-@media (min-width: 2100px),(max-width: 2200px) {
-  .consultant-description {
-    font-size: 32px;
-  }
-}
-
-@media (min-width: 1810px), (max-width: 1920px) {
+@media (max-width: 1920px) {
   .consultant-section {
     height: 40vh;
   }
@@ -194,73 +261,39 @@ justify-content: center;
   }
 }
 
-@media (min-width: 1610px), (max-width: 1800px) {
+@media (min-width: 1460px) and (max-width: 1660px) {
+  .consultant-description {
+    font-size: 132px;
+  }
+}
+
+@media (min-width: 1240px),(max-width: 1440px) {
   .consultant-section {
     height: 55vh;
   }
   .consultant-title {
-    font-size: 10px;
-    font-weight: 800;
-    line-height: 80px;
-  }
-  .consultant-description {
-    font-size: 20px;
-  }
-  .consultant-image{
-    height: 60px;
-  }
-}
-
-
-@media (min-width: 1410px),(max-width: 1600px) {
-  .consultant-section {
-    height: 40vh;
-  }
-  .consultant-title {
-    font-size: 70px;
-    margin: 100px 33px 19px 93px;
-  }
-  .consultant-image{
-    height: 40px;
+    font-size: 65px;
+    margin: 100px 33px 19px 123px;
   }
   .consultant-description {
     font-size: 26px;
-    margin: 1px 1px 1px 100px ;
+    margin: 1px 1px 1px 100px;
   }
 }
 
-@media   (min-width: 1200px), (max-width: 1400px) {
+@media (min-width: 944px)  {
   .consultant-title {
-    font-size: 60px;}
-
+    font-size: auto;
+  }
   .consultant-description {
-      font-size: auto;
-    }
-    .consultant-image{
-      height: auto;
-    }
-    .consultant-section{
-      height: 45rem;
-    }
-
+    font-size: auto;
   }
-
-@media (min-width: 1000px),(max-width: 1200px) {
-
-  .consultant-content {
-    gap: 15px;
-  }
-  .consultant-image{
+  .consultant-section {
     height: auto;
-    margin: 140px 1px 1px 1px;
-  }
-  .consultant-description{
-    font-size: 14px;
-    margin: 10px 1px 1px 120px;
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 944px) {
   .consultant-title {
     font-size: 30px;
   }
@@ -354,4 +387,3 @@ justify-content: center;
     font-size: 10px;
   }
 }
-

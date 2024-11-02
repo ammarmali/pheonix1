@@ -1,23 +1,21 @@
+/* eslint-disable no-unused-vars */
+// HeroSection.jsx
+
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
 
 import React, { useEffect, useRef, useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
-import useResponsive from '../hooks/useWindowSize'; // Import the custom hook
-import "./HeroSection.css"; // Import the CSS file
+import useResponsive from '../hooks/useWindowSize'; // Custom hook for responsive handling
+import "./HeroSection.css"; // CSS for styling
 
-// ImageColumn Component
-const ImageColumn = ({ src, alt, className }) => {
-  return (
-    <div className="image-column">
-      <img loading="lazy" src={src} className={`gallery-image ${className}`} alt={alt} />
-    </div>
-  );
-};
+// ImageColumn Component (Displays individual images)
+const ImageColumn = ({ src, alt, className }) => (
+  <div className="image-column">
+    <img loading="lazy" src={src} className={`gallery-image ${className}`} alt={alt} />
+  </div>
+);
 
-// ImageRow Component (to contain multiple ImageColumns)
+// ImageRow Component (Contains multiple ImageColumns)
 const ImageRow = () => (
   <div className="image-row">
     <ImageColumn
@@ -33,7 +31,7 @@ const ImageRow = () => (
   </div>
 );
 
-// Img Component (Handles Visibility and Intersection)
+// Img Component (Handles visibility of image gallery using IntersectionObserver)
 const Img = () => {
   const [isVisible, setIsVisible] = useState(false);
   const galleryRef = useRef(null);
@@ -41,21 +39,15 @@ const Img = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
+        setIsVisible(entry.isIntersecting);
       },
       { threshold: 0.2 }
     );
 
-    if (galleryRef.current) {
-      observer.observe(galleryRef.current);
-    }
+    if (galleryRef.current) observer.observe(galleryRef.current);
 
     return () => {
-      if (galleryRef.current) {
-        observer.unobserve(galleryRef.current);
-      }
+      if (galleryRef.current) observer.unobserve(galleryRef.current);
     };
   }, []);
 
@@ -68,13 +60,12 @@ const Img = () => {
   );
 };
 
-// HeroSection Component
+// HeroSection Component (Main section with text and image)
 const HeroSection = () => {
   const { screenSize } = useResponsive();
+  const isLargeScreen = screenSize > 1200;
+  const consultantTitleStyle = isLargeScreen ? 'large-title' : 'small-title';
 
-  // Determine styles based on screen size
-  const consultantTitleStyle = screenSize > 1200 ? 'large-title' : 'small-title';
-  
   return (
     <>
       <section className="consultant-section">
@@ -98,11 +89,8 @@ const HeroSection = () => {
             />
           </div>
         </div>
-        <div className="button-column">
-          <a href="#contact" className="consultant-button1">
-            Free Self Analysis
-            <FontAwesomeIcon icon={faUpRightFromSquare} />
-          </a>
+        <div className="btn-home">
+          <button className="btn-free">Free Self Analysis</button>
         </div>
       </section>
       <Img /> {/* Image gallery section */}
