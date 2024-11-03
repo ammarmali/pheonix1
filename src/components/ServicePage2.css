@@ -85,18 +85,38 @@
 
 .custom-heading {
   font-size: 50px;
-  background: linear-gradient(0deg, rgba(70, 25, 85, 1) 2%, rgba(245, 178, 65, 1) 67%);
+  background: linear-gradient(0deg, rgb(50, 27, 57) 2%, rgba(245, 178, 65, 1) 67%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   margin: 120px 30px 1px 1px;
   font-weight: 900;
 }
-
+.custom-heading2{
+  font-size: 35px;
+  background: linear-gradient(0deg, rgb(94, 35, 114) 2%, rgb(0, 0, 0) 67%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 1px 1px 1px 1px;
+  font-weight: 400;
+}
 .custom-solution{
-color: black;
-font-size: 1000px;
-
+  font-display: flex;
+  position: absolute;
+  margin: 1px 1px 1px 1px;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(67deg, rgb(239, 239, 239) 0%, rgba(255, 212, 87, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  border-radius: 8px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
 }
 
 .button-style {

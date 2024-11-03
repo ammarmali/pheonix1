@@ -61,6 +61,10 @@ const Img = () => {
 };
 
 // HeroSection Component (Main section with text and image)
+// HeroSection.jsx
+
+// ... (previous imports remain the same)
+
 const HeroSection = () => {
   const { screenSize } = useResponsive();
   const isLargeScreen = screenSize > 1200;
@@ -71,14 +75,12 @@ const HeroSection = () => {
       <section className="consultant-section">
         <div className="consultant-content">
           <div className="text-column">
-            <div className="text-wrapper">
-              <h1 className={`consultant-title ${consultantTitleStyle}`}>
-                Your <span>Professional DEI</span> Consultant
-              </h1>
-              <p className="consultant-description">
-                Our commitment to DEI ensures that every individual has the opportunity to thrive and succeed.
-              </p>
-            </div>
+            <h1 className={`consultant-title2 ${consultantTitleStyle}`}>
+              Your <span>Professional DEI</span> Consultant
+            </h1>
+            <p className="consultant-description2">
+              Our commitment to DEI ensures that every individual has the opportunity to thrive and succeed.
+            </p>
           </div>
           <div className="image-column">
             <img
@@ -89,13 +91,15 @@ const HeroSection = () => {
             />
           </div>
         </div>
-        <div className="btn-home">
+        <div className="btn-container">
           <button className="btn-free">Free Self Analysis</button>
         </div>
       </section>
-      <Img /> {/* Image gallery section */}
+      <Img />
     </>
   );
 };
+
+// ... (rest of the code remains the same)
 
 export default HeroSection;

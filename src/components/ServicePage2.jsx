@@ -59,9 +59,7 @@ function ServicePage2() {
         </div>
 
         <h1 className="custom-heading">Need something more specific?</h1>
-        <h3 className="custom-solutions">
-          We also offer customized training solutions tailored to your needs
-        </h3>
+        <h1 className="custom-heading2"> We also offer customised training solutions tailored to your needs.</h1>
       </section>
 
       <section className="cta-section">
