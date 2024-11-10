@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightToBracket, faPhone, faTimes } from '@fortawesome/free-solid-svg-icons';
 import useWindowSize from '../hooks/useWindowSize';
-import  logoimg1 from '../assets/color_4_logo2.png'
+import  logoimg1 from '../assets/logo.png'
 import "./Navbar.css";
 
 const Navbar = () => {

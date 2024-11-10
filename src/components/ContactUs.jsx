@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import './ContactUs.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faEnvelope, faComments, faCheckCircle } from '@fortawesome/free-solid-svg-icons'; // Import icons
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'; // Import icons
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -36,7 +36,7 @@ const ContactUs = () => {
 
   return (
     <div className="contact-us-container">
-      <div className="contact-us-content">
+      <div className="contact-us-card">
         <div className="contact-us-left">
           <img src="/path-to-your-logo.png" alt="PhoenixRize Logo" className="logo" />
           <ul className="contact-us-list">

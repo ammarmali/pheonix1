@@ -82,8 +82,30 @@ const BenefitsSection = () => {
             </article>
           ))}
         </div>
+        
       </section>
+      <section className="performance-section">
+      <div className="performance-content">
+        <h2 className="performance-title">
+          Unlock Greater Organisational performance from Diverse and inclusive team
+        </h2>
+        <p className="performance-description">
+          Cultivate a thriving, inclusive culture where diverse perspectives are not only welcomed but celebrated, creating a dynamic environment where innovation and creativity can truly flourish. Empower leaders at every level to be champions of inclusivity, equipping them with the tools and mindset needed to drive meaningful, transformative change within the organization. Build and sustain equitable systems that foster fairness, transparency, and opportunity, ensuring long-term success by embedding these values into the core of your operations.
+        </p>
+      </div>
+    </section>
+
+
 <div className='dei-img1'><img src={newimg} alt="" /></div>
+
+<section className="consultation-cta12">
+      <h1 className="cta-message1">
+        Wondering what approach works best for your organization? We're happy to help. Schedule a complimentary 30-minute consultation call with us to discuss your specific diversity, equity and inclusion consultants' training needs.
+      </h1>
+      <button className="cta-button1" tabIndex="0">
+        Schedule your free consultation
+      </button>
+    </section>
     
     </div>
   );

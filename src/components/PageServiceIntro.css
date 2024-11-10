@@ -110,17 +110,7 @@ display: grid;
     animation: fadeIn 0.5s ease forwards 1.2s;
   }
   
-  .hero-paragraph::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #461955;
-    border-left: 2px solid #FFD700;
-    animation: typing 2.5s steps(40) 1.2s forwards;
-  }
+ 
   
   /* Sophisticated Animations */
   @keyframes fadeInRotate {

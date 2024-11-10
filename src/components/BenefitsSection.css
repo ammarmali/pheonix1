@@ -1,14 +1,17 @@
 .title1 {
-  background: linear-gradient(180deg, rgba(254, 204, 82, 1) 18%, rgba(255, 255, 255, 1) 75%);
+  background:#461955;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  margin: 50px 1px 40px 200px;
+  margin: 50px 1px 40px 300px;
   font-size: auto;
+  text-decoration:  4px underline #461955;
+  text-underline-offset: 10px;
 }
 
 .percentage-indicator {
   border-radius: 10px;
+  border:2px solid #461955;
   background-color: #fff;
   color: #000;
   text-align: center;
@@ -24,7 +27,7 @@
   flex-direction: column; /* Ensure vertical layout */
   align-items: center; /* Center children */
   padding: 20px 0; /* Add padding for aesthetics */
-  background-color: #401B51;
+  background-color: white;
 }
 
 .preference-container {
@@ -35,17 +38,20 @@
 
 .preference-card {
   border-radius: 25px;
-  background-color: rgba(0, 0, 0, 0.27);
+  border: 2px solid #461955;
+  background-color:white;
+  color: #000;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: Roboto, sans-serif;
   height: 300px;
   width: 260px;
+  box-shadow: 0 14px 14px rgba(0, 0, 0, 0.3);
 }
 
 .preference-title {
-  background: linear-gradient(180deg, rgba(254, 204, 82, 1) 18%, rgba(255, 255, 255, 1) 75%);
+  background: linear-gradient(180deg, rgba(254, 204, 82, 1) 18%,  rgba(254, 204, 82, 1)75%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -57,25 +63,120 @@
 }
 
 .preference-description {
-  color: #fff;
+  color: black;
   width: auto;
   height: 70px;
   text-align: center;
   display: flex;
   margin: 10px;
 }
-.dei-img1 img{
+
+.dei-img1 img {
 width: 100%;
 }
 
 
 .dei-img1{
-  background-color: #401B51;
+  background-color:white;
   display: flex;
   justify-content: center;
   align-items: center;
   width: auto;
 }
+
+/* second section start here */
+
+.performance-section {
+  background-color: rgba(70, 25, 85, 0.59);
+  width: auto;
+  padding: 105px 66px;
+  border: 1px solid rgba(255, 255, 255, 0.01);
+  height: 20vh;
+}
+
+.performance-content {
+  display: flex;
+  gap: 20px;
+}
+
+.performance-title {
+ display: inline-block;
+ align-items: center;
+
+ justify-content: flex-start;
+  color: #fff;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  letter-spacing: -0.84px;
+  font: 800 39px Roboto, sans-serif;
+  padding: 1px 1px 146xp 1px;
+  margin: 5px 97px -189px 137px;
+ 
+
+}
+
+
+.performance-description {
+  display: inline-block;
+  width: auto;
+  color: #fff;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  letter-spacing: -0.84px;
+  font: 400 15px Roboto, sans-serif;
+  padding: 10px;
+  margin: 1px 1px 1px 1px ;
+}
+
+
+
+
+/* section3 */
+
+.consultation-cta12 {
+  background-color: rgba(70, 25, 85, 0.59);
+  display: flex;
+  flex-direction: column;
+  padding: 93px 80px 49px;
+  border: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+.cta-message1 {
+  text-align: center;
+  font-size: 35px;
+  letter-spacing: -1.8px;
+}
+
+.cta-button1 {
+  border-radius: 13px;
+  background-color: rgba(70, 25, 85, 1);
+  align-self: center;
+  margin-top: 51px;
+  width: 290px;
+  max-width: 100%;
+  font-size: 15px;
+  letter-spacing: -0.6px;
+  padding: 30px 22px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .consultation-cta {
+      padding: 40px 20px;
+  }
+
+  .cta-message {
+      font-size: 40px;
+  }
+
+  .cta-button {
+      margin-top: 40px;
+      padding: 20px;
+  }
+}
+
+
 
 /* Ultra-wide 4K screens (2560px and above) */
 @media (min-width: 2560px) {
@@ -151,7 +252,7 @@ width: 100%;
 
   .title1 {
     font-size: 45px;
-    margin: -13px 244px 30px 120px;
+    margin: -13px 150px 30px 130px;
   }
 
   .section-description {
