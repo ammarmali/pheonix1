@@ -12,7 +12,7 @@ const ShopHero = () => {
   }, []);
 
   return (
-    <div className="shop-hero-wrapper">
+    <div className="shop-servicehero-wrapper">
       <section className="shop-hero">
         <div className="hero-content">
           <h2 className="primary-heading2 animated-element">

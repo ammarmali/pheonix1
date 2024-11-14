@@ -45,17 +45,16 @@
 
 
 
-.shop-hero-wrapper {
+.shop-abouthero-wrapper{
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('https://cdn.builder.io/api/v1/image/assets/TEMP/51e7681cf599c87e33a3df3a7344ec157eb4a2ad9aa1fb0187fbdc479439b455');
+  background-image: url('../assets/abouthero.png'); /* Replace with your desired image URL */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   overflow: hidden;
 }
 

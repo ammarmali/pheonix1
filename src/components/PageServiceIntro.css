@@ -43,13 +43,16 @@
 }
 
 
-.shop-hero-wrapper {
-    width: 100%;
-    height: 100vh;
+.shop-servicehero-wrapper {
+    width: auto;
+    height: 90vh;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background: linear-gradient(135deg, #461955 0%, #461955 100%);
+    background-image: url('../assets/servicehero.png'); /* Replace with your desired image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     overflow: hidden;
   }
   

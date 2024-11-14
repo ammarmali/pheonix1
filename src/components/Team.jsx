@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import img1 from "../assets/Group 65.png";
+import img1 from '../assets/team.png'
 import img2 from "../assets/Group 67.png";
 import './Team.css';
 import useWindowSize from '../hooks/useWindowSize'; // Import the custom hook

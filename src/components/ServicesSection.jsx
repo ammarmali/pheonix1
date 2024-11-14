@@ -131,7 +131,7 @@ const ServicesSection = () => {
         </div>
       </section>
 
-      <section className="testimonials-container">
+      <section className="testimonials-container33">
         <h2 className="testimonials-heading">What Our Clients Are Saying?</h2>
         <div className="slider-container">
           <div className="testimonials-grid">

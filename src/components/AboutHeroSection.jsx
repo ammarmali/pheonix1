@@ -1,17 +1,31 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
-import "./AboutHeroSection.css"
+import "./AboutHeroSection.css";
+
 const AboutHeroSection = () => {
   useEffect(() => {
     const elements = document.querySelectorAll('.animated-element');
-    elements.forEach((element) => {
-      element.classList.add('animate');
-    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+          }
+        });
+      },
+      { threshold: 0.1 } // Adjust threshold as needed
+    );
+
+    elements.forEach((element) => observer.observe(element));
+
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <div className="shop-hero-wrapper">
+    <div className="shop-abouthero-wrapper">
       <section className="shop-hero">
+     
         <div className="hero-content">
           <h2 className="primary-heading1 animated-element">
             Empowering Inclusive Excellence
@@ -19,7 +33,7 @@ const AboutHeroSection = () => {
           <h1 className="secondary-heading1 animated-element">
             <span>MEET</span> PhoenixRize
           </h1>
-          <button className="buy-button1">Free Self Analysis</button>
+          <button className="buy-button1 animated-element">Free Self Analysis</button>
         </div>
       </section>
     </div>

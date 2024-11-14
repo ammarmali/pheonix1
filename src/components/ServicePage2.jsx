@@ -41,8 +41,8 @@ function ServicePage2() {
           </article>
 
           <article className="service-card1">
-            <h2 className="service-title2">Keynote</h2>
-            <p className="service-description2">
+            <h2 className="service-title">Keynote</h2>
+            <p className="service-description1">
               PhoenixRize delivers inspiring keynotes focused on diversity and inclusion, offering engaging speeches tailored to meet the specific interests and needs of each client.
             </p>
             <button className="learn-more-button button-style">
