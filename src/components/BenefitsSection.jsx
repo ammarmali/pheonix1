@@ -84,9 +84,9 @@ const BenefitsSection = () => {
         </div>
         
       </section>
-      <section className="performance-section">
+      <section className="performance-section22">
       <div className="performance-content">
-        <h2 className="performance-title">
+        <h2 className="performance-title09">
           Unlock Greater Organisational performance from Diverse and inclusive team
         </h2>
         <p className="performance-description">
@@ -99,12 +99,14 @@ const BenefitsSection = () => {
 <div className='dei-img1'><img src={newimg} alt="" /></div>
 
 <section className="consultation-cta12">
+  <div className='cta-con'>
       <h1 className="cta-message1">
         Wondering what approach works best for your organization? We're happy to help. Schedule a complimentary 30-minute consultation call with us to discuss your specific diversity, equity and inclusion consultants' training needs.
       </h1>
-      <button className="cta-button1" tabIndex="0">
+      <button>
         Schedule your free consultation
       </button>
+      </div>
     </section>
     
     </div>
