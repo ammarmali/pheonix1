@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import img32 from '../assets/Group 74 (1).png';
+
 import './Product.css';
 
 const products = [
@@ -41,9 +41,24 @@ const PhoenixRizeSection = () => {
         </div>
 
       </div>
-    </div><div className='img32'>
-        <img src={img32} alt="" />
-      </div></>
+      <div className="purchase-guide-container">
+      <div className="purchase-guide-overlay"></div>
+      <div className="purchase-guide-content">
+        <h1 className="purchase-guide-gradient-text">How To Purchase:</h1>
+        <div className="purchase-guide-section">
+          <h2 className="purchase-guide-heading">Select Your Services:</h2>
+          <p className="purchase-guide-description">Browse through our offerings and add your selected services to the cart.</p>
+        </div>
+        <div className="purchase-guide-section">
+          <h2 className="purchase-guide-heading">Checkout:</h2>
+          <p className="purchase-guide-description">Once you're ready, head to the checkout to complete your purchase.</p><p className="purchase-guide-description"> You'll receive an email confirmation with the next steps.</p>
+        </div>
+        <div className="purchase-guide-section">
+          <h2 className="purchase-guide-heading">Schedule:</h2>
+          <p className="purchase-guide-description">After purchase, a member of our team will reach out within 24 hours to schedule your service.</p>
+        </div>
+      </div>
+    </div></div></>
   );
 };
 

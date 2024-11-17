@@ -23,9 +23,10 @@ const AboutHeroSection = () => {
   }, []);
 
   return (
-    <div className="shop-abouthero-wrapper">
-      <section className="shop-hero">
-     
+   
+      <section className="shop-hero-service">
+
+      <div className="shop-abouthero-wrapper"></div>
         <div className="hero-content">
           <h2 className="primary-heading1 animated-element">
             Empowering Inclusive Excellence
@@ -36,7 +37,7 @@ const AboutHeroSection = () => {
           <button className="buy-button1 animated-element">Free Self Analysis</button>
         </div>
       </section>
-    </div>
+   
   );
 };
 

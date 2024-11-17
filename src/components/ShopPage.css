@@ -1,119 +1,129 @@
-.shop-hero-wrapper-shop {
+/* Wrapper for the hero section */
+.shop-hero-section-wrapper {
   width: 100%;
   height: 100vh;
-  display: flex; 
-    background-color: #dad29f;
-  justify-content: flex-end;
-  align-items: center;
-
-}
-
-
-
-.background-image-shop {
-  position: absolute;
-  inset: 0;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.shop-hero {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.hero-content-shop {
+  position: relative;
+  overflow: hidden;
   text-align: center;
-  width: 100%;
-  perspective: 1000px;
-  background-color: #FFD700;
+  color: #FFD700; /* Ensures text color is visible over overlay */
 }
 
-.primary-heading,
-.secondary-heading {
+/* Background image styling */
+.shop-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Below overlay and content */
+}
+
+/* Overlay layer */
+.overlay-shop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(86, 40, 101, 0.39); /* Semi-transparent overlay */
+  z-index: 0; /* Above background, below content */
+}
+
+/* Hero section container */
+.hero-content-shop {
+  position: relative;
+  z-index: 3; /* Above both overlay and background */
+  width: 100%;
+  max-width: 1200px;
+  padding: 8rem;
+}
+
+/* Headings and paragraph styles */
+
+
+.primary-heading {
   margin: 1rem auto;
   background: linear-gradient(45deg, #f9f9f9, #dad29f, #ffffff);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 0;
   filter: drop-shadow(0 2px 4px rgba(219, 202, 23, 0.1));
   transition: transform 0.4s ease;
-}
-
-.primary-heading {
   font-size: 2rem;
   animation: fadeInRotate 1s ease forwards 0.3s;
 }
 
-.secondary-heading {
-  font-size: 5rem;
-  background: linear-gradient(45deg, #FFD700, #fef6c3, #FFD700);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent; /* Ensure text is filled correctly */
-  animation: fadeInRotate 1s ease forwards 0.6s;
+.shop-secondary-heading {
+  position: relative;
+  font-size: 6rem;
+  color: rgba(86, 40, 101, 0); /* Default text color */
+  -webkit-text-stroke: 1px #4f685a00;
+  text-transform: uppercase;
+  overflow: hidden; /* Ensures text does not overflow */
 }
 
-.hero-paragraph-S {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #fdfdfd;
-  max-width: 800px;
-  margin: 0 auto;
-  overflow: hidden;                /* Hide overflow to create typing effect */
-  white-space: nowrap;             /* Prevent text from wrapping */
-  width: 0;                        /* Start with width 0 */
-  border-right: 2px solid #FFD700; /* Border to mimic typing cursor */
-  animation: typing 2.5s steps(40, end) 1s forwards, fadeInBounce 1s ease forwards 3.7s;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes fadeInBounce {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);   /* Start slightly below */
-  }
-  60% {
-    opacity: 1;
-    transform: translateY(-10px);  /* Bounce up slightly */
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);      /* End at original position */
-  }
-}
-
-
-.hero-paragraph-S::after {
-  content: '';
+/* Pseudo-element for typing effect */
+.shop-secondary-heading::before {
+  content: attr(data-text);
   position: absolute;
   top: 0;
   left: 0;
+  width: 0%; /* Initially hide the text */
   height: 100%;
-  width: 0;                        /* Start with width 0 for typing effect */
-  background-color: rgba(70, 25, 85, 0.59);
-  border-left: 2px solid #FFD700;
-  animation: typing 2.5s steps(40) 1.2s forwards; /* Typing effect */
-  z-index: 1;                      /* Ensure it's layered on top */
+  background:linear-gradient(90deg, #FFD700, #fef6c3, #FFD700); /* Gradient color effect */
+  -webkit-background-clip: text; /* Apply gradient to the text */
+  -webkit-text-stroke: 0px #486a52;
+  border-right: 2px solid #fbff00; /* Simulate typing cursor */
+  overflow: hidden;
+  white-space: nowrap;
+  animation: animateTyping 3s  forwards, gradientAnimation 3s forwards; /* Typing and gradient animation */
 }
 
-/* Typing effect animation */
+/* Keyframes for typing animation */
+@keyframes animateTyping {
+  0% {
+    width: 0%; /* Start with no width */
+  }
+  100% {
+    width: 100%; /* Reveal the full text */
+  }
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 100% 0%; /* Start with gradient at one end */
+  }
+  100% {
+    background-position: 0% 0%; /* Keep gradient in place after animation */
+  }
+}
+
+
+
+/* Paragraph with typing effect */
+.hero-paragraph-S {
+  color: #ffffff;
+  text-align: center;
+  font-size: 1rem;
+  border-right: 5px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s, cursor .4s step-end infinite alternate;
+}
+
+/* Keyframes */
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
 @keyframes typing {
   from {
     width: 0;
@@ -123,123 +133,58 @@
   }
 }
 
-
-/* Typing effect animation (for reference) */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-
+/* Hover effects */
 .primary-heading:hover,
 .secondary-heading:hover {
   transform: scale(1.05);
   filter: drop-shadow(0 4px 8px rgba(249, 237, 145, 0.3));
 }
 
-.hero-paragraph:hover {
-  
+.hero-paragraph-S:hover {
   transform: translateZ(10px);
   text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
 }
 
-.animated-element {
-  
-  will-change: transform, opacity;
-  backface-visibility: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.primary-heading,
-.secondary-heading {
-  background-size: 200% 100%;
-  animation: 
-    fadeInRotate 1s ease forwards,
-    shimmer 2s linear infinite;
-}
-
+/* Shimmer effect */
 @keyframes shimmer {
   0% {
     background-position: -100% 0;
   }
   100% {
     background-position: 100% 0;
-  }  
+  }
 }
 
+.primary-heading,
+.secondary-heading {
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
 
-/* Larger Screen Styles */
+/* Media Queries for responsive design */
 @media screen and (min-width: 1501px) {
   .primary-heading {
-    font-size: 2.5rem; /* Increased size for larger screens */
+    font-size: 2.5rem;
   }
   .secondary-heading {
-    font-size: 6rem; /* Increased size for larger screens */
+    font-size: 6rem;
   }
 }
 
-/* New Media Query for screens wider than 1800px */
-@media screen and (min-width: 1800px) {
-  .primary-heading {
-    font-size: 4rem; /* Further increased size */
-  }
-  .secondary-heading {
-    font-size: 8rem; /* Further increased size */
-  }
-}
-
-/* Medium Screen Styles */
-@media screen and (min-width: 1201px) and (max-width: 1500px) {
-  .primary-heading {
-    font-size: 2rem; /* Maintain original size */
-  }
-  .secondary-heading {
-    font-size: 5rem; /* Maintain original size */
-  }
-}
-
-/* New Media Query for 600px to 1100px */
 @media screen and (min-width: 600px) and (max-width: 1100px) {
   .primary-heading {
-    font-size: 1.8rem; /* Adjusted size for this range */
+    font-size: 1.8rem;
   }
   .secondary-heading {
-    font-size: 4rem; /* Adjusted size for this range */
+    font-size: 4rem;
   }
 }
 
-/* Smaller Screen Styles */
 @media screen and (max-width: 600px) {
   .primary-heading {
-    font-size: 6vw; /* Responsive sizing */
+    font-size: 6vw;
   }
   .secondary-heading {
-    font-size: 10vw; /* Responsive sizing */
+    font-size: 10vw;
   }
 }
-
-@media screen and (max-width: 768px) {
-  .shop-hero {
-    padding: 1.5rem;
-  }
-  .hero-content {
-    perspective: none;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .shop-hero {
-    padding: 1rem;
-  }
-  .hero-paragraph {
-    line-height: 1.4;
-    font-size: 0.9rem;
-  }
-}
-
-

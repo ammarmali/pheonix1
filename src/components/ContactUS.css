@@ -9,17 +9,30 @@ body {
   align-items: center;
   height: 100vh;
   width: 100%;
-  background-image: url('https://cdn.builder.io/api/v1/image/assets/TEMP/51e7681cf599c87e33a3df3a7344ec157eb4a2ad9aa1fb0187fbdc479439b455?placeholderIfAbsent=true&apiKey=a2acdceba9474ffebdaf77e02b0399d6');
+ 
+
+  background-color: #401b5190
+  ;
+}
+
+.contactus-img{
   background-size: cover;
   background-position: center;
+   background-image: url('https://cdn.builder.io/api/v1/image/assets/TEMP/51e7681cf599c87e33a3df3a7344ec157eb4a2ad9aa1fb0187fbdc479439b455?placeholderIfAbsent=true&apiKey=a2acdceba9474ffebdaf77e02b0399d6');}
+
+
+.color-contactus{
+  z-index: 10;
+ background-color: #401B51;
 }
+
 
 .contact-us-card {
   display: flex;
   max-width: 1000px;
   width: 100%;
-  background-color: rgba(45, 19, 57, 0.8); /* Add a slight transparent background to make content more readable */
-  border: 2px solid #ffd700;
+  background-color: rgba(254, 250, 255, 0.397); /* Add a slight transparent background to make content more readable */
+  border: 2px solid white;
   border-radius: 10px;
   padding: 40px;
   color: white;
@@ -63,13 +76,10 @@ body {
   padding-left: 40px;
 }
 
-h2 {
-  background: linear-gradient(180deg, rgba(254,204,82,1) 18%, rgba(255,255,255,1) 75%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-size: 40px;
-  margin-bottom: 30px;
+.contact-ustilte-1 {
+ color: white;
+  font-size: 50px;
+  margin: 1px 1px 50px 80px;
 }
 
 form {
@@ -83,7 +93,16 @@ form {
   margin-bottom: 20px;
 }
 
-input, textarea {
+ textarea {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+input{
   background-color: transparent;
   border: 2px solid white;
   border-radius: 5px;

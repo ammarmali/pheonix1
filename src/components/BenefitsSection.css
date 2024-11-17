@@ -9,6 +9,7 @@
   text-underline-offset: 10px;
 }
 
+
 .percentage-indicator {
   border-radius: 10px;
   border:2px solid #461955;
@@ -76,7 +77,6 @@
 width: 100%;
 }
 
-
 .dei-img1{
   background-color:white;
   display: flex;
@@ -85,42 +85,53 @@ width: 100%;
   width: auto;
 }
 
-/* second section start here */
 
-.performance-section22 {
-  background:url("../assets/home2.png");
-  width: auto;
+/* Performance section start here */
 
-  border: 1px solid rgba(255, 255, 255, 0.01);
-  height: auto;
-  margin: 100px 1px 10px 1px;
-}
-
-.performance-content1 {
+.home-performance-section {
+  position: relative; /* This makes sure that the absolute positioning of children works */
+  background: url("../assets/home2.png") no-repeat center center/cover; /* Background image */
   width: 100%;
-  height: 100%;
-  max-width: 1200px;
-  background-color: #4b1e54b2;
-  margin: 0 auto;
-  padding: 100px 100px 100px 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 80vh; /* Full viewport height */
 }
 
-.performance-title09{
+.home-overlay-performance {
+  position: absolute; /* Positioned on top of the background */
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
-  max-width: 1200px;
-  background-color: #4b1e54b2;
-  margin: 0 auto;
-  padding: 100px 100px 100px 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  height: 100%; /* Cover the entire section */
+  background-color: rgba(86, 40, 101, 0.621); /* Semi-transparent overlay */
+  z-index: 1; /* Positioned above the image but below content */
 }
 
+.performance-content {
+  position: relative; /* Ensure it stays above the overlay */
+  z-index: 2; /* On top of the overlay */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px;
+  color: white;
+  text-align: center;
+  height: 100%; /* Ensure it fills the section */
+}
+
+.performance-title09 {
+  font-size: 2.5rem; /* Adjust font size to your preference */
+  font-weight: bold;
+  margin-bottom: 20px; /* Spacing between heading and paragraph */
+}
+
+.performance-description12 {
+  color: #fff;
+  font-size: 1.3rem;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  letter-spacing: -0.84px;
+  font: 400 15px Roboto, sans-serif;
+  padding: 10px;
+  margin: 1px;
+  line-height: 1.6;
+}
 
 .performance-description12{
   display: inline-block;
@@ -133,70 +144,158 @@ width: 100%;
   margin: 1px 1px 1px 1px ;
 }
 
+/* performance section ends here */
 
 
+/* consultation section starts here */
 
-/* section3 */
-
-.consultation-cta12 {
-  background:url('../assets/home3.png') ;
-  background-color: rgba(70, 25, 85, 0.59);
+/* The section */
+/* Container section */
+.home-consultation-cta {
+  position: relative;
+  background: url('../assets/home3.png') no-repeat center center/cover;
+  height: 70vh; /* Full viewport height */
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 93px 80px 49px;
   border: 1px solid rgba(255, 255, 255, 0.01);
+  animation: fadeInBackground 2s ease-out forwards; /* Fade-in animation for background */
 }
 
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.home-consultation-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(70, 25, 85, 0.59);
+  z-index: 1;
+  animation: fadeInOverlay 2s ease-out forwards;
+}
+
+
+/* Animation for fading in the content */
+.cta-con {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0; /* Initially invisible */
+  animation: slideInContent 1.5s ease-out forwards 0.5s; /* Slide-in animation for content */
+}
+
+/* Heading animation */
 .cta-message1 {
   text-align: center;
   font-size: 35px;
   letter-spacing: -1.8px;
- 
-}
-.cta-con{
-  width: 100%;
-  height: 100%;
-  max-width: 1200px;
-  background-color: #4b1e54b2;
-  margin: 0 auto;
-  padding: 0 10rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #fff;
+  margin-bottom: 30px;
+  opacity: 0; /* Initially invisible */
+  animation: fadeInText 1.5s ease-out forwards 1s; /* Fade-in animation for text */
 }
 
+/* Button animation (Pulse effect) */
 .cta-con button {
   border-radius: 13px;
   text-align: center;
- 
   align-self: center;
-  margin-top: 51px;
-  width: 130px;
+  margin-top: 30px;
+  width: 250px;
   height: 50px;
-  max-width: 100%;
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: -0.6px;
-  padding: 20px 10px;
+  padding: 10px 20px;
   border: 1px solid rgba(255, 255, 255, 1);
   color: #fff;
   text-transform: uppercase;
+  background-color: #a47cdd;
   cursor: pointer;
+  animation: pulseButton 2s ease-in-out infinite; /* Pulse effect for button */
 }
 
-@media (max-width: 991px) {
-  .consultation-cta {
-      padding: 40px 20px;
-  }
+/* Button hover effect (color change) */
+.cta-con button:hover {
+  background-color: #d5a9e5;
+}
 
-  .cta-message {
-      font-size: 40px;
-  }
+/* Keyframes for animations */
 
-  .cta-button {
-      margin-top: 40px;
-      padding: 20px;
+/* Fade-in animation for background */
+@keyframes fadeInBackground {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
+
+/* Fade-in animation for overlay */
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide-in animation for content */
+@keyframes slideInContent {
+  from {
+    transform: translateY(50px); /* Start from below */
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0); /* Slide to normal position */
+    opacity: 1;
+  }
+}
+
+/* Fade-in animation for text */
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Pulse effect for button */
+@keyframes pulseButton {
+  0% {
+    transform: scale(1);
+    background-color: #a47cdd;
+  }
+  50% {
+    transform: scale(1.05);
+    background-color: #d5a9e5;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #a47cdd;
+  }
+}
+
+
+/* home consultation section ends here */
 
 
 

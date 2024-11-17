@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import './ContactUs.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'; // Import icons
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import logoimg from "../assets/logo.png" // Import icons
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -35,10 +36,12 @@ const ContactUs = () => {
   };
 
   return (
+    <section className='contactus-img'>
     <div className="contact-us-container">
+      
       <div className="contact-us-card">
         <div className="contact-us-left">
-          <img src="/path-to-your-logo.png" alt="PhoenixRize Logo" className="logo" />
+          <img src={logoimg} alt="PhoenixRize Logo" className="logo" />
           <ul className="contact-us-list">
             <li><FontAwesomeIcon icon={faCheckCircle} /> Diversity</li>
             <li><FontAwesomeIcon icon={faCheckCircle} /> Equity</li>
@@ -48,7 +51,7 @@ const ContactUs = () => {
           <p className="website">PhoenixRize.com</p>
         </div>
         <div className="contact-us-right">
-          <h2>Get In Touch With Us</h2>
+          <h2 className='contact-ustilte-1'>Get In Touch With Us</h2>
           <form onSubmit={handleSubmit}>
             <div className="form-row">
               <input
@@ -97,7 +100,9 @@ const ContactUs = () => {
           </form>
         </div>
       </div>
-    </div>
+      </div>
+      
+</section>    
   );
 };
 

@@ -32,7 +32,7 @@
   position: absolute;
   background-color: rgba(74, 26, 90, 0.568);
   display: flex;
-  height: 92vh;
+  height: 100%;
   width: 100%;
   flex-direction: column;
   align-items: center;
@@ -75,7 +75,7 @@
   opacity: 0;
   animation: fadeInRotate 1s ease forwards 0.6s;
   margin: 1rem auto;
-  background: linear-gradient(45deg, #FFD700, #fef6c3, #FFD700);
+  background: linear-gradient(45deg, #F7B546, #f1dba6, #F7B546);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
