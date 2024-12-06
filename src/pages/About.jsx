@@ -13,9 +13,7 @@ function About() {
   return (
     <>
    <AboutHeroSection />
-    
       <Team />
-
       <Footer />
 
 

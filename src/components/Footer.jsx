@@ -1,48 +1,72 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
-import "./Footer.css"; // Importing the CSS file
+import React from 'react';
+import './Footer.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import logo from '../assets/logo.png'; // Ensure the logo file path is correct.
 
-const Footer = () => {
+const CustomFooter = () => {
+  const companyLinks = [
+    'About us',
+    'Our services',
+    'Cookie Policy',
+    'Privacy Policy',
+    'Term and Conditions',
+  ];
+  const helpLinks = ['FAQ', 'How to order', 'Payment Options'];
+  const shopLinks = ['info@phoenixrize.ie', 'Location: xyz', 'Company Reg No: 123'];
+  const socialLinks = [
+    { href: '#', icon: 'fab fa-facebook-f' },
+    { href: '#', icon: 'fab fa-twitter' },
+    { href: '#', icon: 'fab fa-instagram' },
+    { href: '#', icon: 'fab fa-linkedin-in' },
+  ];
+
+  const renderLinks = (links) =>
+    links.map((link, index) => (
+      <li key={index}>
+        <a href="#">{link}</a>
+      </li>
+    ));
+
+  const renderSocialLinks = (links) =>
+    links.map((social, index) => (
+      <a key={index} href={social.href}>
+        <i className={social.icon}></i>
+      </a>
+    ));
+
   return (
-    <footer className="footer-container">
-      <div className="logo-container">
-        <img
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/99d4a0121fee9bf9091336c643ff3070ae9d67783cc3aa77f3c01e91776f2ace?placeholderIfAbsent=true&apiKey=e59ec647e8834dcf973e15f6f0bdc424"
-          alt="Primary company logo"
-          className="primary-logo"
-        />
-        <img
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/38b562e0b959702006edc55f8c6fe9cf633e7defaaa4525e282ddcca1c33026c?placeholderIfAbsent=true&apiKey=e59ec647e8834dcf973e15f6f0bdc424"
-          alt="Secondary company logo"
-          className="secondary-logo"
-        />
-      </div>
-
-      <hr className="divider" />
-
-      <section className="footer-content">
-        <div className="footer-links">
-          <nav className="policy-links">
-            <a href="#" className="cookie-policy">Cookie Policy</a>
-            <div className="legal-links">
-              <a href="#" className="privacy-policy">Privacy Policy</a>
-              <a href="#" className="terms">Terms and Conditions</a>
+    <footer className="custom-footer">
+      <div className="custom-footer-container">
+        <div className="custom-footer-row">
+          <div className="custom-footer-col">
+            <h4>Company</h4>
+            <ul>{renderLinks(companyLinks)}</ul>
+          </div>
+          <div className="custom-footer-col">
+            <h4>Get Help</h4>
+            <ul>{renderLinks(helpLinks)}</ul>
+          </div>
+          <div className="custom-footer-col">
+            <h4>Information</h4>
+            <ul>{renderLinks(shopLinks)}</ul>
+          </div>
+          <div className="custom-footer-col">
+            <h4>Follow Us</h4>
+            <div className="custom-footer-social-links">
+              {renderSocialLinks(socialLinks)}
             </div>
-          </nav>
-          <p className="copyright-text">
-            © 2022 Phoenixrize.ie. All rights reserved.
+          </div>
+        </div>
+        <div className="custom-footer-bottom">
+          <img src={logo} alt="Company Logo" className="custom-footer-logo" />
+          <p className="custom-footer-copyright">
+            © {new Date().getFullYear()} Phoenix Rize. All Rights Reserved.
           </p>
         </div>
-
-        <address className="contact-info">
-          <p>Email: info@phoenixrize.ie</p>
-          <p className="company-info">Company Reg No: 714032</p>
-        </address>
-      </section>
+      </div>
     </footer>
   );
 };
 
-export default Footer;
+export default CustomFooter;

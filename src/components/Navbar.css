@@ -4,7 +4,7 @@ body {
   overflow-x: hidden;
 }
 
-.header {
+.header-navbar {
   display:flex;
   
   justify-content: space-between;
@@ -48,7 +48,7 @@ body {
 .nav-links {
   display: flex;
   border-radius: 10px;
-  border: 1px solid #890c9c45;
+  border: 1px solid #ffffff45;
   list-style: none;
   background-color: hsl(0, 0%, 100%);
   gap: 1.5rem;
@@ -59,7 +59,7 @@ body {
   color: 3890c9c45;
  
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 1rem;
   position: relative;
   transition: color 0.3s ease;
 }

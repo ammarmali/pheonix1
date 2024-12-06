@@ -1,268 +1,384 @@
-/* Overall Section */
-.benefit-preference-section {
-  width: 100%;
-  height: auto;
-  margin: 90px 10px 10px 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 0;
+.phoenixrize-section {
   background-color: white;
+
+  text-align: center;
 }
 
-/* Container for Cards */
-.benefit-preference-container {
-  gap: 20px;
+.container {
+  width: 85%;
+  margin: 0 auto;
+  background-color: #fff1;
+  padding: 15px;
+  border-radius: 10px;
+  animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.heading-group {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 20px;
 }
 
-/* Individual Card */
-.benefit-preference-card {
-  border-radius: 25px;
-  border: 2px solid #461955;
-  background-color: white;
-  color: #000;
+.main-heading {
+  font-size: 2em;
+  margin: 0;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #F7B546, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.main-heading span {
+  text-decoration: underline;
+  font-size: 2em;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.product-card {
+  width: auto;
+  max-width: 280px;
+  height: 310px;
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  border-radius: 8px;
+  border: 1px solid #4B1E54;
+  box-shadow: 0 14px 18px #0000005d;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: Roboto, sans-serif;
-  height: auto;
-  width: 300px;
-  box-shadow: 0 14px 14px rgba(0, 0, 0, 0.3);
-  padding: 20px;
+  justify-content: space-between;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  top: -5px;
+  margin-bottom: 20px;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+  animation: bounceIn 0.8s ease-out forwards;
+  transform-style: preserve-3d;
+}
+
+.product-card:hover {
+  transform: rotateY(15deg) rotateX(10deg) translateY(-10px);
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.637);
+}
+
+/* Optional: Add bounce animation on hover */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.9) translateY(30px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1) translateY(-10px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes bounceIn {
+  0% { transform: scale(0.95); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+.product-card img,
+.image-placeholder {
+  width: 100%;
+  height: 140px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.product-name {
+  color: #401B51;
+  margin: 5px 0;
+  font-size: 0.9em;
+  font-weight: bold;
+  padding: 0 10px;
+  transition: color 0.3s ease;
+  margin-bottom: 5px;
+}
+
+.product-description {
+  margin: 3px 0;
+  color: #401B51;
+  font-size: 0.8em;
+  padding: 0 10px;
+}
+
+.product-price {
+  margin: -13px 40px 15px 1px;
+  color: #401B51;
+  font-size: 14px;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 6px;
+}
+
+.buy-button {
+  text-align: center;
+  transition: all 0.5s ease;
+  color: #fff;
+  border: 1px solid white;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  font-size: 10px;
+  background: linear-gradient(90deg,  #4B1E54 40%,  #4B1E54 100%);
+  padding: 10px;
+  outline: none;
+  border-radius: 4px;
+  width: 100px;
+  height: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 0px 16px 37px;
   position: relative;
   overflow: hidden;
-  opacity: 0;
-  animation: fadeInCard 1s ease-out forwards;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-/* Hover Effect on Card */
-.benefit-preference-card:hover {
-  transform: scale(1.05) rotate(3deg); /* Slight scaling and rotation */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Larger, softer shadow */
-  background-color: #f0f0f0; /* Light background color change */
+.buy-button:hover {
+  color: #4B1E54;
+  background: #fff;
+  border-color: #F7B546 30%,;
 }
 
-/* Animation for Card Fade-in */
-@keyframes fadeInCard {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Percentage Indicator */
-.percentage-indicator {
-  font-size: 30px;
-  font-weight: bold;
-  color: #461955;
-  position: absolute;
-  top: 10px;
-  left: 35%;
-  transform: translateX(-50%);
-  background-color: #fff;
-  border-radius: 25px;
-  padding: 15px 20px;
-  border: 2px solid #461955;
-  opacity: 0;
-  animation: fadeInPercentage 1s ease-out forwards;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover Effect for Percentage Indicator */
-.percentage-indicator:hover {
-  transform: translateX(-50%) scale(1.2); /* Slight zoom-in */
-  box-shadow: 0 0 20px rgba(70, 25, 85, 0.5); /* Glowing effect */
-}
-
-/* Fade-in for Percentage Indicator */
-@keyframes fadeInPercentage {
-  from {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* Title Style */
-.benefit-preference-title {
-  background: linear-gradient(180deg, rgba(254, 204, 82, 1) 18%, rgba(254, 204, 82, 1) 75%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-size: 29px;
-  font-weight: 700;
-  text-align: center;
-  margin-top: 50%;
-  opacity: 0;
-  animation: fadeInTitle 1s ease-out forwards 0.5s;
-  transition: color 0.3s ease;
-}
-
-/* Hover Effect for Title */
-.benefit-preference-title:hover {
-  color: #461955; /* Smooth color change */
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add subtle text shadow */
-}
-
-/* Fade-in for Title */
-@keyframes fadeInTitle {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Description Style */
-.benefit-preference-description {
-  color: black;
-  text-align: center;
-  margin-top: 5%;
-  opacity: 0;
-  animation: fadeInDescription 1s ease-out forwards 1s;
-  font-size: 16px;
-  transition: color 0.3s ease;
-}
-
-/* Hover Effect for Description */
-.benefit-preference-description:hover {
-  color: #461955; /* Change text color on hover */
-  transform: translateY(5px); /* Slight upward movement */
-}
-
-/* Fade-in for Description */
-@keyframes fadeInDescription {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* preference section ends here */
-
-
-/* Performance section start here */
-
-.home-performance-section {
-  position: relative;
-  background: url("../assets/home2.png") no-repeat center center/cover; /* Background image */
+.img32 img{
+  height: 450px;
+  margin: 60px 1px 1px 1px;
   width: 100%;
-  height: 80vh; /* Full viewport height */
 }
 
-.home-overlay-performance {
-  position: absolute; /* Positioned on top of the background */
+/* Responsive adjustments */
+
+@media (max-width: 1200px) {
+  .product-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-heading {
+    font-size: 1.8em;
+  }
+  .product-card {
+    height: 270px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+  .main-heading {
+    font-size: 1.5em;
+  }
+  .product-card {
+    max-width: auto;
+    height: auto;
+  }
+  .product-card img {
+    height: 120px;
+  }
+  .product-name
+  {
+    font-size: 0.7em;
+  }
+  .product-price,
+  .product-description {
+    font-size: 0.7em;
+  }
+  .buy-button {
+    width: 90px;
+    height: 30px;
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 1.2em;
+  }
+  .product-card img {
+    height: auto;
+  }
+  .product-name,
+  .product-price,
+  .product-description {
+    font-size: 0.7em;
+  }
+  .buy-button {
+    width: 80px;
+    height: 28px;
+    font-size: auto;
+    padding: 4px;
+  }
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .product-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-heading {
+    font-size: 1.8em;
+  }
+  .product-card {
+    height: 90%;
+  }
+  .purchase-guide h2 {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+  .main-heading {
+    font-size: 1.5em;
+  }
+  .purchase-guide {
+    padding: 30px 20px;
+  }
+  .purchase-guide h2 {
+    font-size: 2em;
+  }
+  .purchase-guide .guide-step .step-title {
+    font-size: 18px;
+  }
+  .purchase-guide .guide-step .step-description {
+    font-size: 16px;
+  }
+  .buy-button {
+  font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 1.2em;
+  }
+  .product-card {
+    width: 100%;
+    height: auto;
+  }
+  .buy-button {
+    width: 80px;
+    font-size: 8px;
+  }
+  .purchase-guide h2 {
+    font-size: 1.8em;
+  }
+  .purchase-guide .guide-step {
+    font-size: 1.5em;
+  }
+  .purchase-guide .guide-step .step-title {
+    font-size: 16px;
+  }
+  .purchase-guide .guide-step .step-description {
+    font-size: 14px;
+  }
+}
+
+.purchase-guide-container {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  background-image: url("../assets/debitcard.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.purchase-guide-overlay {
+  position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
   width: 100%;
-  height: 100%; /* Cover the entire section */
-  background-color: rgba(86, 40, 101, 0.621); /* Semi-transparent overlay */
-  z-index: 1; /* Positioned above the image but below content */
+  background-color: rgba(86, 40, 101, 0.621);
+  z-index: 1;
 }
 
-.home-performance-content {
-  position: relative; /* Ensure it stays above the overlay */
-  z-index: 2; /* On top of the overlay */
-  display: flex;
-  align-items: center; /* Vertically center content */
-  justify-content: space-between; /* Space between title and description */
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 100px;
-  color: white;
-  height: 100%; /* Ensure it fills the section */
-  opacity: 0; /* Initially hidden for animation */
-  animation: fadeInContent 1.5s ease-out forwards; /* Fade in content */
+.purchase-guide-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
 }
 
-@keyframes fadeInContent {
-  from {
-    opacity: 0;
-    transform: translateY(50px); /* Start with content slightly below */
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0); /* Move into the original position */
-  }
-}
-
-.home-performance-title {
-  font-size: 2.5rem; /* Adjust font size to your preference */
+.purchase-guide-gradient-text {
+  font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 20px; /* Spacing between heading and paragraph */
-  max-width: 50%; /* Limit the width of the title */
-  margin-bottom: 25%;
-  opacity: 0; /* Initially hidden for animation */
-  animation: fadeInTitle 1s ease-out forwards; /* Title fade-in animation */
-  animation-delay: 0.5s; /* Delay to appear after content fade-in */
+  background: linear-gradient(90deg, #ffffff 5%, #F7B546);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
-@keyframes fadeInTitle {
-  from {
-    opacity: 0;
-    transform: translateX(-50px); /* Start from the left */
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0); /* End in original position */
-  }
+.purchase-guide-section {
+  margin-bottom: 1.5rem;
 }
 
-.home-performance-description {
-  color: #fff;
-  font-size: 1.3rem;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  letter-spacing: -0.84px;
-  font: 400 15px verdana, sans-serif;
-  padding: 10px;
-  margin: 1px;
-  line-height: 1.6;
-  max-width: 45%; /* Limit the width of the description */
-  text-align: left; /* Align text to the left */
-  opacity: 0; /* Initially hidden for animation */
-  animation: fadeInDescription 1s ease-out forwards; /* Description fade-in animation */
-  animation-delay: 1s; /* Delay to appear after title */
-  margin-bottom: 20%;
+.purchase-guide-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
 }
 
-@keyframes fadeInDescription {
-  from {
-    opacity: 0;
-    transform: translateX(50px); /* Start from the right */
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0); /* End in original position */
-  }
+.purchase-guide-description {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
 }
-
-/* Add responsive design adjustments for mobile */
-@media (max-width: 768px) {
-  .home-performance-content {
-    flex-direction: column; /* Stack elements vertically on smaller screens */
-    padding: 50px 20px; /* Adjust padding for smaller screens */
-  }
-
-  .home-performance-title,
-  .home-performance-description {
-    max-width: 100%; /* Ensure full width for both on small screens */
-  }
-}
-

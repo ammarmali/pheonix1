@@ -4,13 +4,16 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightToBracket, faPhone, faTimes } from '@fortawesome/free-solid-svg-icons';
 import useWindowSize from '../hooks/useWindowSize';
-import  logoimg1 from '../assets/logo.png'
+import { useAuth } from "../auth/AuthProvider"; // Import the useAuth hook
+import logoimg1 from '../assets/logo.png';
 import "./Navbar.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { width } = useWindowSize(); // Get the current window size
+  const { authState, isLoading } = useAuth(); // Use custom AuthContext
+  const { loginWithRedirect, logout } = useAuth(); // Use Auth0 functions
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +29,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className={`header ${scrolled ? "scrolled" : ""}`}>
+    <header className={`header-navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="logo-text">
         <img src={logoimg1} alt="Logo" className="logo-image" />
       </div>
@@ -41,9 +44,18 @@ const Navbar = () => {
       </nav>
 
       <div className="right-section">
-        <button className="auth-button" onClick={() => console.log("Login")}>
-          <FontAwesomeIcon icon={faArrowRightToBracket} /> Log In
-        </button>
+        {!isLoading && authState.isAuthenticated ? (
+          <>
+            <span className="user-name">{authState.user?.name}</span>
+            <button className="auth-button" onClick={() => logout({ returnTo: window.location.origin })}>
+              <FontAwesomeIcon icon={faArrowRightToBracket} /> Log Out
+            </button>
+          </>
+        ) : (
+          <button className="auth-button" onClick={() => loginWithRedirect()}>
+            <FontAwesomeIcon icon={faArrowRightToBracket} /> Log In
+          </button>
+        )}
         <button className="contact-button">
           <FontAwesomeIcon icon={faPhone} /> Contact Us
         </button>

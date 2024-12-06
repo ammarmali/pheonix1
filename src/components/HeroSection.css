@@ -1,16 +1,5 @@
-.consultant-section {
-  display: flex;
-  flex-direction: column;
-  border-radius: 13px;
-  position: relative;
-  min-height: 542px;
-  margin-top: 50px;
-  width: 100%;
-  font-family: Roboto, sans-serif;
-  color: #fff;
-  font-weight: 400;
-  justify-content: center;
-  padding: 4px 0;
+.consultant-section-home {
+  height: 100vh;
 }
 
 @media (max-width: 991px) {
@@ -153,17 +142,28 @@
   }
 }
 
-.cta-button {
+.cta-home-btn {
+  margin-bottom: 30%;
+  height: 40px;
+  width: 150px;
+  padding: 0.7rem 1rem;
+  font-size: 0.6rem;
+  font-weight: 550;
+  color: #ffffff;
+  border: 1px solid #faf8fa;
   border-radius: 8px;
-  display: flex;
-  margin-top: 16px;
-  width: 133px;
-  max-width: 100%;
-  flex-direction: column;
-  overflow: hidden;
-  font-size: 16px;
-  letter-spacing: -0.64px;
-  border: 1px solid #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(90deg, #4B1E54 40%, #4B1E54 100%);
+  text-transform: uppercase;
+  margin: 1px 1px 1px 1px;
+}
+
+
+.cta-home-btn:hover{
+  color: #4B1E54;
+  background: #fff;
+  border-color: #f7b546;
 }
 
 .cta-text {

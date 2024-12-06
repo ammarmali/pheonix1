@@ -24,18 +24,18 @@ const AboutHeroSection = () => {
 
   return (
    
-      <section className="shop-hero-service">
-
-      <div className="shop-abouthero-wrapper"></div>
-        <div className="hero-content">
-          <h2 className="primary-heading1 animated-element">
+      <section className="hero-about">
+      <div className="hero-wrapper-about">
+      
+          <h2 className="primary-heading-about animated-element">
             Empowering Inclusive Excellence
           </h2>
-          <h1 className="secondary-heading1 animated-element">
+          <h1 className="secondary-heading-about animated-element">
             <span>MEET</span> PhoenixRize
           </h1>
-          <button className="buy-button1 animated-element">Free Self Analysis</button>
-        </div>
+          <button className="button-about animated-element">Free Self Analysis</button>
+          </div>
+     
       </section>
    
   );

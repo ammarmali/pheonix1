@@ -1,190 +1,371 @@
-.mission-vision-container {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Values Section Styles */
+.our-values-section {
   padding: 4rem 2rem;
-  width: auto;
-}
-
-.section-title {
-  font-size: 8vw;
-  font-weight: 700;
-  background: #401b51;
-   -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-align: center;
-}
-
-.cards-container {
-  display: flex;
-  justify-content: center;
-  width: auto;
-}
-
-.cards-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.card {
-  text-align: center;
-  border-radius: 14px;
-  border: 2px solid black;
-  background-color:white;
-  padding: 2rem;
-  max-width: 350px;
-  flex: 1 1 45%;
-}
-
-.card-icon {
-
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  color: #401b51;
-}
-
-.card-title {
-  color:#F7B546;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-top: 1rem;
-}
-
-.card-description {
-  color: #000000;
-  font-size: 1rem;
-  margin-top: 1rem;
-}
-
-
-.img-folder{
-  background-color: #fffeff;
-  color: #000000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: auto;
-  margin: 0 aut0;
-
-}
-.img-folder img{
-display: grid;
-margin: 120px auto;
-height: auto;
-width: 120vh;
-
-}
-
-.img22{
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 90vh;
-  margin: 0 aut0;
-}
-
-.img22 img{
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80vh;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Adjust layout for larger desktop screens */
-@media (max-width: 1920px) { /* Full HD */
-  .section-title {
-    font-size: 2.8vw;
-  }
-  .cards-wrapper {
-    gap: 2.5rem;
-  }
-  .card{
-    width: 350px;
-  }
+.our-values-title {
+  text-align: center;
+  color: #4A235A; /* Deep purple color */
+  font-size: 3.5rem;
+  margin-bottom: 4rem;
+  font-weight: bold;
 }
 
-@media (max-width: 1820px) {
-
-  .section-title {
-    font-size: 2.7vw;
-  }
-  .cards-wrapper {
-    gap: 2.2rem;
-  }
-  .card{
-    width: 330px;
-  }
+.our-values-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-@media (max-width: 1680px) {
-  .section-title {
-    font-size: 2.6vw;
+.values-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.row-1 {
+  /* Middle row with 2 items */
+  padding: 0 15%; /* Adjust this value to control how far the middle items are from the edges */
+}
+
+.value-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 350px;
+}
+
+.value-image {
+  width: 10vw;
+  height: auto;
+
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.value-title {
+  color: #000;
+  font-size: 1 rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.value-description {
+  color: #333;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  text-shadow: 1px 1px 5px  #00000068;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .our-values-title {
+    font-size: 2.5rem;
   }
-  .cards-wrapper {
+  
+  .our-values-grid {
+    grid-template-columns: 1fr;
     gap: 2rem;
   }
-  .card{
-    width: 3000px;
+  
+
+  
+  .values-row {
+    flex-direction: column;
+  }
+  
+  .row-1 {
+    padding: 0;
   }
 }
 
-@media (max-width: 1440px) {
-  .section-title {
-    font-size: 2.4vw;
-  }
-  .card {
-    padding: 1.8rem;
-  }
+/* General Styles */
+.team-container {
+  background-color: #fff;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
-@media (max-width: 1366px) { /* Standard Desktop */
-  .section-title {
-    font-size: 5.2vw;
-   display: flex;
-   margin: auto;
-  }
-  .cards-wrapper {
-    gap: 1.8rem;
-  }
+.team-title {
+  font-size: 5vw;
+  font-weight: 700;
+  background: linear-gradient(to right, #401b51, #401b51);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-decoration: 5px solid #401b51 underline;
 }
 
-@media (max-width: 1200px) {
-  .section-title {
-    font-size: 1.8vw;
-  }
-  .card {
-    padding: 1.5rem;
-  }
+.team-cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
 }
 
-/* Adjust layout for tablets */
+.team-card {
+  text-align: center;
+  border-radius: 14px;
+  border: 2px solid black;
+  background-color: white;
+  padding: 2rem;
+  max-width: 350px;
+  flex: 1 1 45%;
+  box-shadow: 0 14px 16px rgba(0, 0, 0, 0.493);
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+}
+
+.team-card-icon {
+  width: 10vw;
+  height: 12vh;
+  object-fit: contain;
+}
+
+.team-card-title {
+  color: #401b51;
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-top: 1rem;
+}
+
+.team-card-description {
+  color: #000;
+  font-size: 1.2rem;
+  margin: 12px 10px;
+}
+
+.team-info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  overflow: hidden; /* Prevent image from spilling outside */
+}
+
+.team-intro {
+  width: 100%;
+  max-width: 1200px; /* Constrain the container width */
+  padding: 0 1rem; /* Add padding to prevent edge cuts */
+  display: flex;
+  justify-content: center;
+}
+
+.team-intro-image {
+  width: 100%; /* Allow the image to use the full width of its container */
+  max-width: 100%; /* Prevent the image from overflowing */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  border-radius: 12px;
+
+  object-fit: contain; /* Ensure the entire image fits within the container */
+}
+
+
+/* Media Queries */
 @media (max-width: 1024px) {
-  .section-title {
+  .team-title {
     font-size: 4vw;
   }
-  .card {
-    padding: 1.5rem;
+
+  .team-card {
     flex: 1 1 90%;
+    padding: 1.5rem;
+  }
+
+  .team-intro-image {
+    max-width: 600px;
   }
 }
 
-/* Adjust layout for mobile */
-@media (max-width: 768px) {
-  .mission-vision-container {
+
+  .team-container {
     padding: 2rem 1rem;
   }
-  .section-title {
+
+  .team-title {
     font-size: 5vw;
   }
-  .card {
-    padding: 1rem;
+
+  .team-intro-image {
     max-width: 100%;
+  }
+
+.team-values-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  color: #333;
+}
+
+.section-title {
+  display: flex;
+  font-size: 3.5rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin: 40px auto;
+  color: #461955;
+}
+
+.team-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.team-members {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.team-member {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6vh;
+}
+
+.member-content {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.member-image {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.member-info {
+  flex: 1;
+  max-width: 600px;
+  margin-left: 10vh;
+}
+
+.member-name {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+
+}
+
+
+.member-role {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.member-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .member-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .member-image {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  .member-info {
+    max-width: 100%;
+    margin-left: 10vw;
+  }
+}
+
+.values-section {
+  padding: 4rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.values-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.values-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.centered-row {
+  justify-content: center;
+  margin: 0 auto;
+  width: 66.66%; /* This makes the bottom row take up roughly the same space as the cards above */
+}
+
+.value-card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.value-icon {
+  width: 12vw;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.value-content {
+  text-align: left;
+}
+
+.value-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #4A235A;
+}
+
+.value-description {
+  font-size: 0.7rem;
+  line-height: 1.4;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .values-cards {
+    flex-direction: column;
+  }
+
+  .values-row {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .value-card {
+    flex: 1;
+    width: 100%;
   }
 }

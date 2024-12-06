@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import { useAuth } from '../context/AuthProvider';
+import { useAuth } from '../auth/AuthProvider';
 import { Navigate } from 'react-router-dom';
 
 // eslint-disable-next-line react/prop-types

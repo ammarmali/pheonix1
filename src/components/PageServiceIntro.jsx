@@ -13,7 +13,7 @@ const ShopHero = () => {
 
   return (
     <div className="shop-servicehero-wrapper">
-      <section className="shop-hero">
+      <section className="hero-service">
         <div className="hero-content">
           <h2 className="primary-heading2 animated-element">
           Our Services
@@ -21,7 +21,7 @@ const ShopHero = () => {
           <h1 className="secondary-heading2 animated-element">
           CUSTOMISED DEIB SOLUTIONS
           </h1>
-          <p className="hero-paragraph2 animated-element">
+          <p className="service-hero-paragraph animated-element">
           At PhoenixRize, we offer a comprehensive range of services designed to address the specific DEIB challenges organisations face today. Whether you're seeking consulting services to build a long-term strategy, training programmes to foster inclusive leadership, or engaging keynotes to inspire action, we are here to help. Our approach is data-driven, focused on delivering measurable results, and powered by the expertise of our team.          </p>
         </div>
 

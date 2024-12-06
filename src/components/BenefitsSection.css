@@ -1,96 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+.benefit-section-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+
 .title1 {
-  background:#461955;
+  background: #461955;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   margin: 50px 1px 40px 300px;
   font-size: auto;
-  text-decoration:  4px underline #461955;
+  text-decoration: 4px underline #461955;
   text-underline-offset: 10px;
 }
 
 
-.percentage-indicator {
-  border-radius: 10px;
-  border:2px solid #461955;
-  background-color: #fff;
-  color: #000;
+.benefit-title-2 {
+display: inline;
+border: 2px solid #461955;
+border-radius: 15px;
+padding: 10px;
+  color: #461955;
   text-align: center;
-  letter-spacing: -1.44px;
-  width: 80px;
-  font: 600 25px Poppins, sans-serif;
+  font-size: 2vw;
+  font-weight: 700;
+  margin-right: 5vw;
+ 
 }
 
-.preference-section {
+
+/* Overall Section */
+.benefit-preference-section {
   width: 100%;
   height: auto;
-  margin: 90px 10px 10px 10px;
+  margin: 50px 10px 50px 10px;
   display: flex;
-  flex-direction: column; /* Ensure vertical layout */
-  align-items: center; /* Center children */
-  padding: 20px 0; /* Add padding for aesthetics */
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
   background-color: white;
 }
 
-.preference-container {
+/* Container for Cards */
+.benefit-preference-container {
   gap: 20px;
   display: flex;
-  height: auto;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.preference-card {
+/* Individual Card */
+.benefit-preference-card {
   border-radius: 25px;
-  border: 2px solid #461955;
-  background-color:white;
+  background-color: white;
   color: #000;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: Roboto, sans-serif;
-  height: 300px;
-  width: 260px;
-  box-shadow: 0 14px 14px rgba(0, 0, 0, 0.3);
+  height: auto;
+  width: 300px;
+
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeInCard 1s ease-out forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-.preference-title {
-  background: linear-gradient(180deg, rgba(254, 204, 82, 1) 18%,  rgba(254, 204, 82, 1)75%);
+
+/* Animation for Card Fade-in */
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Percentage Indicator */
+.percentage-indicator {
+  font-size: 40px;
+  font-weight: bold;
+  color: #461955;
+  position: absolute;
+  top: 10px;
+  left: 35%;
+  transform: translateX(-50%);
+  background-color: #fff;
+
+  padding: 15px 20px;
+ 
+  opacity: 0;
+  animation: fadeInPercentage 1s ease-out forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Fade-in for Percentage Indicator */
+@keyframes fadeInPercentage {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Title Style */
+.benefit-preference-title {
+  background: #461955;
   -webkit-background-clip: text;
+  font-family: roboto;
   background-clip: text;
   color: transparent;
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: -1.28px;
+  font-size: 25px;
+  font-weight: 800;
   text-align: center;
-  margin: 20px 0px 40px 0px;
+  margin-top: 35%;
+  opacity: 0;
+  animation: fadeInTitle 1s ease-out forwards 0.5s;
+  transition: color 0.3s ease;
 }
 
-.preference-description {
+/* Hover Effect for Title */
+.benefit-preference-title:hover {
+  color: #461955; /* Smooth color change */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add subtle text shadow */
+}
+
+/* Fade-in for Title */
+@keyframes fadeInTitle {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Description Style */
+.benefit-preference-description {
   color: black;
-  width: auto;
-  height: 70px;
   text-align: center;
-  display: flex;
-  margin: 10px;
+  margin-top: 5%;
+  opacity: 0;
+  animation: fadeInDescription 1s ease-out forwards 1s;
+  font-size: 16px;
+  transition: color 0.3s ease;
 }
 
-.dei-img1 img {
-width: 100%;
+/* Hover Effect for Description */
+.benefit-preference-description:hover {
+  color: #461955; /* Change text color on hover */
+  transform: translateY(5px); /* Slight upward movement */
 }
 
-.dei-img1{
-  background-color:white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto;
+/* Fade-in for Description */
+@keyframes fadeInDescription {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+/* preference section ends here */
 
 
 /* Performance section start here */
 
 .home-performance-section {
-  position: relative; /* This makes sure that the absolute positioning of children works */
-  background: url("../assets/home2.png") no-repeat center center/cover; /* Background image */
+  position: relative;
+  background: url("../assets/hero.png") no-repeat center center/cover; /* Background image */
   width: 100%;
   height: 80vh; /* Full viewport height */
 }
@@ -101,59 +199,109 @@ width: 100%;
   left: 0;
   width: 100%;
   height: 100%; /* Cover the entire section */
-  background-color: rgba(86, 40, 101, 0.621); /* Semi-transparent overlay */
+  background-color: rgba(86, 40, 101, 0.406); /* Semi-transparent overlay */
   z-index: 1; /* Positioned above the image but below content */
 }
 
-.performance-content {
+.home-performance-content {
   position: relative; /* Ensure it stays above the overlay */
   z-index: 2; /* On top of the overlay */
+  display: flex;
+  align-items: center; /* Vertically center content */
+  justify-content: space-between; /* Space between title and description */
   max-width: 1200px;
   margin: 0 auto;
   padding: 100px;
   color: white;
-  text-align: center;
   height: 100%; /* Ensure it fills the section */
+  opacity: 0; /* Initially hidden for animation */
+  animation: fadeInContent 1.5s ease-out forwards; /* Fade in content */
 }
 
-.performance-title09 {
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(50px); /* Start with content slightly below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Move into the original position */
+  }
+}
+
+.home-performance-title {
   font-size: 2.5rem; /* Adjust font size to your preference */
   font-weight: bold;
   margin-bottom: 20px; /* Spacing between heading and paragraph */
+  max-width: 50%; /* Limit the width of the title */
+  margin-bottom: 25%;
+  opacity: 0; /* Initially hidden for animation */
+  animation: fadeInTitle 1s ease-out forwards; /* Title fade-in animation */
+  animation-delay: 0.5s; /* Delay to appear after content fade-in */
 }
 
-.performance-description12 {
+@keyframes fadeInTitle {
+  from {
+    opacity: 0;
+    transform: translateX(-50px); /* Start from the left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* End in original position */
+  }
+}
+
+.home-performance-description {
   color: #fff;
   font-size: 1.3rem;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   letter-spacing: -0.84px;
-  font: 400 15px Roboto, sans-serif;
+  font: 400 15px verdana, sans-serif;
   padding: 10px;
   margin: 1px;
   line-height: 1.6;
+  max-width: 45%; /* Limit the width of the description */
+  text-align: left; /* Align text to the left */
+  opacity: 0; /* Initially hidden for animation */
+  animation: fadeInDescription 1s ease-out forwards; /* Description fade-in animation */
+  animation-delay: 1s; /* Delay to appear after title */
+  margin-bottom: 20%;
 }
 
-.performance-description12{
-  display: inline-block;
-  width: auto;
-  color: #fff;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  letter-spacing: -0.84px;
-  font: 400 15px Roboto, sans-serif;
-  padding: 10px;
-  margin: 1px 1px 1px 1px ;
+@keyframes fadeInDescription {
+  from {
+    opacity: 0;
+    transform: translateX(50px); /* Start from the right */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* End in original position */
+  }
 }
+
+/* Add responsive design adjustments for mobile */
+@media (max-width: 768px) {
+  .home-performance-content {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    padding: 50px 20px; /* Adjust padding for smaller screens */
+  }
+
+  .home-performance-title,
+  .home-performance-description {
+    max-width: 100%; /* Ensure full width for both on small screens */
+  }
+}
+
 
 /* performance section ends here */
 
 
 /* consultation section starts here */
-
-/* The section */
 /* Container section */
+
 .home-consultation-cta {
   position: relative;
-  background: url('../assets/home3.png') no-repeat center center/cover;
+  background: url('../assets/servicehero.png') no-repeat center center/cover;
   height: 70vh; /* Full viewport height */
   display: flex;
   flex-direction: column;
@@ -224,14 +372,14 @@ width: 100%;
   border: 1px solid rgba(255, 255, 255, 1);
   color: #fff;
   text-transform: uppercase;
-  background-color: #a47cdd;
+ background-color: #461955;
   cursor: pointer;
   animation: pulseButton 2s ease-in-out infinite; /* Pulse effect for button */
 }
 
 /* Button hover effect (color change) */
 .cta-con button:hover {
-  background-color: #d5a9e5;
+  background-color: #faf5fc;
 }
 
 /* Keyframes for animations */
@@ -279,20 +427,7 @@ width: 100%;
 }
 
 /* Pulse effect for button */
-@keyframes pulseButton {
-  0% {
-    transform: scale(1);
-    background-color: #a47cdd;
-  }
-  50% {
-    transform: scale(1.05);
-    background-color: #d5a9e5;
-  }
-  100% {
-    transform: scale(1);
-    background-color: #a47cdd;
-  }
-}
+
 
 
 /* home consultation section ends here */
@@ -565,3 +700,157 @@ width: 100%;
     font-size: 12px;
   }
 }
+
+
+
+
+/* 3 Steps Of An Organisation's DEI Journey */
+
+.dei-container {
+  max-width: 970px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.dei-title {
+  color: #461955; /* Deep purple color */
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 60px;
+  font-weight: bold;
+}
+
+.dei-step {
+  margin-bottom: 80px;
+}
+
+.dei-step-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+}
+
+.dei-text-content {
+  flex: 1;
+  max-width: 50%;
+  line-height: 2vw;
+}
+
+.dei-text-content1{
+  display: flex;
+  align-items: center;
+}
+
+.dei-step-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.dei-step-number {
+  font-size: 50px;
+  font-weight: bold;
+  color: #461955; /* Golden yellow color */
+}
+
+.dei-step-title {
+  font-size: 36px;
+  font-weight: bold;
+  color:#461955;
+}
+
+.dei-step-description {
+  width: 33vw;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+.benefit-preference-button{
+  font-weight: 700;
+  font-size: 15px;
+color: #461955;
+background-color: #fff;
+border:white ;
+text-decoration: #461955 underline;
+cursor: pointer;
+}
+
+.dei-image {
+  height: auto;
+  width: 35vw;
+  border-radius: 12px;
+  border: 1px solid #461955;
+  margin: 10vh 1px;
+}
+
+/* Alternate layout for even-numbered steps */
+.dei-step:nth-child(even) .dei-step-content {
+  flex-direction: row-reverse;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dei-step-content {
+    flex-direction: column !important; /* Override the alternate layout */
+    gap: 20px;
+  }
+
+  .dei-text-content {
+    max-width: 100%;
+  }
+
+  .dei-image {
+    width: 100%;
+  }
+
+  .dei-title {
+    font-size: 36px;
+  }
+
+  .dei-step-number {
+    font-size: 48px;
+  }
+
+  .dei-step-title {
+    font-size: 24px;
+  }
+}
+
+/* Add base styles for fade-in elements */
+.benefit-section-title,
+.title1,
+.benefit-preference-card,
+.home-performance-content,
+.dei-step,
+.dei-step-2,
+.cta-con,
+.home-performance-title,
+.home-performance-description,
+.dei-title,
+.dei-step-number,
+.dei-step-title,
+.dei-step-description,
+.cta-message1,
+.cta-btn1 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Class added when element becomes visible */
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add different delays for cards */
+.benefit-preference-card:nth-child(1) { transition-delay: 0.2s; }
+.benefit-preference-card:nth-child(2) { transition-delay: 0.4s; }
+.benefit-preference-card:nth-child(3) { transition-delay: 0.6s; }
+
+/* Add delays for DEI steps */
+.dei-step:nth-child(1) { transition-delay: 0.2s; }
+.dei-step-2 { transition-delay: 0.4s; }
+.dei-step:nth-child(3) { transition-delay: 0.6s; }
