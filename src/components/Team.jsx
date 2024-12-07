@@ -7,19 +7,21 @@ import meera from "../assets/meera.png";
 import olwen from "../assets/olwen.png";
 import useWindowSize from "../hooks/useWindowSize";
 
-const Team = () => {
+  const Team = () => {
   const { width } = useWindowSize();
+  
 
   // Define layout based on screen size
   const layoutClass = width < 768 ? "mobile" : width < 1024 ? "tablet" : "desktop";
 
  
   return (
+
     <>
       <section className="team-container">
         <h2 className="team-title">Our Mission & Vision</h2>
         <div className={`team-cards-wrapper ${layoutClass}`}>
-          <article className="team-card">
+         <article className="team-card">
             <img
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/137f56e210d939504dd84e6256b125918221f8e582c3c2f6086ae531442d8413?placeholderIfAbsent=true&apiKey=a2acdceba9474ffebdaf77e02b0399d6"
@@ -64,7 +66,7 @@ const Team = () => {
                 <h4 className="member-role">Founder & Principal DEI Consultant</h4>
                 <p className="member-description">
                 At Phoenixrize, we go beyond surface-level diversity initiatives. We partner with organizations to create meaningful, long-lasting change by integrating inclusivity into the very fabric of their operations. Our expert consultants develop tailored strategies that meet the unique needs of each business, ensuring that equity and inclusion are central to their success. <br />  <br />
-By working closely with our clients, we provide actionable solutions that not only enhance company culture but also drive business growth and social impact. Let Phoenixrize help your organization thrive by fostering an environment where everyone has the opportunity to succeed. <br />  <br />
+                By working closely with our clients, we provide actionable solutions that not only enhance company culture but also drive business growth and social impact. Let Phoenixrize help your organization thrive by fostering an environment where everyone has the opportunity to succeed. <br />  <br />
                 </p>
               </div>
             </div>
@@ -81,8 +83,7 @@ By working closely with our clients, we provide actionable solutions that not on
                 <h4 className="member-role">DEI Data & Strategy Partner</h4>
                 <p className="member-description">
                 Meera Somji brings a unique blend of data analytics and DEI strategy to PhoenixRize. With a Master’s degree in Gender Studies from the London School of Economics, Meera has worked across London and New York as a strategy consultant. <br />  <br />
-
-leading data-driven projects that impact real change. As the DEI Data & Strategy Partner at PhoenixRize, Meera ensures that our services are grounded in actionable insights, helping organisations track progress and drive transformation through informed decision-making.
+                leading data-driven projects that impact real change. As the DEI Data & Strategy Partner at PhoenixRize, Meera ensures that our services are grounded in actionable insights, helping organisations track progress and drive transformation through informed decision-making.
                 </p>
               </div>
             </div>

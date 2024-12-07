@@ -8,7 +8,14 @@
 
 }
 
-
+.benefit-preference-button{
+  font-size: 14px;
+  font-weight: 600;
+  color: #461955;
+  background-color: #fff;
+  border: #fff;
+  text-decoration: underline;
+}
 
 .title1 {
   background: #461955;
@@ -19,6 +26,8 @@
   font-size: auto;
   text-decoration: 4px underline #461955;
   text-underline-offset: 10px;
+  text-transform: uppercase;
+  font-weight: 800;
 }
 
 
@@ -29,9 +38,10 @@ border-radius: 15px;
 padding: 10px;
   color: #461955;
   text-align: center;
-  font-size: 2vw;
-  font-weight: 700;
+  font-size: 1.5vw;
+  font-weight: 800;
   margin-right: 5vw;
+  text-transform: uppercase;
  
 }
 
@@ -701,156 +711,113 @@ padding: 10px;
   }
 }
 
+#2{
+  border: 2px solid #000;
+}
 
 
 
 /* 3 Steps Of An Organisation's DEI Journey */
 
-.dei-container {
-  max-width: 970px;
-  margin: 0 auto;
-  padding: 40px 20px;
+.journey-container {
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  padding: 101px 80px;
 }
-
-.dei-title {
-  color: #461955; /* Deep purple color */
-  font-size: 48px;
+.journey-content {
+  display: flex;
+  width: 100%;
+  max-width: 1070px;
+  flex-direction: column;
+}
+.journey-title {
+  color: rgba(70, 25, 85, 1);
+  letter-spacing: -2.4px;
   text-align: center;
-  margin-bottom: 60px;
-  font-weight: bold;
+  align-self: center;
+  width: 756px;
+  font: 600 60px Roboto, sans-serif;
 }
-
-.dei-step {
-  margin-bottom: 80px;
-}
-
-.dei-step-content {
+.step-container {
+  margin: 3vh;
+  gap: 20px;
   display: flex;
-  align-items: center;
-  gap: 40px;
-
 }
-
-.dei-text-content {
-  flex: 1;
-  max-width: 50%;
-  line-height: 2vw;
-}
-
-.dei-text-content1{
+.step-content {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  line-height: normal;
+  width: 50%;
 }
-
-.dei-step-header {
+.step-details {
   display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 20px;
+  margin-top: 4px;
+  flex-direction: column;
+  align-items: start;
+  font-family: Roboto, sans-serif;
 }
-
-.dei-step-number {
-  font-size: 50px;
-  font-weight: bold;
-  color: #461955; /* Golden yellow color */
+.step-number {
+  color: #461955;
+  font: 900 60px Roboto, sans-serif;
+  letter-spacing: -2.4px;
+  text-align: center;
 }
-
-.dei-step-title {
-  font-size: 36px;
-  font-weight: bold;
-  color:#461955;
+.step-title {
+  color: rgba(12, 0, 0, 1);
+  font: 600 39px Roboto, sans-serif;
+  letter-spacing: -1.56px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 6px;
 }
-
-.dei-step-description {
-  width: 33vw;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
+.step-description {
+  color: rgba(12, 0, 0, 1);
+  font: 400 18px Roboto, sans-serif;
+  letter-spacing: -0.72px;
+  margin-top: 12px;
 }
-.benefit-preference-button{
-  font-weight: 700;
-  font-size: 15px;
-color: #461955;
-background-color: #fff;
-border:white ;
-text-decoration: #461955 underline;
-cursor: pointer;
+.step-image {
+  aspect-ratio: 1.66;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  border-radius: 13px;
+  flex-grow: 1;
 }
-
-.dei-image {
-  height: auto;
-  width: 35vw;
-  border-radius: 12px;
-  border: 1px solid #461955;
-  margin: 10vh 1px;
-}
-
-/* Alternate layout for even-numbered steps */
-.dei-step:nth-child(even) .dei-step-content {
-  flex-direction: row-reverse;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .dei-step-content {
-    flex-direction: column !important; /* Override the alternate layout */
-    gap: 20px;
+@media (max-width: 991px) {
+  .journey-container {
+    padding: 100px 20px;
   }
-
-  .dei-text-content {
+  .journey-content {
     max-width: 100%;
   }
-
-  .dei-image {
+  .journey-title {
+    max-width: 100%;
+    font-size: 40px;
+  }
+  .step-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .step-content {
     width: 100%;
+    margin: 40px 0 0;
   }
-
-  .dei-title {
-    font-size: 36px;
+  .step-number {
+    
+    font-size: 40px;
   }
-
-  .dei-step-number {
-    font-size: 48px;
-  }
-
-  .dei-step-title {
-    font-size: 24px;
+  .step-details,
+  .step-description,
+  .step-image {
+    max-width: 100%;
+    margin-top: 40px;
   }
 }
 
-/* Add base styles for fade-in elements */
-.benefit-section-title,
-.title1,
-.benefit-preference-card,
-.home-performance-content,
-.dei-step,
-.dei-step-2,
-.cta-con,
-.home-performance-title,
-.home-performance-description,
-.dei-title,
-.dei-step-number,
-.dei-step-title,
-.dei-step-description,
-.cta-message1,
-.cta-btn1 {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
 
-/* Class added when element becomes visible */
-.fade-in-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Add different delays for cards */
-.benefit-preference-card:nth-child(1) { transition-delay: 0.2s; }
-.benefit-preference-card:nth-child(2) { transition-delay: 0.4s; }
-.benefit-preference-card:nth-child(3) { transition-delay: 0.6s; }
-
-/* Add delays for DEI steps */
-.dei-step:nth-child(1) { transition-delay: 0.2s; }
-.dei-step-2 { transition-delay: 0.4s; }
-.dei-step:nth-child(3) { transition-delay: 0.6s; }

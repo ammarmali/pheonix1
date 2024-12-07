@@ -101,6 +101,7 @@
   background-clip: text;
   color: transparent;
   text-align: center;
+  text-transform: uppercase;
   margin-bottom: 2rem;
   text-decoration: 5px solid #401b51 underline;
 }
@@ -139,6 +140,7 @@
   font-size: 2.6rem;
   font-weight: 800;
   margin-top: 1rem;
+  text-transform: uppercase;
 }
 
 .team-card-description {
@@ -219,6 +221,7 @@
   font-weight: 700;
   margin: 40px auto;
   color: #461955;
+  text-transform: uppercase;
 }
 
 .team-section {

@@ -90,15 +90,16 @@ const BenefitsSection = () => {
             button: "Monster’s Global Future of Work"
           }, {
             id:2,
+            
             target: 62,
             title: 'Profitability Boost',
             description: 'of employees would reject a job offer if it came from an organisation with a culture that didn’t support diversity',
-            button: "Learn More"
+            button:"Monster’s Global Future of Work"
           }, {
             target: 32,
             title: 'Critical Importance',
             description: 'Companies with a strong ethnic diversity are 36% more likely to have above-average profitability',
-            button: "Explore"
+            button: "Monster’s Global Future of Work"
           }].map(({ target, title, description, button }, index) => (
             <article className="benefit-preference-card" key={index}>
               <div className="percentage-indicator" data-target={target}>0%</div>
@@ -123,62 +124,53 @@ const BenefitsSection = () => {
 </section>
 
 
-<div className="dei-container">
-  <h1 className="dei-title">3 Steps Of An Organisation's DEI Journey</h1>
-  
-  <div className="dei-step">
-    <div className="dei-step-content">
-      <div className="dei-text-content">
-
-        <div className="dei-step-header">
-          <span className="dei-step-number">01</span>
+<div className="journey-container">
+  <div className="journey-content">
+    <h1 className="journey-title">3 steps of an organisation's DEI journey</h1>
+    
+    <div className="step-container">
+      <div className="step-content">
+        <div className="step-details">
+          <span className="step-number">01</span>
+          <h2 className="step-title">Diagnose</h2>
+          <p className="step-description">
+            Diagnose: Conduct a thorough assessment of existing DEI practices, identify gaps and areas for improvement, analyze organizational culture and employee feedback, evaluate current policies and procedures, benchmark against industry standards, and gather insights to develop a customized, strategic DEI plan that addresses specific needs and drives meaningful change.
+          </p>
         </div>
-        <h2 className="dei-step-title">DIAGNOSE:</h2>
-        <p className="dei-step-description">
-          Diagnose: Conduct A Thorough Assessment Of Existing DEI Practices, Identify Gaps And Areas For Improvement, Analyze Organizational Culture And Employee Feedback, Evaluate Current Policies And Procedures, Benchmark Against Industry Standards, And Gather Insights To Develop A Customized, Strategic DEI Plan That Addresses Specific Needs And Drives Meaningful Change.
-        </p>    
       </div>
-      <img 
-      loading='lazy'
-      src="https://s3-alpha-sig.figma.com/img/d80e/8307/dcd60fc3ad4d7bed74d59408e5517f23?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YkLpkW3dqPbcyK5i-NUJ8beCxcjTO4jRnK~ufGzJxedNNj8qIfwic3y4Dibrq7l0UoHcWbzExYThszy64gOTL-x6L3tgL~y7leGOJj8neFZc7eH-QHZNZ2K2HjD6KSopm58DeSSKeIQV6-HNEQXQo3vIyE2IBYp5IOGO-JBWpDB5WFgta5z70fZngU9s5E~bNFyI6eCrL4uRUSzGyWbfKueULYrAV-T2RPMr51vjlkz80xHIPwXXE3z7O9m1jEc~tSI-Gb9sslXXXivKRrPEz6RC6QlrdKPZ8Hu5B9CfWAQr5FJE4XyMYi9qMH9i56kWRZew8crbUeJwNmdTEJdaBA__" alt="Diagnose Step" className="dei-image" />
+      <div className="step-content">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/955a9cb3070fd4f4e2c3ede3fdacbbaba0b1b9ec4e2ef8ce7dd3bc76e5aef0a7?placeholderIfAbsent=true&apiKey=a81574df70b8455693c5aa03f1eabb8d" alt="Visual representation of DEI diagnosis process" className="step-image" />
+      </div>
     </div>
-  </div>
 
-  <div className="dei-step1">
-    <div className="dei-step-content1">
-      <div className="dei-text-content">
-      <img 
-        loading='lazy'
-        src="https://s3-alpha-sig.figma.com/img/a8cd/77f3/0b359701ffc8b9d105286fb246700a8d?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lspc0jbOmJdTGZDSVvYkaL7lx-hBhlOvRru-Q9vGHxoPFfNAO-zj4FLs5oIztFr08igOLefeG-vbCT6XTkRLV0e018ga~O7pcxYsEsx3BiJE52irW9QeGcY-r64sJHAMgtSvWNbNftMgewTQQTFBX22O4HM8g6xPee1ZRYkmnZ8T2Gza~mHey8crNkdjH0sbTVFq372WEovh0PBIr6o920~sd6YntOiXvJN-DXa7kiFGPTvAUy~GAUXcjYXCi~-~TqWDvFMQScraJjTtE0rC2JOJ0EThweCRYpBkoGK4QvUREfWcGonDJ2~lPyWt-D40KyymH9P-Kxwa58bMSfQ3ug__" 
-        alt="Develop Step" 
-        className="dei-image" 
-      />
-        <div className="dei-step-header">
-          <span className="dei-step-number">02</span> 
-        </div>
-        <h2 className="dei-step-title">DEVELOP:</h2>
-        <p className="dei-step-description">
-          To Drive Meaningful And Sustained Progress In Diversity, Equity, And Inclusion (DEI), It Is Essential To Provide Comprehensive Training And Development Programs That Equip Employees And Leaders With The Necessary Skills And Knowledge. Implementing A Robust Suite Of Tools And Resources Supports These DEI Initiatives, Ensuring That All Members Of The Organization.
-        </p>
+    <div className="step-container">
+      <div className="step-content">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5f78eed2bdc68a9d65cb512001b6e3ce3970a79fd50723eed3999cbea2aafdd1?placeholderIfAbsent=true&apiKey=a81574df70b8455693c5aa03f1eabb8d" alt="Visual representation of DEI development process" className="step-image" />
       </div>
-   
+      <div className="step-content">
+        <div className="step-details">
+          <span className="step-number">02</span>
+          <h2 className="step-title">Develop</h2>
+          <p className="step-description">
+            To drive meaningful and sustained progress in diversity, equity, and inclusion (DEI), it is essential to provide comprehensive training and development programs that equip employees and leaders with the necessary skills and knowledge. Implementing a robust suite of tools and resources supports these DEI initiatives, ensuring that all members of the organization.
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div className="dei-step">
-    <div className="dei-step-content">
-      <div className="dei-text-content">
-        <div className="dei-step-header">
-          <span className="dei-step-number">03</span>
+    <div className="step-container">
+      <div className="step-content">
+        <div className="step-details">
+          <span className="step-number">03</span>
+          <h2 className="step-title">Impact</h2>
+          <p className="step-description">
+            Measuring the impact of DEI initiatives is crucial for understanding their effectiveness. This involves evaluating how these efforts enhance employee engagement, drive innovation, and improve overall business performance. By sharing success stories and data-driven results, organizations can reinforce the importance of DEI, inspiring continued commitment and scaling successful practices across the organization.
+          </p>
         </div>
-        <h2 className="dei-step-title">IMPACT:</h2>
-        <p className="dei-step-description">
-          Measuring The Impact Of DEI Initiatives Is Crucial For Understanding Their Effectiveness. This Involves Evaluating How These Efforts Enhance Employee Engagement, Drive Innovation, And Improve Overall Business Performance. By Sharing Success Stories And Data-Driven Results, Organizations Can Reinforce The Importance Of DEI, Inspiring Continued Commitment And Scaling Successful Practices Across The Organization
-        </p>
       </div>
-      <img 
-      loading='lazy'
-      src="https://s3-alpha-sig.figma.com/img/d80e/8307/dcd60fc3ad4d7bed74d59408e5517f23?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YkLpkW3dqPbcyK5i-NUJ8beCxcjTO4jRnK~ufGzJxedNNj8qIfwic3y4Dibrq7l0UoHcWbzExYThszy64gOTL-x6L3tgL~y7leGOJj8neFZc7eH-QHZNZ2K2HjD6KSopm58DeSSKeIQV6-HNEQXQo3vIyE2IBYp5IOGO-JBWpDB5WFgta5z70fZngU9s5E~bNFyI6eCrL4uRUSzGyWbfKueULYrAV-T2RPMr51vjlkz80xHIPwXXE3z7O9m1jEc~tSI-Gb9sslXXXivKRrPEz6RC6QlrdKPZ8Hu5B9CfWAQr5FJE4XyMYi9qMH9i56kWRZew8crbUeJwNmdTEJdaBA__" alt="Impact Step" className="dei-image" />
+      <div className="step-content">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7efcd4b4037bee08cdff51890f5a9cbff14df1ca596aaa5a66c527f63ba8692f?placeholderIfAbsent=true&apiKey=a81574df70b8455693c5aa03f1eabb8d" alt="Visual representation of DEI impact measurement" className="step-image" />
+      </div>
     </div>
   </div>
 </div>

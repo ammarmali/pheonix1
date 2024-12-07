@@ -180,13 +180,14 @@
 }
 
 .service-title {
-  font-size: 44px;
+  font-size: 40px;
   background:#4B1E54;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   margin: 1px 1px 1px 1px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .service-title2 {
