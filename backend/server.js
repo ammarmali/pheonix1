@@ -1,8 +1,11 @@
 /* eslint-disable no-undef */
+
 const express = require("express");
+const cors = require("cors"); // Import cors
 const axios = require("axios");
 
 const app = express();
+app.use(cors()); // Enable CORS for all routes
 app.use(express.json());
 
 // Configuration
@@ -85,7 +88,7 @@ async function fetchOpenAIResponse(aiSearchResponse, userQuery) {
         `${endpoint}openai/deployments/${deployment}/chat/completions?api-version=2024-05-01-preview`,
         {
             messages: chatPrompt,
-            max_tokens: 800,
+            max_tokens: 200,
             temperature: 0.7,
             top_p: 0.95,
             frequency_penalty: 0,

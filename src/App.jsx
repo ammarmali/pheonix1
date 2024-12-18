@@ -10,6 +10,7 @@ import AdminPanel from "./pages/AdminPanel";
 import About from "./pages/About";
 import Service from "./pages/Service";
 import Shop from "./pages/Shop";
+import Chatbot from "./components/Chatbot";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -31,6 +32,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <Chatbot />
 
       <Routes>
         <Route
