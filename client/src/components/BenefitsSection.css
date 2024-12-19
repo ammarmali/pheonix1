@@ -1,0 +1,821 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+.benefit-section-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.benefit-preference-button{
+  font-size: 14px;
+  font-weight: 600;
+  color: #461955;
+  background-color: #fff;
+  border: #fff;
+  text-decoration: underline;
+}
+
+.title1 {
+  background: #461955;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 50px 1px 40px 300px;
+  font-size: auto;
+  text-decoration: 4px underline #461955;
+  text-underline-offset: 10px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+
+.benefit-title-2 {
+display: inline;
+border: 2px solid #461955;
+border-radius: 15px;
+padding: 10px;
+  color: #461955;
+  text-align: center;
+  font-size: 1.5vw;
+  font-weight: 800;
+  margin-right: 5vw;
+  text-transform: uppercase;
+ 
+}
+
+
+/* Overall Section */
+.benefit-preference-section {
+  width: 100%;
+  height: auto;
+  margin: 50px 10px 50px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  background-color: white;
+}
+
+/* Container for Cards */
+.benefit-preference-container {
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Individual Card */
+.benefit-preference-card {
+  border-radius: 25px;
+  background-color: white;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Roboto, sans-serif;
+  height: auto;
+  width: 300px;
+
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeInCard 1s ease-out forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+
+/* Animation for Card Fade-in */
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Percentage Indicator */
+.percentage-indicator {
+  font-size: 50px;
+  font-weight: bold;
+  color:black;
+  position: absolute;
+  top: 10px;
+  left: 35%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 15px 20px;
+  opacity: 0;
+  animation: fadeInPercentage 1s ease-out forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Fade-in for Percentage Indicator */
+@keyframes fadeInPercentage {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Title Style */
+.benefit-preference-title {
+  background: #461955;
+  -webkit-background-clip: text;
+  font-family: roboto;
+  background-clip: text;
+  color: transparent;
+  font-size: 25px;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 35%;
+  opacity: 0;
+  animation: fadeInTitle 1s ease-out forwards 0.5s;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effect for Title */
+.benefit-preference-title:hover {
+  color: #461955; /* Smooth color change */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add subtle text shadow */
+}
+
+/* Fade-in for Title */
+@keyframes fadeInTitle {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Description Style */
+.benefit-preference-description {
+  color: black;
+  text-align: center;
+  margin-top: 5%;
+  opacity: 0;
+  animation: fadeInDescription 1s ease-out forwards 1s;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effect for Description */
+.benefit-preference-description:hover {
+  color: #461955; /* Change text color on hover */
+  transform: translateY(5px); /* Slight upward movement */
+}
+
+/* Fade-in for Description */
+@keyframes fadeInDescription {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* preference section ends here */
+
+
+/* Performance section start here */
+
+.home-performance-section {
+  position: relative;
+  background: url("../assets/hero.png") no-repeat center center/cover; /* Background image */
+  width: 100%;
+  height: 80vh; /* Full viewport height */
+}
+
+.home-overlay-performance {
+  position: absolute; /* Positioned on top of the background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Cover the entire section */
+  background-color: rgba(86, 40, 101, 0.406); /* Semi-transparent overlay */
+  z-index: 1; /* Positioned above the image but below content */
+}
+
+.home-performance-content {
+  position: relative; /* Ensure it stays above the overlay */
+  z-index: 2; /* On top of the overlay */
+  display: flex;
+  align-items: center; /* Vertically center content */
+  justify-content: space-between; /* Space between title and description */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px;
+  color: white;
+  height: 100%; /* Ensure it fills the section */
+  opacity: 0; /* Initially hidden for animation */
+  animation: fadeInContent 1.5s ease-out forwards; /* Fade in content */
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(50px); /* Start with content slightly below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Move into the original position */
+  }
+}
+
+.home-performance-title {
+  font-size: 2.5rem; /* Adjust font size to your preference */
+  font-weight: bold;
+  margin-bottom: 20px; /* Spacing between heading and paragraph */
+  max-width: 50%; /* Limit the width of the title */
+  margin-bottom: 25%;
+  opacity: 0; /* Initially hidden for animation */
+  animation: fadeInTitle 1s ease-out forwards; /* Title fade-in animation */
+  animation-delay: 0.5s; /* Delay to appear after content fade-in */
+}
+
+@keyframes fadeInTitle {
+  from {
+    opacity: 0;
+    transform: translateX(-50px); /* Start from the left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* End in original position */
+  }
+}
+
+.home-performance-description {
+  color: #fff;
+  font-size: 1.3rem;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  letter-spacing: -0.84px;
+  font: 400 15px verdana, sans-serif;
+  padding: 10px;
+  margin: 1px;
+  line-height: 1.6;
+  max-width: 45%; /* Limit the width of the description */
+  text-align: left; /* Align text to the left */
+  opacity: 0; /* Initially hidden for animation */
+  animation: fadeInDescription 1s ease-out forwards; /* Description fade-in animation */
+  animation-delay: 1s; /* Delay to appear after title */
+  margin-bottom: 20%;
+}
+
+@keyframes fadeInDescription {
+  from {
+    opacity: 0;
+    transform: translateX(50px); /* Start from the right */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* End in original position */
+  }
+}
+
+/* Add responsive design adjustments for mobile */
+@media (max-width: 768px) {
+  .home-performance-content {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    padding: 50px 20px; /* Adjust padding for smaller screens */
+  }
+
+  .home-performance-title,
+  .home-performance-description {
+    max-width: 100%; /* Ensure full width for both on small screens */
+  }
+}
+
+
+/* performance section ends here */
+
+
+/* consultation section starts here */
+/* Container section */
+
+.home-consultation-cta {
+  position: relative;
+  background: url('../assets/servicehero.png') no-repeat center center/cover;
+  height: 70vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 93px 80px 49px;
+  border: 1px solid rgba(255, 255, 255, 0.01);
+  animation: fadeInBackground 2s ease-out forwards; /* Fade-in animation for background */
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.home-consultation-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(70, 25, 85, 0.59);
+  z-index: 1;
+  animation: fadeInOverlay 2s ease-out forwards;
+}
+
+
+/* Animation for fading in the content */
+.cta-con {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0; /* Initially invisible */
+  animation: slideInContent 1.5s ease-out forwards 0.5s; /* Slide-in animation for content */
+}
+
+/* Heading animation */
+.cta-message1 {
+  text-align: center;
+  font-size: 35px;
+  letter-spacing: -1.8px;
+  color: #fff;
+  margin-bottom: 30px;
+  opacity: 0; /* Initially invisible */
+  animation: fadeInText 1.5s ease-out forwards 1s; /* Fade-in animation for text */
+}
+
+/* Button animation (Pulse effect) */
+.cta-con button {
+  border-radius: 13px;
+  text-align: center;
+  align-self: center;
+  margin-top: 30px;
+  width: 250px;
+  height: 50px;
+  font-size: 14px;
+  letter-spacing: -0.6px;
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  color: #fff;
+  text-transform: uppercase;
+ background-color: #461955;
+  cursor: pointer;
+  animation: pulseButton 2s ease-in-out infinite; /* Pulse effect for button */
+}
+
+/* Button hover effect (color change) */
+.cta-con button:hover {
+  background-color: #faf5fc;
+}
+
+/* Keyframes for animations */
+
+/* Fade-in animation for background */
+@keyframes fadeInBackground {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fade-in animation for overlay */
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide-in animation for content */
+@keyframes slideInContent {
+  from {
+    transform: translateY(50px); /* Start from below */
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0); /* Slide to normal position */
+    opacity: 1;
+  }
+}
+
+/* Fade-in animation for text */
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Pulse effect for button */
+
+
+
+/* home consultation section ends here */
+
+
+
+/* Ultra-wide 4K screens (2560px and above) */
+@media (min-width: 2560px) {
+  .preference-card {
+    width: 400px;
+    height: 450px;
+  }
+
+  h1 {
+    font-size: 80px;
+  }
+
+  .section-title {
+    font-size: 48px;
+  }
+
+  .section-description {
+    font-size: 32px;
+  }
+
+  /* Additional styles for .title1 and others can be added here if needed */
+}
+
+/* Ultra-wide (2000px - 2559px) */
+@media (min-width: 2000px) and (max-width: 2159px) {
+  .preference-section {
+    padding-bottom: 100px;
+    height: auto;
+  }
+
+  .preference-card {
+    width: 400px;
+    height: 360px;
+  }
+}
+
+/* Large desktops (1600px - 1999px) */
+@media  (min-width: 1600px) and (max-width: 1800px) {
+ 
+
+  .preference-card {
+    width: 350px;
+    height: 60px;
+  }
+
+  .title1 {
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .section-title {
+    font-size: 35px;
+  }
+
+  .preference-description {
+    font-size: 10px;
+  }
+}
+
+/* Extra-large desktops (1400px - 1599px) */
+@media (min-width: 1400px),(max-width: 1600px) {
+  .preference-card {
+    width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .title1 {
+    font-size: 45px;
+    margin: -13px 150px 30px 130px;
+  }
+
+  .section-description {
+    font-size: 44px;
+  }
+
+  .percentage-indicator {
+   
+    margin: 40px 1px 1px 1px;
+  }
+
+  .preference-description {
+    font-size: 16px;
+  
+        
+  }
+
+  .preference-section {
+    height: auto;
+  }
+  .preference-title{
+    font-size: 35px;
+    margin: 20px 1px 30px 10px;
+  }
+}
+
+/* Large desktops (1200px - 1399px) */
+@media (min-width: 1200px) ,(max-width: 1400px) {
+  .preference-card {
+    width: 360px;
+    height: 380px;
+  }
+
+  .preference-section {
+    height: auto;
+  }
+
+  .percentage-indicator {
+    margin: 30px 1px 1px 1px;
+  }
+
+  h1 {
+    font-size: 35px;
+    margin: 1px 1px 1px 10px;
+  }
+
+  .section-title {
+    font-size: 34px;
+    margin: 67px 1px 30px 213px;;
+  }
+
+  .section-description {
+    font-size: 20px;
+    margin: 40px;
+  }
+
+  .title1 {
+    font-size: 38px;
+   
+  }
+}
+
+/* Medium desktops (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .preference-card {
+    width: 300px;
+    height: 300px;
+  }
+
+  h1 {
+    font-size: 30px;
+    margin: 1px 1px 10px 50px;
+  }
+
+  .title1 {
+    font-size: 38px;
+   
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .section-description {
+    font-size: 18px;
+  }
+
+  .percentage-indicator {
+    font-size: 22px;
+  }
+}
+
+/* Tablets (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .preference-card {
+    width: 300px;
+    height: 250px;
+  }
+
+  h1 {
+    font-size: 26px;
+    margin: 1px 1px 20px 30px;
+  }
+
+  .title1 {
+    font-size: 28px;
+    margin: 1px 1px 20px 30px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .section-description {
+    font-size: 16px;
+  }
+}
+
+/* Mobile (576px - 767px) */
+@media (max-width: 767px) {
+  .preference-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .percentage-indicator {
+    font-size: 18px;
+  }
+
+  .title1 {
+    font-size: 24px;
+    margin: 10px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .section-description {
+    font-size: 14px;
+  }
+
+  .step-container {
+    flex-direction: column;
+  }
+
+  .step-content {
+    width: 100%;
+  }
+
+  .step-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+/* Extra-small devices (up to 575px) */
+@media (max-width: 575px) {
+  .preference-section {
+    height: auto;
+    padding: 20px;
+  }
+
+  .step-number {
+    font-size: 50px;
+  }
+
+  .step-title {
+    font-size: 20px;
+  }
+
+  .step-description {
+    font-size: 12px;
+  }
+
+  .percentage-indicator {
+    font-size: 16px;
+  }
+
+  .title1 {
+    font-size: 20px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .section-description {
+    font-size: 12px;
+  }
+}
+
+#2{
+  border: 2px solid #000;
+}
+
+
+
+/* 3 Steps Of An Organisation's DEI Journey */
+
+.journey-container {
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  padding: 101px 80px;
+}
+.journey-content {
+  display: flex;
+  width: 100%;
+  max-width: 1070px;
+  flex-direction: column;
+}
+.journey-title {
+  color: rgba(70, 25, 85, 1);
+  letter-spacing: -2.4px;
+  text-align: center;
+  align-self: center;
+  width: 756px;
+  font: 600 60px Roboto, sans-serif;
+}
+.step-container {
+  margin: 3vh;
+  gap: 20px;
+  display: flex;
+}
+.step-content {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 50%;
+}
+.step-details {
+  display: flex;
+  margin-top: 4px;
+  flex-direction: column;
+  align-items: start;
+  font-family: Roboto, sans-serif;
+}
+.step-number {
+  color: #461955;
+  font: 900 60px Roboto, sans-serif;
+  letter-spacing: -2.4px;
+  text-align: center;
+}
+.step-title {
+  color: rgba(12, 0, 0, 1);
+  font: 600 39px Roboto, sans-serif;
+  letter-spacing: -1.56px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+.step-description {
+  color: rgba(12, 0, 0, 1);
+  font: 400 18px Roboto, sans-serif;
+  letter-spacing: -0.72px;
+  margin-top: 12px;
+}
+.step-image {
+  aspect-ratio: 1.66;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  border-radius: 13px;
+  flex-grow: 1;
+}
+@media (max-width: 991px) {
+  .journey-container {
+    padding: 100px 20px;
+  }
+  .journey-content {
+    max-width: 100%;
+  }
+  .journey-title {
+    max-width: 100%;
+    font-size: 40px;
+  }
+  .step-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .step-content {
+    width: 100%;
+    margin: 40px 0 0;
+  }
+  .step-number {
+    
+    font-size: 40px;
+  }
+  .step-details,
+  .step-description,
+  .step-image {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}
+
+
