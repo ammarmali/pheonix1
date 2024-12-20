@@ -7,6 +7,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10vh;
   height: 100vh;
   width: 100%;
  
@@ -18,7 +19,7 @@ body {
 .contactus-img{
   background-size: cover;
   background-position: center;
-   background-image: url('https://cdn.builder.io/api/v1/image/assets/TEMP/51e7681cf599c87e33a3df3a7344ec157eb4a2ad9aa1fb0187fbdc479439b455?placeholderIfAbsent=true&apiKey=a2acdceba9474ffebdaf77e02b0399d6');}
+   background-image: url('../assets/contact.png');}
 
 
 .color-contactus{
@@ -30,7 +31,8 @@ body {
 .contact-us-card {
   display: flex;
   max-width: 1000px;
-  width: 100%;
+  width: 70vw;
+  height: 70vh;
   background-color: rgba(254, 250, 255, 0.397); /* Add a slight transparent background to make content more readable */
   border: 2px solid white;
   border-radius: 10px;
@@ -39,6 +41,7 @@ body {
 }
 
 .contact-us-left {
+  width: auto;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -78,12 +81,14 @@ body {
 
 .contact-ustilte-1 {
  color: white;
-  font-size: 50px;
+  font-size: 3vw;
   margin: 1px 1px 50px 80px;
 }
 
 form {
   display: flex;
+  width: 40vw;
+  height: 50vh;
   flex-direction: column;
 }
 

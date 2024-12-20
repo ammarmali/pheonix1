@@ -1,7 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import axios from "axios";
-import "./Chatbot.css"; // Assuming you'll create a CSS file for the styles
+import "./Chatbot.css";
+import chatbot from "../assets/chatbot.png"
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([]);
@@ -11,15 +12,11 @@ const Chatbot = () => {
   const handleSend = async () => {
     if (!userInput.trim()) return;
 
-    // Add user message to the chat
     const newMessage = { sender: "user", text: userInput };
     setMessages([...messages, newMessage]);
 
     try {
-      // Call the backend API
       const response = await axios.post("/rag", { userQuery: userInput });
-
-      // Add AI response to the chat
       const aiResponseText =
         response.data?.openAIResponse?.choices?.[0]?.message?.content ||
         "Sorry, I couldn't understand that.";
@@ -41,7 +38,11 @@ const Chatbot = () => {
           className="chatbot-toggle"
           onClick={() => setIsChatOpen(true)}
         >
-          Chat
+          <img
+            src={chatbot}// Replace with your image URL
+            alt="Chatbot"
+            className="chatbot-logo"
+          />
         </button>
       )}
 

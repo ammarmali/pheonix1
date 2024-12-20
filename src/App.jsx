@@ -11,6 +11,8 @@ import About from "./pages/About";
 import Service from "./pages/Service";
 import Shop from "./pages/Shop";
 import Chatbot from "./components/Chatbot";
+import ContactUs1 from "../src/pages/Contact";
+
 
 function App() {
   const [items, setItems] = useState([]);
@@ -50,6 +52,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/services" element={<Service />} /> 
+        <Route path="/contact" element={<ContactUs1 />} />
         <Route
           path="/profile"
           element={

@@ -4,8 +4,6 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 
-const response = await axios.post("/rag", { userQuery: userInput });
-
 
 export default defineConfig({
   plugins: [react()],

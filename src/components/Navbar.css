@@ -22,7 +22,7 @@ body {
 
 .header.scrolled {
   height: 60px;
-  background-color: rgba(255, 254, 255, 0.95);
+  background-color: rgba(255, 254, 255, 0.087);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -36,7 +36,7 @@ body {
 }
 
 .scrolled .logo-image {
-  width: 160px;
+  width: 220px;
 }
 
 .navbar {

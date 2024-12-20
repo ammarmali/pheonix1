@@ -101,17 +101,15 @@ padding: 10px;
 
 /* Percentage Indicator */
 .percentage-indicator {
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bold;
-  color: #461955;
+  color:black;
   position: absolute;
   top: 10px;
   left: 35%;
   transform: translateX(-50%);
   background-color: #fff;
-
   padding: 15px 20px;
- 
   opacity: 0;
   animation: fadeInPercentage 1s ease-out forwards;
   transition: transform 0.3s ease, box-shadow 0.3s ease;

@@ -1,32 +1,43 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRightToBracket, faPhone, faTimes } from '@fortawesome/free-solid-svg-icons';
-import useWindowSize from '../hooks/useWindowSize';
-import { useAuth } from "../auth/AuthProvider"; // Import the useAuth hook
-import logoimg1 from '../assets/logo.png';
+import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRightToBracket, faPhone, faTimes } from "@fortawesome/free-solid-svg-icons";
+
+import useWindowSize from "../hooks/useWindowSize";
+import { useAuth0 } from "@auth0/auth0-react";
+import logoimg1 from "../assets/logo.png";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { width } = useWindowSize(); // Get the current window size
-  const { authState, isLoading } = useAuth(); // Use custom AuthContext
-  const { loginWithRedirect, logout } = useAuth(); // Use Auth0 functions
+  const { width } = useWindowSize();
+  const { isAuthenticated, isLoading, user, loginWithRedirect, logout } = useAuth0();
+  const navigate = useNavigate(); // Initialize navigate
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    document.body.style.overflow = isOpen ? 'unset' : 'hidden';
+    document.body.style.overflow = isOpen ? "unset" : "hidden";
   };
+  const handleContactClick = () => {
+    navigate("/Contact"); // Use the correct route path
+    setTimeout(() => {
+      const contactSection = document.getElementById("ContactUs");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 200);
+  };
+  
 
   return (
     <header className={`header-navbar ${scrolled ? "scrolled" : ""}`}>
@@ -44,10 +55,13 @@ const Navbar = () => {
       </nav>
 
       <div className="right-section">
-        {!isLoading && authState.isAuthenticated ? (
+        {!isLoading && isAuthenticated ? (
           <>
-            <span className="user-name">{authState.user?.name}</span>
-            <button className="auth-button" onClick={() => logout({ returnTo: window.location.origin })}>
+            <span className="user-name">{user?.name}</span>
+            <button
+              className="auth-button"
+              onClick={() => logout({ returnTo: window.location.origin })}
+            >
               <FontAwesomeIcon icon={faArrowRightToBracket} /> Log Out
             </button>
           </>
@@ -56,7 +70,12 @@ const Navbar = () => {
             <FontAwesomeIcon icon={faArrowRightToBracket} /> Log In
           </button>
         )}
-        <button className="contact-button">
+
+        {/* Updated Contact Us Button */}
+        <button
+          className="contact-button"
+          onClick={handleContactClick} // Use the handler
+        >
           <FontAwesomeIcon icon={faPhone} /> Contact Us
         </button>
       </div>
