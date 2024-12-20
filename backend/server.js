@@ -12,9 +12,9 @@ app.use(express.json());
 const endpoint = process.env.ENDPOINT_URL || "https://asksue.openai.azure.com/";
 const deployment = process.env.DEPLOYMENT_NAME || "gpt-4o-mini";
 const searchEndpoint = process.env.SEARCH_ENDPOINT || "https://asksuesearch.search.windows.net";
-const searchKey = process.env.SEARCH_KEY || "AZURE";
-const searchIndex = process.env.SEARCH_INDEX_NAME || "phoneix";
-const subscriptionKey = process.env.AZURE_OPENAI_API_KEY || "fake";
+const searchKey = process.env.SEARCH_KEY 
+const searchIndex = process.env.SEARCH_INDEX_NAME 
+const subscriptionKey = process.env.AZURE_API_KEY 
 
 console.log("Endpoint URL:", endpoint);
 console.log("Search Endpoint:", searchEndpoint);
