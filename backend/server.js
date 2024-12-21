@@ -1,7 +1,9 @@
+/* eslint-disable no-undef */
+
 const express = require("express");
 const cors = require("cors");
 const axios = require("axios");
-require("dotenv").config();
+require("dotenv").config(); // Import and configure dotenv
 
 const app = express();
 app.use(cors());
@@ -15,7 +17,16 @@ const searchKey = process.env.SEARCH_KEY;
 const searchIndex = process.env.SEARCH_INDEX_NAME;
 const subscriptionKey = process.env.AZURE_OPENAI_API_KEY;
 
-app.post("/rag", async (req, res) => {
+console.log("Loaded Environment Variables:");
+console.log("ENDPOINT_URL:", process.env.ENDPOINT_URL);
+console.log("DEPLOYMENT_NAME:", process.env.DEPLOYMENT_NAME);
+console.log("SEARCH_ENDPOINT:", process.env.SEARCH_ENDPOINT);
+console.log("SEARCH_KEY:", process.env.SEARCH_KEY);
+console.log("SEARCH_INDEX_NAME:", process.env.SEARCH_INDEX_NAME);
+console.log("AZURE_OPENAI_API_KEY:", process.env.AZURE_OPENAI_API_KEY);
+
+// Handle POST request for RAG functionality
+app.post("/api/rag", async (req, res) => {
     const { userQuery } = req.body;
 
     if (!userQuery) {
@@ -28,12 +39,14 @@ app.post("/rag", async (req, res) => {
 
         res.status(200).send({ openAIResponse, aiSearchResponse });
     } catch (error) {
-        console.error("Error:", error);
-        res.status(500).send({ error: "An error occurred while processing your request." });
+        console.error("Error:", error.message);
+        res.status(500).send({ error: "An error occurred while processing your request.", details: error.message });
     }
 });
 
+// Function to fetch response from AIsearch
 async function fetchAIsearchResponse(query) {
+    console.log("Fetching AIsearch response for query:", query);
     const response = await axios.post(
         `${searchEndpoint}/indexes/${searchIndex}/docs/search?api-version=2024-05-01-preview`,
         {
@@ -49,9 +62,12 @@ async function fetchAIsearchResponse(query) {
             },
         }
     );
+
+    console.log("AIsearch response:", response.data);
     return response.data;
 }
 
+// Function to fetch response from OpenAI
 async function fetchOpenAIResponse(aiSearchResponse, userQuery) {
     const relevantText = aiSearchResponse.value.map(item => item.chunk).join("\n\n");
 
@@ -87,5 +103,12 @@ async function fetchOpenAIResponse(aiSearchResponse, userQuery) {
     return response.data;
 }
 
-// Export the app for Vercel
-module.exports = app;
+// Start the server (for local testing)
+const PORT = process.env.PORT || 3001;
+if (process.env.NODE_ENV !== "production") {
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+    });
+}
+
+module.exports = app; // Export for Vercel
