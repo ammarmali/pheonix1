@@ -9,9 +9,9 @@ app.use(cors()); // Enable CORS for all routes
 app.use(express.json());
 
 // Configuration
-const endpoint = process.env.ENDPOINT_URL || "https://asksue.openai.azure.com/";
+const endpoint = "https://pheonix1-ammarmalis-projects.vercel.app";  // Updated URL
 const deployment = process.env.DEPLOYMENT_NAME || "gpt-4o-mini";
-const searchEndpoint = process.env.SEARCH_ENDPOINT || "https://asksuesearch.search.windows.net";
+const searchEndpoint = "https://pheonix1-ammarmalis-projects.vercel.app";  // Updated URL
 const searchKey = process.env.SEARCH_KEY || "i4nl0TZxBCEvq3vZmItXfxr6SAqoaHOzyfgUNaAcZ5AzSeC06Pyn";
 const searchIndex = process.env.SEARCH_INDEX_NAME || "phoneix";
 const subscriptionKey = process.env.AZURE_OPENAI_API_KEY || "7ocAteQPkQ7UCJgTTUKSQs8XbynsgQhJ7vkOYNIO8XKsdFzBi56zJQQJ99ALACYeBjFXJ3w3AAAAACOGf0Dv";
