@@ -34,10 +34,10 @@ app.post("/rag", async (req, res) => {
 });
 
 async function fetchAIsearchResponse(query) {
-    console.log("Fetching AIsearch response for query:", query);
+    console.log("Fetching AI search response for query:", query);
     try {
         const response = await axios.post(
-            `${process.env.SEARCH_ENDPOINT}/indexes/${process.env.SEARCH_INDEX_NAME}/docs/search?api-version=2024-05-01-preview`,
+            `${searchEndpoint}/indexes/${searchIndex}/docs/search?api-version=2024-05-01-preview`,
             {
                 search: query,
                 queryType: "semantic",
@@ -47,14 +47,14 @@ async function fetchAIsearchResponse(query) {
             {
                 headers: {
                     "Content-Type": "application/json",
-                    "api-key": process.env.SEARCH_KEY,
+                    "api-key": searchKey,
                 },
             }
         );
-        console.log("AIsearch response:", response.data);
+        console.log("AI search response:", response.data);
         return response.data;
     } catch (error) {
-        console.error("Error during AIsearch request:", error.response ? error.response.data : error.message);
+        console.error("Error during AI search request:", error.response ? error.response.data : error.message);
         throw new Error("Failed to fetch AI search response");
     }
 }
@@ -75,7 +75,7 @@ async function fetchOpenAIResponse(aiSearchResponse, userQuery) {
 
     try {
         const response = await axios.post(
-            `${process.env.ENDPOINT_URL}openai/deployments/${process.env.DEPLOYMENT_NAME}/chat/completions?api-version=2024-05-01-preview`,
+            `${endpoint}openai/deployments/${deployment}/chat/completions?api-version=2024-05-01-preview`,
             {
                 messages: chatPrompt,
                 max_tokens: 200,
@@ -87,7 +87,7 @@ async function fetchOpenAIResponse(aiSearchResponse, userQuery) {
             {
                 headers: {
                     "Content-Type": "application/json",
-                    "api-key": process.env.AZURE_OPENAI_API_KEY,
+                    "api-key": subscriptionKey,
                 },
             }
         );
