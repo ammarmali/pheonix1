@@ -78,6 +78,9 @@ web_modules/
 .env.test.local
 .env.production.local
 .env.local
+.env:4
+
+.vercel.json
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -129,4 +132,7 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+<<<<<<< HEAD:backend/.gitignore
 .vercel.json
+=======
+>>>>>>> b10a9c1d87357f74eb28b9023f634bd8158917ef:client/.gitignore

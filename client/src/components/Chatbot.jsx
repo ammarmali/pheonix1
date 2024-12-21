@@ -16,7 +16,7 @@ const Chatbot = () => {
     setMessages([...messages, newMessage]);
 
     try {
-      const response = await axios.post("/rag", { userQuery: userInput });
+      const response = await axios.post("https://pheonix1-ammarmalis-projects.vercel.app/rag", { userQuery: userInput });
       const aiResponseText =
         response.data?.openAIResponse?.choices?.[0]?.message?.content ||
         "Sorry, I couldn't understand that.";
@@ -39,7 +39,7 @@ const Chatbot = () => {
           onClick={() => setIsChatOpen(true)}
         >
           <img
-            src={chatbot}// Replace with your image URL
+            src={chatbot} // Replace with your image URL
             alt="Chatbot"
             className="chatbot-logo"
           />
