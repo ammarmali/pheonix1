@@ -1,5 +1,11 @@
+const express = require("express");
+const cors = require("cors");
 const axios = require("axios");
 require("dotenv").config(); // Import and configure dotenv
+
+const app = express();
+app.use(cors());
+app.use(express.json());
 
 // Configuration
 const endpoint = process.env.ENDPOINT_URL;
@@ -9,27 +15,23 @@ const searchKey = process.env.SEARCH_KEY;
 const searchIndex = process.env.SEARCH_INDEX_NAME;
 const subscriptionKey = process.env.AZURE_OPENAI_API_KEY;
 
-module.exports = async (req, res) => {
-    if (req.method === "POST") {
-        const { userQuery } = req.body;
+app.post("/rag", async (req, res) => {
+    const { userQuery } = req.body;
 
-        if (!userQuery) {
-            return res.status(400).json({ error: "userQuery is required." });
-        }
-
-        try {
-            const aiSearchResponse = await fetchAIsearchResponse(userQuery);
-            const openAIResponse = await fetchOpenAIResponse(aiSearchResponse, userQuery);
-
-            return res.status(200).json({ openAIResponse, aiSearchResponse });
-        } catch (error) {
-            console.error("Error during function execution:", error.message);
-            return res.status(500).json({ error: "An error occurred while processing your request." });
-        }
-    } else {
-        return res.status(405).json({ error: "Method Not Allowed. Only POST requests are allowed." });
+    if (!userQuery) {
+        return res.status(400).json({ error: "userQuery is required." });
     }
-};
+
+    try {
+        const aiSearchResponse = await fetchAIsearchResponse(userQuery);
+        const openAIResponse = await fetchOpenAIResponse(aiSearchResponse, userQuery);
+
+        return res.status(200).json({ openAIResponse, aiSearchResponse });
+    } catch (error) {
+        console.error("Error during function execution:", error.message);
+        return res.status(500).json({ error: "An error occurred while processing your request." });
+    }
+});
 
 async function fetchAIsearchResponse(query) {
     console.log("Fetching AI search response for query:", query);
@@ -96,3 +98,6 @@ async function fetchOpenAIResponse(aiSearchResponse, userQuery) {
         throw new Error("Failed to fetch OpenAI response");
     }
 }
+
+// Export the serverless function
+module.exports = app;
