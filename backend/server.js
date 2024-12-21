@@ -15,7 +15,7 @@ const searchKey = process.env.SEARCH_KEY;
 const searchIndex = process.env.SEARCH_INDEX_NAME;
 const subscriptionKey = process.env.AZURE_OPENAI_API_KEY;
 
-app.post("/rag", async (req, res) => {
+app.post("https://pheonix2-ammarmalis-projects.vercel.app/rag", async (req, res) => {
     const { userQuery } = req.body;
 
     if (!userQuery) {
