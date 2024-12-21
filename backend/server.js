@@ -1,22 +1,21 @@
+const express = require("express");
+const cors = require("cors");
 const axios = require("axios");
+require("dotenv").config(); // Import and configure dotenv
 
-module.exports = async (req, res) => {
-    // Configuration
-    const endpoint = process.env.ENDPOINT_URL;
-    const deployment = process.env.DEPLOYMENT_NAME;
-    const searchEndpoint = process.env.SEARCH_ENDPOINT;
-    const searchKey = process.env.SEARCH_KEY;
-    const searchIndex = process.env.SEARCH_INDEX_NAME;
-    const subscriptionKey = process.env.AZURE_OPENAI_API_KEY;
+const app = express();
+app.use(cors());
+app.use(express.json());
 
-    console.log("Loaded Environment Variables:");
-    console.log("ENDPOINT_URL:", endpoint);
-    console.log("DEPLOYMENT_NAME:", deployment);
-    console.log("SEARCH_ENDPOINT:", searchEndpoint);
-    console.log("SEARCH_KEY:", searchKey);
-    console.log("SEARCH_INDEX_NAME:", searchIndex);
-    console.log("AZURE_OPENAI_API_KEY:", subscriptionKey);
+// Configuration
+const endpoint = process.env.ENDPOINT_URL;
+const deployment = process.env.DEPLOYMENT_NAME;
+const searchEndpoint = process.env.SEARCH_ENDPOINT;
+const searchKey = process.env.SEARCH_KEY;
+const searchIndex = process.env.SEARCH_INDEX_NAME;
+const subscriptionKey = process.env.AZURE_OPENAI_API_KEY;
 
+app.post("/rag", async (req, res) => {
     const { userQuery } = req.body;
 
     if (!userQuery) {
@@ -24,20 +23,16 @@ module.exports = async (req, res) => {
     }
 
     try {
-        // Fetch AI search response
         const aiSearchResponse = await fetchAIsearchResponse(userQuery);
-        // Fetch OpenAI response
         const openAIResponse = await fetchOpenAIResponse(aiSearchResponse, userQuery);
 
-        // Return the combined response
         return res.status(200).json({ openAIResponse, aiSearchResponse });
     } catch (error) {
         console.error("Error during function execution:", error.message);
         return res.status(500).json({ error: "An error occurred while processing your request." });
     }
-};
+});
 
-// Function to fetch response from AIsearch
 async function fetchAIsearchResponse(query) {
     console.log("Fetching AIsearch response for query:", query);
     try {
@@ -64,7 +59,6 @@ async function fetchAIsearchResponse(query) {
     }
 }
 
-// Function to fetch response from OpenAI
 async function fetchOpenAIResponse(aiSearchResponse, userQuery) {
     const relevantText = aiSearchResponse.value.map(item => item.chunk).join("\n\n");
 
@@ -104,3 +98,6 @@ async function fetchOpenAIResponse(aiSearchResponse, userQuery) {
         throw new Error("Failed to fetch OpenAI response");
     }
 }
+
+// Export the serverless function
+module.exports = app;
