@@ -132,7 +132,5 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-<<<<<<< HEAD:backend/.gitignore
+
 .vercel.json
-=======
->>>>>>> b10a9c1d87357f74eb28b9023f634bd8158917ef:client/.gitignore
